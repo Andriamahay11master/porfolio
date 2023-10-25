@@ -1,0 +1,193 @@
+.nice-select {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #e8e8e8;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  height: 42px;
+  line-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 30px;
+  position: relative;
+  text-align: left !important;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+  border: none;
+  border-bottom: 1px solid $color-primary;
+  border-radius: unset;
+  background: transparent;
+  padding-left: 0px;
+  padding-right: 49px;
+  min-width: 236px;
+  width: 236px;
+
+  &:active,
+  &:focus,
+  &.option {
+    border-color: #999;
+  }
+
+  &::after {
+    content: "\e90f";
+    font-family: "stellarix" !important;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+    transition: all .3s ease-in-out;
+    color: $color-primary;
+  }
+
+  .current {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-family: $mqtPro-bold;
+
+    @include max(1440px) {
+      font-size: 14px;
+    }
+  }
+
+  &.open {
+
+    &::after {
+      transform: rotate(-90deg);
+    }
+
+    .list {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1) translateY(0);
+      width: 100%;
+    }
+  }
+
+  &.disabled {
+    border-color: #ededed;
+    color: #999;
+    pointer-events: none;
+
+    &::after {
+      border-color: #cccccc;
+    }
+  }
+
+  &.wide {
+    width: 100%;
+
+    .list {
+      left: 0 !important;
+      right: 0 !important;
+    }
+  }
+
+  &.right {
+    float: right;
+
+    .list {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &.small {
+    font-size: 12px;
+    height: 36px;
+    line-height: 34px;
+
+    &::after {
+      height: 4px;
+      width: 4px;
+    }
+
+    &.option {
+      line-height: 34px;
+      min-height: 34px;
+    }
+  }
+
+  .list {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+    box-sizing: border-box;
+    margin-top: 4px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform-origin: 50% 0;
+    transform: scale(0.75) translateY(-21px);
+    transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    z-index: 9;
+
+    &:hover {
+
+      .option {
+
+        &:not(:hover) {
+          background-color: transparent !important;
+        }
+      }
+    }
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    clear: both;
+    white-space: break-spaces !important;
+    cursor: pointer;
+    list-style: none;
+    min-height: 40px;
+    outline: none;
+    padding: 5px 20px;
+    text-align: left;
+    transition: all .2s;
+    line-height: 1.4;
+    font-family: $mqtPro-medium;
+    color: $grey-3;
+
+    &:hover,
+    &.focus,
+    &.selected.focus {
+      background-color: $blue-2;
+    }
+
+    &.selected {
+      font-weight: bold;
+    }
+
+    &.disabled {
+      background-color: transparent;
+      color: #999;
+      cursor: default;
+    }
+  }
+}
+
+.no-csspointerevents {
+  .nice-select .list {
+    display: none;
+  }
+
+  .nice-select.open .list {
+    display: block;
+  }
+}
