@@ -137,10 +137,20 @@
             display: inline-block;
         }
         a{
+            display: flex;
+            align-items: center;
+            figure{
+                width: 50px;
+                height: 50px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: start;
+            }
             img{
                 @include max(768px){
                     width: 125px;
                     height: auto;
+                    border-radius: 100%;
                 }
             }
         }
@@ -150,14 +160,19 @@
             display: none;
         }
         a {
-            display: block;
-            width: 155px;
-            @include max(992px) {
-                width: 130px;
+            display: flex;
+            align-items: center;
+            figure{
+                width: 50px;
+                height: 50px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: start;
             }
             img {
                 width: 100%;
-                height: 44px;
+                height: auto;
+                border-radius: 100%;
             }
         }
     }   

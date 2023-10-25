@@ -8,20 +8,20 @@ import Image from 'next/image';
 
 const navLinks = [
     {
-        name: 'Accueil',
-        href: '/'   
+        name: 'Home',
+        href: '/#home'   
     },  
     {
-        name: "S'Informer",
-        href: '/informer'
+        name: "About",
+        href: '/#about'
     } ,
     {
-        name: 'Réduire mon empreinte',
-        href: '/empreinte'
+        name: 'Projects',
+        href: '/#projects'
     },
     {
         name: 'Contact',
-        href: '/contact'
+        href: '/#contact'
     }
 ];
 
@@ -63,14 +63,20 @@ export default function Header() {
             <div className="headerIntern"> 
                 <div className="container-transverse">
                     <div className="cntLogoMobile">
-                            <Link href="/">
-                                <Image src="/images/LogoGreenGascar.svg" alt="Logo Site" width={125} height={44}/>
+                            <Link href="/#home">
+                                <figure>
+                                    <Image src="/images/Mahay.jpg" alt="Logo Site" width={200} height={200}/>
+                                </figure>
+                                <span className='cntLogo-text'>IRIMANANA Henikaja Andriamahay</span>
                             </Link>
                     </div>
                     <div className={`headerInternContent${navbarOpen ? ' show-menu' : ''}`}>
                         <div className="cntlogo">
                             <Link href="/">
-                                <Image src="/images/LogoGreenGascar.svg" alt="Logo Site" width={155} height={44}/>
+                                <figure>
+                                    <Image src="/images/Mahay.jpg" alt="Logo Site" width={200} height={200}/>
+                                </figure>
+                                <span className='cntLogo-text'>IRIMANANA Henikaja Andriamahay</span>
                             </Link>
                         </div>
                         <div className="boxNavIntern"> 
@@ -95,9 +101,6 @@ export default function Header() {
                                     </ul> 
                                 </div> 
                             </nav>  
-                        </div>
-                        <div className="nav-right">
-                            <Link href="/calcul" className='btn btn-outline-black'>Calculer mon empreinte</Link>
                         </div>
 
                         <div className="block-bottom-mobile">
