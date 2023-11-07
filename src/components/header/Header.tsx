@@ -43,10 +43,8 @@ export default function Header() {
                     <div className="headerTopContent">
                         <div className="headerTopCol">
                             <div className="header-reseau-sociaux">
-                                <Link className="header-rs-link" href="/home"><i className="icon-facebook" aria-label='Crabone facebook page'></i></Link>
-                                <Link className="header-rs-link" href="/informer"><i className="icon-twitter" aria-label='Crabone twitter page'></i></Link>
-                                <Link className="header-rs-link" href="/empreinte"><i className="icon-linkedin" aria-label='Crabone linkedin page'></i></Link>
-                                <Link className="header-rs-link" href="/contact"><i className="icon-youtube" aria-label='Crabone youtube page'></i></Link>
+                                <Link className="header-rs-link" href="https://wwww.facebook.fr" target='_blank'><i className="icon-fb" aria-label='Mahay facebook page'></i></Link>
+                                <Link className="header-rs-link" href="https://www.linkedin.com/in/andriamahay-henikaja-irimanana/" target='_blank'><i className="icon-linkedin" aria-label='Mahay linkedin page'></i></Link>
                             </div>
                         </div>
                         <div className="headerTopCol">
@@ -105,14 +103,11 @@ export default function Header() {
 
                         <div className="block-bottom-mobile">
                             <div className="header-reseau-sociaux">
-                                <Link className="header-rs-link" href="#"><i className="icon-facebook"></i></Link>
-                                <Link className="header-rs-link" href="#"><i className="icon-twitter"></i></Link>
-                                <Link className="header-rs-link" href="#"><i className="icon-linkedin"></i></Link>
-                                <Link className="header-rs-link" href="#"><i className="icon-youtube"></i></Link>
+                                <Link className="header-rs-link" href="https://www.facebook.com" target='_blank'><i className="icon-fb"></i></Link>
+                                <Link className="header-rs-link" href="https://www.linkedin.com/in/andriamahay-henikaja-irimanana/" target='_blank'><i className="icon-linkedin"></i></Link>
                             </div>
                             <div className="list-language">
                                 <Link className="list-language-link" href="#">FR</Link>
-                                <Link className="list-language-link" href="#">MG</Link>
                                 <Link className="list-language-link" href="#">EN</Link>
                             </div>
                         </div>
