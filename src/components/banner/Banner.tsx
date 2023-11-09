@@ -18,7 +18,7 @@ interface BannerProps {
 export default function Banner({$title, $desc, $btn, $linkBtn, $srcImage, $width, $height, $altImage} : BannerProps) {
     return (
         <div className="banner">
-            <Image className="banner-img" src={$srcImage} width={$width} height={$height} alt={$altImage} />
+            <Image className="banner-img" src={$srcImage} width={$width} height={$height} alt={$altImage} loading="lazy" />
             <div className="banner-content">
                 <h1 className="banner-title">{$title}</h1>
                 <p className='banner-desc'>{$desc}</p>
