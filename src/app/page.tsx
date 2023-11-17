@@ -3,6 +3,7 @@ import Banner from '@/components/banner/Banner'
 import SectionTitle from '@/components/sectionTitle/SectionTitle'
 import BlockInfo from '@/components/blockInfo/BlockInfo'
 import ListSkills from '@/components/listSkills/ListSkills'
+import Project from '@/components/project/Project'
 
 export default function Home() {
   //Data Banner
@@ -63,11 +64,46 @@ export default function Home() {
       'Office 365',
     ]
   }
+
+  //Project1
+  const dataProject1 = {
+    $title: "Wilsonport",
+    $desc: 'Wilsonport is a multiservice logistics and transport company and I created their website from scratch using the frontend tools I know.',
+    $btn: 'See project',
+    $linkBtn: '/#projects',
+    $srcImage: '/images/project/project1.jpg',
+    $width: 1600,
+    $height: 941,
+    $altImage: 'Project image'
+  }
+
+  const dataProject2 = {
+    $title: "Boreal Coffee Clone",
+    $desc: "I re-created the frontend of Boreal Coffee's official web app because I got attracted to their beautiful UI. It was a great experience for me to build the entire frontend.",
+    $btn: 'See project',
+    $linkBtn: '/#projects',
+    $srcImage: '/images/project/project2.jpg',
+    $width: 1600,
+    $height: 941,
+    $altImage: 'Project image'
+  }
+
+  const dataProject3 = {
+    $title: "Crown Template",
+    $desc: 'Crown is a web template that I created targeting the restaurant and food industry which anyone can use to present their business online.',
+    $btn: 'See project',
+    $linkBtn: '/#projects',
+    $srcImage: '/images/project/project3.jpg',
+    $width: 1600,
+    $height: 941,
+    $altImage: 'Project image'
+  }
+
   return (
     <main className='main-page'>
       <Banner {...dataBanner}/>
       <SectionTitle {...dataAbout}/>
-      <div className="main-section about-section">
+      <div className="main-section about-section" id="about">
         <div className="container">
           <div className="about-block">
             <BlockInfo {...dataBlockInfo}/>
@@ -76,6 +112,15 @@ export default function Home() {
         </div>
       </div>
       <SectionTitle {...dataProject}/>
+      <div className="main-section project-section"  id="projects">
+        <div className="container">
+          <div className="project-block">
+            <Project {...dataProject1}/>
+            <Project {...dataProject2}/>
+            <Project {...dataProject3}/>
+          </div>
+        </div>
+      </div>
     </main>
   )
 }
