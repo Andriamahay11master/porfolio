@@ -23,7 +23,10 @@ export default function Banner({$title, $desc, $btn, $linkBtn, $srcImage, $width
                 <h1 className="banner-title">{$title}</h1>
                 <p className='banner-desc'>{$desc}</p>
                 <Link href={$linkBtn} className='btn btn-primary'>{$btn}</Link>
-            </div>  
+            </div>
+            <div className="mouse">
+                <div className="scroll"></div>
+            </div>
         </div>
     )
   }
