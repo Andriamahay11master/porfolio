@@ -4,6 +4,7 @@ import SectionTitle from '@/components/sectionTitle/SectionTitle'
 import BlockInfo from '@/components/blockInfo/BlockInfo'
 import ListSkills from '@/components/listSkills/ListSkills'
 import Project from '@/components/project/Project'
+import Contact from '@/components/contact/Contact'
 
 export default function Home() {
   //Data Banner
@@ -28,6 +29,12 @@ export default function Home() {
   const dataProject = {
     $title: 'Projects',
     $desc: 'Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology'
+  }
+
+  //Data Section Title Contact
+  const dataContact = {
+    $title: 'Contact',
+    $desc: 'Feel free to Contact me by submitting the form below and I will get back to you as soon as possible'
   }
 
   //Data Block Info
@@ -65,7 +72,7 @@ export default function Home() {
     ]
   }
 
-  //Project1
+  //All Project
   const dataProject1 = {
     $title: "Wilsonport",
     $desc: 'Wilsonport is a multiservice logistics and transport company and I created their website from scratch using the frontend tools I know.',
@@ -121,6 +128,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <SectionTitle {...dataContact}/>
+      <Contact/>
     </main>
   )
 }

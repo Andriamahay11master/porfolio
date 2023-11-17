@@ -1,0 +1,22 @@
+@import "../../assets/scss/common/variable";
+@import "../../assets/scss/common/mixins";
+
+.form-content{
+    padding: 50px;
+    .form-group{
+        margin-bottom: 20px;
+        &.form-group-btn{
+            margin-bottom: 0;
+        }
+    }
+    label{
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .form-control{
+        width: 100%;
+        border-radius: 2px;
+        background: $white-f7;
+        border: 1px solid $grey;
+    }
+}
