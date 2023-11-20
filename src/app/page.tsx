@@ -21,18 +21,21 @@ export default function Home() {
 
   //Data Section Title About
   const dataAbout = {
+    $id:'about',
     $title: 'About me',
     $desc: 'Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology'
   }
 
   //Data Section Title Project
   const dataProject = {
+    $id:'projects',
     $title: 'Projects',
     $desc: 'Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology'
   }
 
   //Data Section Title Contact
   const dataContact = {
+    $id:'contact',
     $title: 'Contact',
     $desc: 'Feel free to Contact me by submitting the form below and I will get back to you as soon as possible'
   }
@@ -110,7 +113,7 @@ export default function Home() {
     <main className='main-page'>
       <Banner {...dataBanner}/>
       <SectionTitle {...dataAbout}/>
-      <div className="main-section about-section" id="about">
+      <div className="main-section about-section">
         <div className="container">
           <div className="about-block">
             <BlockInfo {...dataBlockInfo}/>
@@ -119,7 +122,7 @@ export default function Home() {
         </div>
       </div>
       <SectionTitle {...dataProject}/>
-      <div className="main-section project-section"  id="projects">
+      <div className="main-section project-section">
         <div className="container">
           <div className="project-block">
             <Project {...dataProject1}/>
