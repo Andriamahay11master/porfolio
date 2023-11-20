@@ -1,6 +1,6 @@
 "use client"
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 import './header.scss';
@@ -35,6 +35,26 @@ export default function Header() {
             setNavbarOpen(false);
         }, 300)
       }
+
+      const resize = () =>  {
+        console.log('ok')
+      }
+
+      useEffect(() => {
+        function handleResize() {
+            if (window.innerWidth >= 1200 && navbarOpen) {
+                setNavbarOpen(false);
+            }
+        }
+ 
+        handleResize();
+ 
+        window.addEventListener("resize", handleResize);
+ 
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, [navbarOpen]);
 
     return (
         <header className={`sectHeader sectHeader--fixed${navbarOpen ? ' show-menu' : ''}`}>
