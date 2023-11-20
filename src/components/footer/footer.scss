@@ -1,0 +1,163 @@
+@import "../../assets/scss/common/variable";
+@import "../../assets/scss/common/mixins";
+
+
+.footerPage {
+    background: $dark-grey;
+    position: relative;
+    z-index: 2;
+    a {
+        color: $grey-c4;
+        text-decoration: none;
+        &:hover {
+            color: #FFF;
+        }
+    }
+    .cntFooter { 
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 154px;
+        padding: 30px 135px;
+        @include max(1440px){
+            padding: 30px 50px;
+            column-gap: 75px;
+        }
+        @include max(1200px){
+            column-gap: 50px;
+        }
+        @include max(768px){
+            display: flex;
+            flex-direction: column;
+            padding: 24px 15px 45px;
+        }
+        .logoFooter {
+            margin-bottom: 19px;
+            display: inline-block;
+            img {
+                width: 155px;
+                height: 44px;
+            }
+        }
+        .titleFooter {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: #FFF;
+            @include max(1440px){
+                font-size: 18px;
+            }
+        }
+        .navFooter {
+            li {
+                margin-bottom: 19px;
+                @include max(1440px){
+                    line-height: 1;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                a{
+                    font-size: 16px;
+                    @include max(1440px){
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .listLink {
+            display: flex;
+            align-items: center;
+            grid-gap: 12px;
+            @include max(768px){
+                justify-content: center;
+            }
+        }
+        p{
+            color:$grey-c4;
+            font-size: 12px;
+        }
+        .colFooter{
+            &:not(:first-child){
+                padding-left: 25px;
+                border-left: 1px solid rgba($grey-c4, 0.25);
+                @include max(768px){
+                    border-left: none;
+                    border-bottom: 1px solid rgba($grey-c4, 0.25);
+                    padding-left: 0;
+                }
+            }
+
+            .txtFooter {
+                text-align: left;
+            }
+
+
+            &:nth-child(2){
+                @include max(768px){
+                    order: 1;
+                }
+            }
+            &:nth-child(3){
+                @include max(768px){
+                    order: 2;
+                }
+            }
+            &:last-child{
+                @include max(768px){
+                    order: 3;
+                }
+            }
+            @include max(768px){
+                padding: 24px 0;
+                text-align: center;
+            }
+            &:first-child{
+                @include max(768px){
+                    order: 4;
+                    padding-top: 44px;
+                    padding-bottom: 0;
+                }
+            }
+        }
+        .icon-footer{
+            font-size: 20px;
+        }
+    }
+    .footerCopyright {
+        padding: 18px 135px;
+        border-top: 1px solid rgba($grey-c4, 0.25);
+        background: $dark-grey;
+        margin: 0 6px;
+        @include max(1440px){
+            padding: 18px 50px;
+        }
+        @include max(768px){
+            padding: 0px 15px 10px;
+            border-top: none;
+        }
+        .cntCopyright {
+            display: flex;
+            justify-content: space-between;
+            @include max(635px) {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        p{
+            color: $grey-c4;
+            font-size: 12px;
+            font-weight: 300;
+        }
+        .icon-heart{
+            color: $red-dark;
+            font-size: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .itemCol{
+            @include max(768px){
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
