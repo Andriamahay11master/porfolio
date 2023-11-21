@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 import './header.scss';
 import Image from 'next/image';
+import '@/app/i18n';
+import { useTranslation } from 'react-i18next';
 
 const navLinks = [
     {
@@ -25,19 +27,14 @@ const navLinks = [
     }
 ];
 
-
 export default function Header() {
     const [navbarOpen, setNavbarOpen] = useState(false);
     const pathname = usePathname();
-
+    const { t, i18n } = useTranslation();
     const closeMenu = () => {
         setTimeout(() => {
             setNavbarOpen(false);
         }, 300)
-      }
-
-      const resize = () =>  {
-        console.log('ok')
       }
 
       useEffect(() => {
@@ -55,6 +52,11 @@ export default function Header() {
             window.removeEventListener("resize", handleResize);
         };
     }, [navbarOpen]);
+
+    const changeLanguageHandler = (lang: any) =>
+    {
+      i18n.changeLanguage("fr")
+    }
 
     return (
         <header className={`sectHeader sectHeader--fixed${navbarOpen ? ' show-menu' : ''}`}>
@@ -85,7 +87,7 @@ export default function Header() {
                                 <figure>
                                     <Image src="/images/Mahay.jpg" alt="Logo Site" width={200} height={200}/>
                                 </figure>
-                                <span className='cntLogo-text'>IRIMANANA Henikaja Andriamahay</span>
+                                <span className='cntLogo-text'>{t('title')}IRIMANANA Henikaja Andriamahay</span>
                             </Link>
                     </div>
                     <div className={`headerInternContent${navbarOpen ? ' show-menu' : ''}`}>
@@ -94,7 +96,7 @@ export default function Header() {
                                 <figure>
                                     <Image src="/images/Mahay.jpg" alt="Logo Site" width={200} height={200}/>
                                 </figure>
-                                <span className='cntLogo-text'>IRIMANANA Henikaja Andriamahay</span>
+                                <span className='cntLogo-text'>{t('title')}IRIMANANA Henikaja Andriamahay</span>
                             </Link>
                         </div>
                         <div className="boxNavIntern"> 
@@ -109,7 +111,7 @@ export default function Header() {
                                                     <Link
                                                         className={isActive ? 'cntNav-link active' : 'cntNav-link'}
                                                         href={link.href}
-                                                        onClick={closeMenu}>
+                                                        onClick={closeMenu} locale="en">
                                                         {link.name}
                                                     </Link>
                                                 </li>

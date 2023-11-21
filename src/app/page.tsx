@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Banner from '@/components/banner/Banner'
 import SectionTitle from '@/components/sectionTitle/SectionTitle'
 import BlockInfo from '@/components/blockInfo/BlockInfo'
