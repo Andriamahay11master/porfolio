@@ -1,11 +1,18 @@
+"use client"
 import Banner from '@/components/banner/Banner'
 import SectionTitle from '@/components/sectionTitle/SectionTitle'
 import BlockInfo from '@/components/blockInfo/BlockInfo'
 import ListSkills from '@/components/listSkills/ListSkills'
 import Project from '@/components/project/Project'
 import Contact from '@/components/contact/Contact'
+import Header from '@/components/header/Header'
+import Footer from '@/components/footer/Footer'
+import '@/app/i18n'
+import { useTranslation } from 'next-i18next';
 
 export default function Home() {
+
+  const { t } = useTranslation('translation');
   //Data Banner
   const dataBanner = {
     $title: "Hey, I'm MAHAY",
@@ -20,8 +27,8 @@ export default function Home() {
 
   //Data Section Title About
   const dataAbout = {
-    $id:'about',
-    $title: 'About me',
+    $id: 'about',
+    $title: `${t('title')}`,
     $desc: 'Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology'
   }
 
@@ -109,29 +116,33 @@ export default function Home() {
   }
 
   return (
-    <main className='main-page'>
-      <Banner {...dataBanner}/>
-      <SectionTitle {...dataAbout}/>
-      <div className="main-section about-section">
-        <div className="container">
-          <div className="about-block">
-            <BlockInfo {...dataBlockInfo}/>
-            <ListSkills $title={dataListSkills.$title} data={dataListSkills.data}/>
+    <>
+    <Header/>
+      <main className='main-page'>
+        <Banner {...dataBanner}/>
+        <SectionTitle {...dataAbout}/>
+        <div className="main-section about-section">
+          <div className="container">
+            <div className="about-block">
+              <BlockInfo {...dataBlockInfo}/>
+              <ListSkills $title={dataListSkills.$title} data={dataListSkills.data}/>
+            </div>
           </div>
         </div>
-      </div>
-      <SectionTitle {...dataProject}/>
-      <div className="main-section project-section">
-        <div className="container">
-          <div className="project-block">
-            <Project {...dataProject1}/>
-            <Project {...dataProject2}/>
-            <Project {...dataProject3}/>
+        <SectionTitle {...dataProject}/>
+        <div className="main-section project-section">
+          <div className="container">
+            <div className="project-block">
+              <Project {...dataProject1}/>
+              <Project {...dataProject2}/>
+              <Project {...dataProject3}/>
+            </div>
           </div>
         </div>
-      </div>
-      <SectionTitle {...dataContact}/>
-      <Contact/>
-    </main>
+        <SectionTitle {...dataContact}/>
+        <Contact/>
+      </main>
+      <Footer/>
+    </>
   )
 }

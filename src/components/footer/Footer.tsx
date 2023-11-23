@@ -1,9 +1,9 @@
 import * as React from 'react';
 import './footer.scss';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
+    
     return (
         <footer className='footerPage'>
             <div className="cntFooter">
