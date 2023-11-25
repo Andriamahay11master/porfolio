@@ -141,6 +141,13 @@ export default function Home() {
     message: `${t('form.message')}`,
     valBtn: `${t('form.valBtn')}`
   }
+
+  //data footer
+  const dataFooter = {
+    title: `${t('footer.title')}`,
+    desc: `${t('footer.desc')}`,
+    copyright: `${t('footer.copyright')}`,
+  }
   return (
     <>
     <Header linkMenu={dataNav}/>
@@ -168,7 +175,7 @@ export default function Home() {
         <SectionTitle {...dataContact}/>
         <Contact {...dataForm}/>
       </main>
-      <Footer/>
+      <Footer {...dataFooter}/>
     </>
   )
 }
