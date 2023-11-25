@@ -13,23 +13,45 @@ import { useTranslation } from 'next-i18next';
 export default function Home() {
 
   const { t } = useTranslation('translation');
+
+  //Data Nav
+  const dataNav = [
+    {
+        name: `${t('menu.home')}`,
+        href: '/#home'   
+    },  
+    {
+        name: `${t('menu.about')}`,
+        href: '/#about'
+    } ,
+    {
+        name: `${t('menu.projects')}`,
+        href: '/#projects'
+    },
+    {
+        name: `${t('menu.contact')}`,
+        href: '/#contact'
+    }
+];
+
+
   //Data Banner
   const dataBanner = {
-    $title: "Hey, I'm MAHAY",
-    $desc: 'A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product',
-    $btn: 'Projects',
+    $title: `${t('banner.title')}`,
+    $desc: `${t('banner.description')}`,
+    $btn: `${t('banner.textButton')}`,
     $linkBtn: '/#projects',
     $srcImage: '/images/banner/banner.jpg',
     $width: 1200,
     $height: 600,
-    $altImage: 'Banner front'
+    $altImage: `${t('banner.altImage')}`
   }
 
   //Data Section Title About
   const dataAbout = {
     $id: 'about',
-    $title: `${t('title')}`,
-    $desc: 'Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology'
+    $title: `${t('aboutTitle.title')}`,
+    $desc: `${t('aboutTitle.desc')}`,
   }
 
   //Data Section Title Project
@@ -48,19 +70,15 @@ export default function Home() {
 
   //Data Block Info
   const dataBlockInfo = {
-    $title: 'Front developer',
-    $desc: `👋 Hello World! I'm Mahay, a passionate front-end developer with a knack for transforming ideas into captivating digital experiences. 💻✨ <br/><br/>
-            🚀 Armed with a creative mindset and a love for clean, efficient code, I thrive on the challenges of bringing user interfaces to life. From crafting seamless user journeys to ensuring pixel-perfect design implementation, I am dedicated to delivering web solutions that not only meet but exceed expectations. <br/><br/>
-            🎨 My toolkit includes the latest front-end technologies such as HTML5, CSS3, and JavaScript, and I'm always eager to stay ahead of the curve with emerging trends like React.js and Vue.js. I believe in the power of responsive design, ensuring that the user experience remains flawless across devices. <br/><br/>
-            🛠️ Whether it's optimizing website performance, enhancing interactivity, or collaborating with cross-functional teams, I'm committed to creating web applications that resonate with users and leave a lasting impression.  <br/><br/> 
-            💡 Let's build something extraordinary together – where design meets functionality, and user satisfaction takes center stage. Feel free to reach out for collaborations, ideas, or just a good coding chat! 🚀🌐`,
+    $title: `${t('blockInfo.title')}`,
+    $desc: `${t('blockInfo.desc')}`,
     $linkBtn: '/#projects',
-    $valBtn: 'Projects'
+    $valBtn: `${t('blockInfo.valBtn')}`
   }
 
   //Data list skills
   const dataListSkills = {
-    $title: 'My skills',
+    $title: `${t('skillsTitle')}`,
     data: [
       'HTML',
       'CSS',
@@ -117,7 +135,7 @@ export default function Home() {
 
   return (
     <>
-    <Header/>
+    <Header linkMenu={dataNav}/>
       <main className='main-page'>
         <Banner {...dataBanner}/>
         <SectionTitle {...dataAbout}/>

@@ -19,6 +19,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        @include max(575px){
+            min-width: 320px;
+        }
         .banner-title, .banner-desc{
             color: #fff;
         }

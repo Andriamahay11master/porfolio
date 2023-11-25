@@ -3,5 +3,27 @@
   "description": {
     "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
     "part2": "Switch language between english and german using buttons above."
-  }
+  },
+  "menu":{
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "projects": "Projects"
+  },
+  "banner" : {
+    "title": "Greetings, my name is Mahay.",
+    "description": "A Web Developer specializing in Frontend development, dedicated to constructing the user interface and experience for websites and web applications, contributing to the overall success of the product.",
+    "textButton": "See my projects",
+    "altImage": "Banner front"
+  },
+  "aboutTitle": {
+    "title": "About me",
+    "desc": "On this page, you'll discover additional details about me, my professional activities, and my current proficiency, primarily focused on programming and technology."
+  },
+  "blockInfo":{
+    "title": "Front-End Developer",
+    "desc":"👋 Hello World! I'm Mahay, a passionate front-end developer with a knack for transforming ideas into captivating digital experiences. 💻✨ <br/><br/>🚀 Armed with a creative mindset and a love for clean, efficient code, I thrive on the challenges of bringing user interfaces to life. From crafting seamless user journeys to ensuring pixel-perfect design implementation, I am dedicated to delivering web solutions that not only meet but exceed expectations. <br/><br/>🎨 My toolkit includes the latest front-end technologies such as HTML5, CSS3, and JavaScript, and I'm always eager to stay ahead of the curve with emerging trends like React.js and Vue.js. I believe in the power of responsive design, ensuring that the user experience remains flawless across devices. <br/><br/>🛠️ Whether it's optimizing website performance, enhancing interactivity, or collaborating with cross-functional teams, I'm committed to creating web applications that resonate with users and leave a lasting impression.  <br/><br/> 💡 Let's build something extraordinary together – where design meets functionality, and user satisfaction takes center stage. Feel free to reach out for collaborations, ideas, or just a good coding chat! 🚀🌐",
+    "valBtn": "See my projects"
+  },
+  "skillsTitle":"My skills"
 }

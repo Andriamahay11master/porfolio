@@ -3,5 +3,28 @@
   "description": {
     "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
     "part2": "Switch language between english and german using buttons above."
-  }
+  },
+  "menu":{
+    "home": "Accueil",
+    "about": "A propos",
+    "contact": "Contact",
+    "projects": "Projets"
+  },
+  "banner" : {
+    "title": "Bonjour, je m'appelle Mahay.",
+    "description": "Un développeur web axé sur le frontend construisant l'interface utilisateur et l'expérience utilisateur des sites web et des applications web, contribuant ainsi au succès global du produit.",
+    "textButton": "Voir mes projets",
+    "altImage": "Bannière front"
+  },
+  "aboutTitle": {
+    "title": "À propos de moi",
+    "desc": "Sur cette page, vous trouverez plus d'informations me concernant, mes activités professionnelles, et mes compétences actuelles, principalement dans les domaines de la programmation et de la technologie."
+  },
+  "blockInfo":{
+    "title": "Développeur web front-end",
+    "desc":"👋 Bonjour le monde ! Je suis Mahay, un développeur front-end passionné avec un talent pour transformer des idées en expériences numériques captivantes. 💻✨ <br/><br/>🚀 Armé d'un esprit créatif et d'un amour pour un code propre et efficace, je prospère face aux défis de donner vie aux interfaces utilisateur. De la conception de parcours utilisateur fluides à la mise en œuvre d'un design parfaitement détaillé, je suis déterminé à fournir des solutions web qui non seulement répondent aux attentes mais les dépassent. <br/><br/>🎨 Mon arsenal comprend les dernières technologies front-end telles que HTML5, CSS3 et JavaScript, et je suis toujours désireux de rester à la pointe avec les tendances émergentes comme React.js et Vue.js. Je crois en la puissance du design réactif, garantissant que l'expérience utilisateur reste impeccable sur tous les appareils. <br/><br/>🛠️ Que ce soit pour optimiser les performances des sites web, améliorer l'interactivité, ou collaborer avec des équipes pluridisciplinaires, je m'engage à créer des applications web qui résonnent avec les utilisateurs et laissent une impression durable. <br/><br/> 💡 Construisons quelque chose d'extraordinaire ensemble - là où le design rencontre la fonctionnalité, et la satisfaction de l'utilisateur prend le devant de la scène. N'hésitez pas à me contacter pour des collaborations, des idées, ou simplement une bonne discussion sur la programmation ! 🚀🌐",
+    "valBtn": "Voir mes projets"
+  },
+  "skillsTitle":"Mes compétences"
+
 }
