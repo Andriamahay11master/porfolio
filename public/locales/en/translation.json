@@ -25,5 +25,39 @@
     "desc":"👋 Hello World! I'm Mahay, a passionate front-end developer with a knack for transforming ideas into captivating digital experiences. 💻✨ <br/><br/>🚀 Armed with a creative mindset and a love for clean, efficient code, I thrive on the challenges of bringing user interfaces to life. From crafting seamless user journeys to ensuring pixel-perfect design implementation, I am dedicated to delivering web solutions that not only meet but exceed expectations. <br/><br/>🎨 My toolkit includes the latest front-end technologies such as HTML5, CSS3, and JavaScript, and I'm always eager to stay ahead of the curve with emerging trends like React.js and Vue.js. I believe in the power of responsive design, ensuring that the user experience remains flawless across devices. <br/><br/>🛠️ Whether it's optimizing website performance, enhancing interactivity, or collaborating with cross-functional teams, I'm committed to creating web applications that resonate with users and leave a lasting impression.  <br/><br/> 💡 Let's build something extraordinary together – where design meets functionality, and user satisfaction takes center stage. Feel free to reach out for collaborations, ideas, or just a good coding chat! 🚀🌐",
     "valBtn": "See my projects"
   },
-  "skillsTitle":"My skills"
+  "skillsTitle":"My skills",
+  "aboutProjects": {
+    "title": "Projects",
+    "desc": "On this page, you'll discover a selection of both personal and client projects that I've developed, and each project comes with its own dedicated case study."
+  },
+  "projet":{
+    "1":{
+      "title": "Wilsonport",
+      "desc": "Wilsonport is a multiservice logistics and transport company and I created their website from scratch using the frontend tools I know.",
+      "valBtn": "See project",
+      "altImage": "Project image 1"
+    },
+    "2":{
+      "title": "Boreal Coffee Clone",
+      "desc": "I re-created the frontend of Boreal Coffee's official web app because I got attracted to their beautiful UI. It was a great experience for me to build the entire frontend.",
+      "valBtn": "See project",
+      "altImage": "Project image 2"
+    },
+    "3":{
+      "title": "Crown Template",
+      "desc": "Crown is a web template that I created targeting the restaurant and food industry which anyone can use to present their business online.",
+      "valBtn": "See project",
+      "altImage": "Project image 3"
+    }
+  },
+  "contact":{
+    "title": "Contact",
+    "desc": "Don't hesitate to reach out by filling out the form below, and I'll respond to you at my earliest convenience."
+  },
+  "form":{
+    "name": "name",
+    "email": "email",
+    "message": "message",
+    "valBtn": "submit"
+  }
 }
