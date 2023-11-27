@@ -57,15 +57,15 @@ export default function Home() {
   //Data Section Title Project
   const dataProject = {
     $id:'projects',
-    $title: 'Projects',
-    $desc: 'Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology'
+    $title: `${t('aboutProjects.title')}`,
+    $desc: `${t('aboutProjects.desc')}`,
   }
 
   //Data Section Title Contact
   const dataContact = {
     $id:'contact',
-    $title: 'Contact',
-    $desc: 'Feel free to Contact me by submitting the form below and I will get back to you as soon as possible'
+    $title: `${t('contact.title')}`,
+    $desc: `${t('contact.desc')}`,
   }
 
   //Data Block Info
@@ -101,38 +101,53 @@ export default function Home() {
 
   //All Project
   const dataProject1 = {
-    $title: "Wilsonport",
-    $desc: 'Wilsonport is a multiservice logistics and transport company and I created their website from scratch using the frontend tools I know.',
-    $btn: 'See project',
+    $title: `${t('projet.1.title')}`,
+    $desc: `${t('projet.1.desc')}`,
+    $btn: `${t('projet.1.valBtn')}`,
     $linkBtn: '/#projects',
     $srcImage: '/images/project/project1.jpg',
     $width: 1600,
     $height: 941,
-    $altImage: 'Project image'
+    $altImage: `${t('projet.1.altImage')}`
   }
 
   const dataProject2 = {
-    $title: "Boreal Coffee Clone",
-    $desc: "I re-created the frontend of Boreal Coffee's official web app because I got attracted to their beautiful UI. It was a great experience for me to build the entire frontend.",
-    $btn: 'See project',
+    $title: `${t('projet.2.title')}`,
+    $desc: `${t('projet.2.desc')}`,
+    $btn: `${t('projet.2.valBtn')}`,
     $linkBtn: '/#projects',
     $srcImage: '/images/project/project2.jpg',
     $width: 1600,
     $height: 941,
-    $altImage: 'Project image'
+    $altImage: `${t('projet.2.altImage')}`
   }
 
   const dataProject3 = {
-    $title: "Crown Template",
-    $desc: 'Crown is a web template that I created targeting the restaurant and food industry which anyone can use to present their business online.',
-    $btn: 'See project',
+    $title: `${t('projet.3.title')}`,
+    $desc: `${t('projet.3.desc')}`,
+    $btn: `${t('projet.3.valBtn')}`,
     $linkBtn: '/#projects',
     $srcImage: '/images/project/project3.jpg',
     $width: 1600,
     $height: 941,
-    $altImage: 'Project image'
+    $altImage: `${t('projet.3.altImage')}`
   }
 
+
+  //Data page form
+  const dataForm = {
+    name: `${t('form.name')}`,
+    email: `${t('form.email')}`,
+    message: `${t('form.message')}`,
+    valBtn: `${t('form.valBtn')}`
+  }
+
+  //data footer
+  const dataFooter = {
+    title: `${t('footer.title')}`,
+    desc: `${t('footer.desc')}`,
+    copyright: `${t('footer.copyright')}`,
+  }
   return (
     <>
     <Header linkMenu={dataNav}/>
@@ -158,9 +173,9 @@ export default function Home() {
           </div>
         </div>
         <SectionTitle {...dataContact}/>
-        <Contact/>
+        <Contact {...dataForm}/>
       </main>
-      <Footer/>
+      <Footer {...dataFooter}/>
     </>
   )
 }

@@ -25,6 +25,45 @@
     "desc":"👋 Bonjour le monde ! Je suis Mahay, un développeur front-end passionné avec un talent pour transformer des idées en expériences numériques captivantes. 💻✨ <br/><br/>🚀 Armé d'un esprit créatif et d'un amour pour un code propre et efficace, je prospère face aux défis de donner vie aux interfaces utilisateur. De la conception de parcours utilisateur fluides à la mise en œuvre d'un design parfaitement détaillé, je suis déterminé à fournir des solutions web qui non seulement répondent aux attentes mais les dépassent. <br/><br/>🎨 Mon arsenal comprend les dernières technologies front-end telles que HTML5, CSS3 et JavaScript, et je suis toujours désireux de rester à la pointe avec les tendances émergentes comme React.js et Vue.js. Je crois en la puissance du design réactif, garantissant que l'expérience utilisateur reste impeccable sur tous les appareils. <br/><br/>🛠️ Que ce soit pour optimiser les performances des sites web, améliorer l'interactivité, ou collaborer avec des équipes pluridisciplinaires, je m'engage à créer des applications web qui résonnent avec les utilisateurs et laissent une impression durable. <br/><br/> 💡 Construisons quelque chose d'extraordinaire ensemble - là où le design rencontre la fonctionnalité, et la satisfaction de l'utilisateur prend le devant de la scène. N'hésitez pas à me contacter pour des collaborations, des idées, ou simplement une bonne discussion sur la programmation ! 🚀🌐",
     "valBtn": "Voir mes projets"
   },
-  "skillsTitle":"Mes compétences"
+  "skillsTitle":"Mes compétences",
+  "aboutProjects": {
+    "title": "Projets",
+    "desc": "Vous trouverez ici quelques-uns des projets personnels et clients que j'ai créés, chacun étant accompagné d'une étude de cas détaillée."
+  },
+  "projet":{
+    "1":{
+      "title": "Wilsonport",
+      "desc": "Wilsonport est une entreprise de logistique et de transport multiservices, et j'ai créé leur site web de A à Z en utilisant les outils de développement frontend que je maîtrise.",
+      "valBtn": "Voir le projet",
+      "altImage": "Image Projet 1"
+    },
+    "2":{
+      "title": "Boreal Coffee Clone",
+      "desc": " J'ai recréé le frontend de l'application web officielle de Boreal Coffee parce que j'ai été attiré par leur superbe interface utilisateur. Ce fut une excellente expérience pour moi de construire l'intégralité du frontend.",
+      "valBtn": "Voir le projet",
+      "altImage": "Image Projet 2"
+    },
+    "3":{
+      "title": "Crown Template",
+      "desc": "Crown est un modèle de site web que j'ai créé ciblant l'industrie de la restauration et de l'alimentation, que quiconque peut utiliser pour présenter son activité en ligne.",
+      "valBtn": "Voir le projet",
+      "altImage": "Image Projet 3"
+    }
+  },
+  "contact":{
+    "title": "Contact",
+    "desc": "N'hésitez pas à me contacter en remplissant le formulaire ci-dessous, et je vous répondrai dans les plus brefs délais."
+  },
+  "form":{
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "valBtn": "Envoyer"
+  },
+  "footer":{
+    "title": "Suivez-moi",
+    "desc": "Un développeur web axé sur le frontend construisant l'interface utilisateur et l'expérience utilisateur des sites web et des applications web, contribuant ainsi au succès global du produit.",
+    "copyright": "Développé par"
+  }
 
 }
