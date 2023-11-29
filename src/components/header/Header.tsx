@@ -58,8 +58,8 @@ export default function Header({linkMenu} : HeaderProps) {
                     <div className="headerTopContent">
                         <div className="headerTopCol">
                             <div className="header-reseau-sociaux">
-                                <Link className="header-rs-link" href="https://wwww.facebook.fr" target='_blank'><i className="icon-fb" aria-label='Mahay facebook page'></i></Link>
-                                <Link className="header-rs-link" href="https://www.linkedin.com/in/andriamahay-henikaja-irimanana/" target='_blank'><i className="icon-linkedin" aria-label='Mahay linkedin page'></i></Link>
+                                <Link className="header-rs-link" href="https://wwww.facebook.fr" target='_blank'><i className="icon-fb"></i></Link>
+                                <Link className="header-rs-link" href="https://www.linkedin.com/in/andriamahay-henikaja-irimanana/" target='_blank'><i className="icon-linkedin"></i></Link>
                             </div>
                         </div>
                         <div className="headerTopCol">
