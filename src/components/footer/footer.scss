@@ -56,7 +56,7 @@
                 text-align: left;
                 max-width: 50%;
                 @include max(768px){
-                    max-width: auto;
+                    max-width: 100%;
                 }
             }
 

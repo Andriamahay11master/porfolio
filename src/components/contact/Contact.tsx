@@ -45,7 +45,7 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
         });
     }
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setFormErrors(null);
         try {
@@ -55,6 +55,9 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
         } catch (error) {
             if (error instanceof ZodError) {
                 setFormErrors(error);
+            }
+            else{
+                console.error('Error sending email:', error);
             }
         }
     }
