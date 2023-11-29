@@ -139,7 +139,9 @@ export default function Home() {
     name: `${t('form.name')}`,
     email: `${t('form.email')}`,
     message: `${t('form.message')}`,
-    valBtn: `${t('form.valBtn')}`
+    valBtn: `${t('form.valBtn')}`,
+    valText: `${t('form.popupVal')}`,
+    valTxtBtn: `${t('form.valTxtBtn')}`,
   }
 
   //data footer
@@ -173,7 +175,7 @@ export default function Home() {
           </div>
         </div>
         <SectionTitle {...dataContact}/>
-        <Contact {...dataForm}/>
+        <Contact {...dataForm} />
       </main>
       <Footer {...dataFooter}/>
     </>

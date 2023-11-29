@@ -9,10 +9,12 @@ interface ContactProps{
     name: string,
     email: string,
     message: string,
-    valBtn: string
+    valBtn: string,
+    valText: string,
+    valTxtBtn: string
 }
 
-export default function Contact({name, email, message, valBtn, } : ContactProps) {
+export default function Contact({name, email, message, valBtn, valText, valTxtBtn} : ContactProps) {
 
     const [showPopup, setShowPopup] = useState(false);
 
@@ -61,14 +63,6 @@ export default function Contact({name, email, message, valBtn, } : ContactProps)
         setShowPopup(false);
       };
 
-      const dataPopup = {
-        icon: 'icon-ok',
-        val: 'Your message has been sent',
-        valBtn: 'Close',
-        icnBTn: 'btn-primary',
-        onClose: handleClosePopup
-      }
-   
     return (
         <>
             <div className="form-block">
@@ -120,7 +114,7 @@ export default function Contact({name, email, message, valBtn, } : ContactProps)
                 </div>
             </div>
 
-            {showPopup && <Popup {...dataPopup} onClose={handleClosePopup} />}
+            {showPopup && <Popup icon="icon-checkmark" val={valText} valTxtBtn={valTxtBtn} icnBTn="btn-close" onClose={handleClosePopup} />}
         </>
          
     )
