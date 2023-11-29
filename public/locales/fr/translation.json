@@ -58,7 +58,9 @@
     "name": "Nom",
     "email": "Email",
     "message": "Message",
-    "valBtn": "Envoyer"
+    "valBtn": "Envoyer",
+    "popupVal": "Votre message a bien été prise en compte!",
+    "valTxtBtn": "Valider"
   },
   "footer":{
     "title": "Suivez-moi",
