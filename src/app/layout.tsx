@@ -9,6 +9,17 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Andriamahay IRIMANANA | Portfolio | Developer Frontend',
   description: "Passionate Front-End Developer with a flair for creating seamless, user-centric web experiences. Transforming ideas into captivating interfaces through a blend of creativity and cutting-edge technologies. Let's build the future of the web together!",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  }
 }
 type LayoutProps = {
   children: React.ReactNode;
