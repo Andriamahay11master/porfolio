@@ -15,7 +15,7 @@ export default function BlockInfo({$title, $desc, $linkBtn, $valBtn} : BlockInfo
         <div className="block-info">
             <h2 className="title-h2 block-info-title">{$title}</h2>
             <p className='block-info-desc' dangerouslySetInnerHTML={{__html: $desc}} />
-            <Link href={$linkBtn} className='btn btn-primary'>{$valBtn}</Link>
+            <Link href={$linkBtn} className='btn btn-primary' title='Info link'>{$valBtn}</Link>
         </div>
     )
   }
