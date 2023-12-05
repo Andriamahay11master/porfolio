@@ -19,12 +19,12 @@ export default function Project({$title, $desc, $btn, $linkBtn, $srcImage, $widt
     return (
         <div className="project-content">
             <div className="project-col">
-                <Image className="project-img" src={$srcImage} width={$width} height={$height} alt={$altImage} loading="lazy" />
+                <Image className="project-img" src={$srcImage} width={$width} height={$height} alt={$altImage} loading="lazy" title='project image'/>
             </div>
             <div className="project-col">
                 <h2 className="title-h2 project-title">{$title}</h2>
                 <p className='project-desc'>{$desc}</p>
-                <Link href={$linkBtn} className='btn btn-primary'>{$btn}</Link>
+                <Link href={$linkBtn} className='btn btn-primary' title='Project link'>{$btn}</Link>
             </div>
         </div>
     )

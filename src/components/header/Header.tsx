@@ -58,8 +58,8 @@ export default function Header({linkMenu} : HeaderProps) {
                     <div className="headerTopContent">
                         <div className="headerTopCol">
                             <div className="header-reseau-sociaux">
-                                <Link className="header-rs-link" href="https://wwww.facebook.fr" target='_blank'><i className="icon-fb"></i></Link>
-                                <Link className="header-rs-link" href="https://www.linkedin.com/in/andriamahay-henikaja-irimanana/" target='_blank'><i className="icon-linkedin"></i></Link>
+                                <Link className="header-rs-link" href="https://wwww.facebook.fr" target='_blank' title='Profil Facebook'><i className="icon-fb"></i></Link>
+                                <Link className="header-rs-link" href="https://www.linkedin.com/in/andriamahay-henikaja-irimanana/" target='_blank' title='Profil LinkedIn'><i className="icon-linkedin"></i></Link>
                             </div>
                         </div>
                         <div className="headerTopCol">
@@ -77,18 +77,18 @@ export default function Header({linkMenu} : HeaderProps) {
             <div className="headerIntern"> 
                 <div className="container-transverse">
                     <div className="cntLogoMobile">
-                            <Link href="/#home">
+                            <Link href="/#home" title='Ancre to top'>
                                 <figure>
-                                    <Image src="/images/Mahay.jpg" alt="Logo Site" width={200} height={200}/>
+                                    <Image src="/images/Mahay.jpg" alt="Logo Site" width={200} height={200} title='Mahay image'/>
                                 </figure>
                                 <span className='cntLogo-text'>IRIMANANA Henikaja Andriamahay</span>
                             </Link>
                     </div>
                     <div className={`headerInternContent${navbarOpen ? ' show-menu' : ''}`}>
                         <div className="cntlogo">
-                            <Link href="/">
+                            <Link href="/" title='Ancre to top'>
                                 <figure>
-                                    <Image src="/images/Mahay.jpg" alt="Logo Site" width={200} height={200}/>
+                                    <Image src="/images/Mahay.jpg" alt="Logo Site" width={200} height={200} title='Mahay image'/>
                                 </figure>
                                 <span className='cntLogo-text'>IRIMANANA Henikaja Andriamahay</span>
                             </Link>
@@ -105,7 +105,7 @@ export default function Header({linkMenu} : HeaderProps) {
                                                     <Link
                                                         className={isActive ? 'cntNav-link active' : 'cntNav-link'}
                                                         href={link.href}
-                                                        onClick={closeMenu} locale="en">
+                                                        onClick={closeMenu} locale="en" title='Link menu'>
                                                         {link.name}
                                                     </Link>
                                                 </li>
@@ -119,8 +119,8 @@ export default function Header({linkMenu} : HeaderProps) {
 
                         <div className="block-bottom-mobile">
                             <div className="header-reseau-sociaux">
-                                <Link className="header-rs-link" href="https://www.facebook.com" target='_blank'><i className="icon-fb"></i></Link>
-                                <Link className="header-rs-link" href="https://www.linkedin.com/in/andriamahay-henikaja-irimanana/" target='_blank'><i className="icon-linkedin"></i></Link>
+                                <Link className="header-rs-link" href="https://www.facebook.com" target='_blank' title='Profil Facebook'><i className="icon-fb"></i></Link>
+                                <Link className="header-rs-link" href="https://www.linkedin.com/in/andriamahay-henikaja-irimanana/" target='_blank' title='Profil LinkedIn'><i className="icon-linkedin"></i></Link>
                             </div>
                             <div className="list-language">
                                 <button className={`list-language-link ${!langMobile ? 'active' : ''}`} onClick={() => changeLanguageMobile('en') }>EN</button>

@@ -23,10 +23,10 @@ export default function Footer({desc, title, copyright} : FooterProps) {
                     <div className="titleFooter">{title}</div>
                     <div className="listLink">
                         <div className="itemLink">
-                            <Link href="https://www.facebook.fr" target='_blank' aria-label="Profil Facebook d'Andriamahay Henikaja Irimanana"><i className="icon-footer icon-fb"></i></Link>
+                            <Link href="https://www.facebook.fr" target='_blank' aria-label="Profil Facebook d'Andriamahay Henikaja Irimanana" title='Profil Facebook'><i className="icon-footer icon-fb"></i></Link>
                         </div>
                         <div className="itemLink">
-                            <Link href="https://www.linkedin.com/in/andriamahay-henikaja-irimanana/" target='_blank' aria-label="Profil LinkedIn d'Andriamahay Henikaja Irimanana"><i className="icon-footer icon-linkedin"></i></Link>
+                            <Link href="https://www.linkedin.com/in/andriamahay-henikaja-irimanana/" target='_blank' aria-label="Profil LinkedIn d'Andriamahay Henikaja Irimanana" title='Profil LinkedIn'><i className="icon-footer icon-linkedin"></i></Link>
                         </div>
                     </div>
                 </div>
