@@ -1,0 +1,8 @@
+# Block all crawlers for /node_modules
+User-agent: *
+Disallow: /.next
+Disallow: /node_modules
+
+# Allow all crawlers
+User-agent: *
+Allow: /

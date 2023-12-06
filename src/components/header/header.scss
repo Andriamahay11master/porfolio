@@ -5,6 +5,7 @@
     width: 100%;
     z-index: 101;
     background: #fff;
+    box-shadow: 0 3px 16px -8px rgba(#000, 0.6);
     &--fixed {
         position: fixed;
         top: 0;
@@ -46,6 +47,8 @@
     .headerTop{
         padding: 6px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+        position: relative;
+        z-index: 3;
         @include max(1200px){
             display: none;
         }
@@ -56,17 +59,20 @@
         }
         .dropdown-language{
             padding-right: 20px;
-            a{
+            position: relative;
+            button{
                 text-decoration: none;
                 color: $grey-4A;
                 font-size: 12px;
+                text-transform: uppercase;
             }
             .dropdown-default{
                 position: relative;
+                width: 20px;
                 &::after{
                     content: '';
                     position: absolute;
-                    top:6px;
+                    top:5px;
                     margin-left: 5px;
                     width: 0; 
                     height: 0; 
@@ -77,6 +83,25 @@
             }
             .dropdown-language-list{
                 display: none;
+                &.show-dropdown{
+                    display: block;
+                    position: absolute;
+                    border-radius: 2px;
+                    padding: 5px;
+                    background: $white-f7;
+                    margin-top: 2px;
+                }
+                li{
+                    &:first-child{
+                        margin-bottom: 2px;
+                    }
+                    .dropdown-link{
+                        transition: all 0.3s ease;
+                        &:hover{
+                            color: rgba($grey, 0.8);
+                        }
+                    }
+                }
             }
         }
         .headerTopCol{
@@ -93,9 +118,11 @@
     padding: 15px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.20);
     position: relative;
+    z-index: 2;
     @include max(1200px){
         border-bottom: none;
         padding: 13px 0;
+        z-index: initial;
     }
     @include max(768px){
         padding: 10px 0;
@@ -283,7 +310,7 @@
                 font-weight: 300;
                 text-decoration: none;
                 &.active{
-                    font-weight: normal;
+                    font-weight: 600;
                 }
             }
         }

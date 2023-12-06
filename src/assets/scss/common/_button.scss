@@ -1,8 +1,7 @@
 .btn {
-  padding: 10px 20px;
-  font-family: $font-family;
+  padding: 15px 40px;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
   cursor: pointer;
@@ -35,7 +34,6 @@
 
   &.btn-primary {
     background: $color-primary;
-    padding: 15px 30px;
     color: #FFF;
     font-weight: 600;
     font-size: 17px;

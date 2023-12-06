@@ -1,0 +1,30 @@
+@import "../../assets/scss/common/variable";
+@import "../../assets/scss/common/mixins";
+
+.project-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    margin-bottom: 40px;
+    @include max(575px){
+        grid-template-columns: 100%;
+        row-gap: 20px;
+    }
+    .title-h2, .project-desc{
+        margin-bottom: 15px;
+    }
+    .project-col{
+        &:last-child{
+            padding-top: 75px;
+            @include max(1200px){
+                padding-top: 40px;
+            }
+            @include max(768px){
+                padding-top: 20px;
+            }
+        }
+    }
+    .project-img{
+        mix-blend-mode: multiply;
+    }
+}

@@ -1,0 +1,56 @@
+@import "../../assets/scss/common/variable";
+@import "../../assets/scss/common/mixins";
+
+.form-block{
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 100px;
+    @include max(768px){
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+}
+.form-content{
+    padding: 50px;
+    background: #FFF;
+    border-radius: 3px;
+    @include max(768px){
+        padding: 50px 30px;
+    }
+    .form-group{
+        margin-bottom: 20px;
+        &.form-group-btn{
+            margin-bottom: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    label{
+        display: block;
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        text-transform: capitalize;
+    }
+    .form-control{
+        width: 100%;
+        border-radius: 4px;
+        background: $white-f7;
+        border: 1px solid $grey;
+        padding: 10px 15px;
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+        &.error{
+            border: 1px solid $red;
+        }
+    }
+    .btn-primary{
+        text-transform: uppercase;
+    }
+    .error-message{
+        font-size: 12px;
+        color: $red;
+    }
+}

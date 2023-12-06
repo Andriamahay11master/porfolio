@@ -1,0 +1,43 @@
+@import "../../assets/scss/common/variable";
+@import "../../assets/scss/common/mixins";
+
+.banner{
+    height: calc(100vh - 116px);
+    position: relative; 
+    overflow: hidden;
+    @include max(768px){
+        height: calc(100vh - 75px);
+    }
+    .banner-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .banner-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        @include max(575px){
+            min-width: 320px;
+        }
+        .banner-title, .banner-desc{
+            color: #fff;
+        }
+        .banner-title{  
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+        .banner-desc{
+            margin-bottom: 25px;
+            font-size: 20px;
+            @include max(1440px){
+              font-size: 18px;
+            }
+        }
+        .btn-primary{
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<mjml>
+  <mj-body width="600px">
+    <!--Pulse header-->
+    <mj-section css-class="pulse-header" background-color="#336699" padding-left="30px" padding-right="30px" padding-bottom="20px">
+      <mj-column css-class="pulse-col-left" width="50%">
+        <!-- First column content -->
+        <!-- <mj-image css-class="logo-pulse" align="left" width="179px" src="https://zupimages.net/up/22/31/nr8g.png" padding="0"/> -->
+        <mj-text font-size="32px" font-family="Arial" line-height="35px" font-weight="700" color="#FFF" padding="0" padding-bottom="10px">IHA</mj-text>    
+      </mj-column>
+      <mj-column css-class="pulse-col-right" width="50%">
+    </mj-column>
+    </mj-section>
+    <!--/Pulse header-->
+    
+    <!--Content-->
+    <mj-section css-class="pulse-header" padding-left="30px" padding-right="30px" padding-bottom="20px" border-left="1px solid #EBEBEB" border-right="1px solid #EBEBEB">
+        <mj-column>
+            <mj-text font-size="16px" font-family="Arial" line-height="20px" font-weight="400" color="#000" padding="0" padding-bottom="10px">Cher(e) [Nom du destinataire],</mj-text>
+            <mj-text font-size="16px" font-family="Arial" line-height="20px" font-weight="400" color="#000" padding="0" padding-bottom="10px">Je tiens à vous remercier sincèrement d'avoir soumis le formulaire sur mon site. J'ai bien reçu votre demande et je l'apprécie grandement.</mj-text>
+            <mj-text font-size="16px" font-family="Arial" line-height="20px" font-weight="400" color="#000" padding="0" padding-bottom="10px">Voici un récapitulatif des informations que vous avez fournies :</mj-text>
+            <mj-text font-size="16px" font-family="Arial" line-height="20px" font-weight="400" color="#000" padding="0" padding-bottom="10px">Actuellement, j'examine les détails que vous avez fournis et je m'efforcerai de traiter votre demande dans les plus brefs délais. Si j'ai besoin de plus d'informations, je vous contacterai à l'adresse e-mail que vous avez fournie.</mj-text>
+            <mj-text font-size="16px" font-family="Arial" line-height="20px" font-weight="400" color="#000" padding="0" padding-bottom="10px"><strong>Nom :</strong> [Votre nom]<br/> <strong>E-mail :</strong> [Votre adresse e-mail]<br/><strong>Téléphone :</strong> [Numéro de téléphone]<br/><strong>Message :</strong> [Contenu du message]</mj-text>
+            <mj-text font-size="16px" font-family="Arial" line-height="20px" font-weight="400" color="#000" padding="0" padding-bottom="10px">Je tiens à vous assurer que votre satisfaction est ma priorité absolue. Si vous avez des questions supplémentaires ou si vous souhaitez apporter des modifications à votre demande, n'hésitez pas à répondre à cet e-mail.</mj-text>
+            <mj-text font-size="16px" font-family="Arial" line-height="20px" font-weight="400" color="#000" padding="0" padding-bottom="20px">Merci encore de votre confiance.</mj-text>
+            <mj-text font-size="16px" font-family="Arial" line-height="20px" font-weight="400" color="#000" padding="0">Cordialement, <br/><br/>IRIMANANANA <br/>Henikaja Andriamahay <br/>+261 34 38 866 66 <br/><a href="mailto:hirimanana@yahoo.fr" style="color: #336699; text-decoration: underline;"></a>hirimanana@yahoo.fr</mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!--Content-->
+
+    </mj-body>
+</mjml>
