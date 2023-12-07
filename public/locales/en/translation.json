@@ -18,7 +18,7 @@
   },
   "aboutTitle": {
     "title": "About me",
-    "desc": "On this page, you'll discover additional details about me, my professional activities, and my current proficiency, primarily focused on programming and technology."
+    "desc": "In this section, you'll find a detailed overview of my passion for front-end development and the skills I bring to the table. I'm dedicated to creating visually appealing and functional interfaces, with expertise in various tools and technologies. Explore to discover more about my commitment to delivering high-quality front-end solutions."
   },
   "blockInfo":{
     "title": "Front-End Developer",
@@ -28,31 +28,31 @@
   "skillsTitle":"My skills",
   "aboutProjects": {
     "title": "Projects",
-    "desc": "On this page, you'll discover a selection of both personal and client projects that I've developed, and each project comes with its own dedicated case study."
+    "desc": "In this section, explore my personal achievements for a tangible glimpse into my expertise."
   },
   "projet":{
     "1":{
-      "title": "Wilsonport",
-      "desc": "Wilsonport is a multiservice logistics and transport company and I created their website from scratch using the frontend tools I know.",
+      "title": "First IMMO",
+      "desc": "The website of First IMMO, available at www.firstimmo.mg, is a platform specialized in real estate in Madagascar. With a user-friendly interface, the site provides a comprehensive range of services for individuals seeking real estate properties, whether for rent or purchase.",
       "valBtn": "See project",
       "altImage": "Project image 1"
     },
     "2":{
-      "title": "Boreal Coffee Clone",
-      "desc": "I re-created the frontend of Boreal Coffee's official web app because I got attracted to their beautiful UI. It was a great experience for me to build the entire frontend.",
+      "title": "SANKO",
+      "desc": "I created the landing page for the company SANKO. SANKO is an insurance brokerage and organizational consulting firm based in Madagascar and operating across the African continent.",
       "valBtn": "See project",
       "altImage": "Project image 2"
     },
     "3":{
-      "title": "Crown Template",
-      "desc": "Crown is a web template that I created targeting the restaurant and food industry which anyone can use to present their business online.",
+      "title": "TOA",
+      "desc": "TOA is a market leader in the telecommunications tower infrastructure. I developed the front end of the showcase website with the Elementor team.",
       "valBtn": "See project",
       "altImage": "Project image 3"
     }
   },
   "contact":{
     "title": "Contact",
-    "desc": "Don't hesitate to reach out by filling out the form below, and I'll respond to you at my earliest convenience."
+    "desc": "Feel free to get in touch by completing the form below, and I'll promptly respond at your earliest convenience."
   },
   "form":{
     "name": "name",
