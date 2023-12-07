@@ -24,7 +24,7 @@ export default function Project({$title, $desc, $btn, $linkBtn, $srcImage, $widt
             <div className="project-col">
                 <h2 className="title-h2 project-title">{$title}</h2>
                 <p className='project-desc'>{$desc}</p>
-                <Link href={$linkBtn} className='btn btn-primary' title='Project link'>{$btn}</Link>
+                <Link href={$linkBtn} className='btn btn-primary' title='Project link' target='_blank'>{$btn}</Link>
             </div>
         </div>
     )
