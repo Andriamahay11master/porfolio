@@ -41,7 +41,7 @@ export default function Home() {
     $desc: `${t('banner.description')}`,
     $btn: `${t('banner.textButton')}`,
     $linkBtn: '/#projects',
-    $srcImage: '/images/banner/banner.jpg',
+    $srcImage: '/images/banner/banner-2023.jpg',
     $width: 1200,
     $height: 600,
     $altImage: `${t('banner.altImage')}`
@@ -104,8 +104,8 @@ export default function Home() {
     $title: `${t('projet.1.title')}`,
     $desc: `${t('projet.1.desc')}`,
     $btn: `${t('projet.1.valBtn')}`,
-    $linkBtn: 'https://www.stellar-ix.com/',
-    $srcImage: '/images/project/project1.jpg',
+    $linkBtn: 'https://www.firstimmo.mg/',
+    $srcImage: '/images/project/fimmo.jpg',
     $width: 1600,
     $height: 941,
     $altImage: `${t('projet.1.altImage')}`
@@ -115,8 +115,8 @@ export default function Home() {
     $title: `${t('projet.2.title')}`,
     $desc: `${t('projet.2.desc')}`,
     $btn: `${t('projet.2.valBtn')}`,
-    $linkBtn: 'https://harmony-saintouen.com/fr',
-    $srcImage: '/images/project/project2.jpg',
+    $linkBtn: 'https://www.sanko-africa.com/',
+    $srcImage: '/images/project/sanko.jpg',
     $width: 1600,
     $height: 941,
     $altImage: `${t('projet.2.altImage')}`
@@ -127,7 +127,7 @@ export default function Home() {
     $desc: `${t('projet.3.desc')}`,
     $btn: `${t('projet.3.valBtn')}`,
     $linkBtn: 'https://towercoofafrica.com/',
-    $srcImage: '/images/project/project3.jpg',
+    $srcImage: '/images/project/toa.jpg',
     $width: 1600,
     $height: 941,
     $altImage: `${t('projet.3.altImage')}`
