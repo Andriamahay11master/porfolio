@@ -18,7 +18,7 @@
   },
   "aboutTitle": {
     "title": "À propos de moi",
-    "desc": "Sur cette page, vous trouverez plus d'informations me concernant, mes activités professionnelles, et mes compétences actuelles, principalement dans les domaines de la programmation et de la technologie."
+    "desc": "Dans cette section, vous trouverez une présentation détaillée de ma passion pour le développement front-end et des compétences que je mets en œuvre. Je m'engage à créer des interfaces visuellement attrayantes et fonctionnelles, avec une expertise dans divers outils et technologies. Explorez pour en savoir plus sur mon engagement à fournir des solutions front-end de haute qualité"
   },
   "blockInfo":{
     "title": "Développeur web front-end",
@@ -28,24 +28,24 @@
   "skillsTitle":"Mes compétences",
   "aboutProjects": {
     "title": "Projets",
-    "desc": "Vous trouverez ici quelques-uns des projets personnels et clients que j'ai créés, chacun étant accompagné d'une étude de cas détaillée."
+    "desc": "Dans cette section, explorez mes réalisations personnelles pour obtenir un aperçu concret de mon expertise."
   },
   "projet":{
     "1":{
-      "title": "Wilsonport",
-      "desc": "Wilsonport est une entreprise de logistique et de transport multiservices, et j'ai créé leur site web de A à Z en utilisant les outils de développement frontend que je maîtrise.",
+      "title": "FIrst IMMO",
+      "desc": "Le site internet de First IMMO, accessible via www.firstimmo.mg, se consacre exclusivement à l'immobilier à Madagascar. Doté d'une interface conviviale, il propose une variété étendue de services destinés à ceux en quête de biens immobiliers, que ce soit pour la location ou l'acquisition.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 1"
     },
     "2":{
-      "title": "Boreal Coffee Clone",
-      "desc": " J'ai recréé le frontend de l'application web officielle de Boreal Coffee parce que j'ai été attiré par leur superbe interface utilisateur. Ce fut une excellente expérience pour moi de construire l'intégralité du frontend.",
+      "title": "Sanko",
+      "desc": " J'ai créé le landing page de la société SANKO. SANKO est une entreprise de courtage d'assurances et de conseil en organisation basée à Madagascar et présente sur le continent Afrique.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 2"
     },
     "3":{
-      "title": "Crown Template",
-      "desc": "Crown est un modèle de site web que j'ai créé ciblant l'industrie de la restauration et de l'alimentation, que quiconque peut utiliser pour présenter son activité en ligne.",
+      "title": "TOA",
+      "desc": "TOA est une entreprise leader sur le marché de l'infrastructure des tours de télécommunication. J'ai développé avec l'équipe Elementor le front du site vitrine",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 3"
     }
