@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Andriamahay IRIMANANA | Portfolio | Developer Frontend',
-  description: "Passionate front-end developer with 4 years of experience creating responsive and user-friendly web applications. Proficient in HTML, CSS, and JavaScript, with a focus on modern frameworks such as React.js. Skilled in translating design concepts into efficient, clean, and maintainable code. Adept at collaborating with cross-functional teams to deliver high-quality digital experiences. Explore my portfolio to see how I bring creativity and technical expertise together to build engaging websites.",
+  description: "Experienced front-end developer with a passion for crafting responsive and user-friendly web applications. Proficient in HTML, CSS, and JavaScript, emphasizing modern frameworks like React.js. Expert in transforming design concepts into efficient, clean, and maintainable code. Collaborative team player, skilled in delivering high-quality digital experiences. Check out my portfolio to witness the fusion of creativity and technical expertise in building compelling websites.",
   keywords: 'Andriamahay, Andriamahay IRIMANANA, Andriamahay IRIMANANA Portfolio, Andriamahay IRIMANANA Developer Frontend',
   robots: {
     index: true,
