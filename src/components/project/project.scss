@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 50px;
-    margin-bottom: 40px;
+    padding: 0 20px;
     @include max(575px){
         grid-template-columns: 100%;
         row-gap: 20px;
@@ -24,5 +24,30 @@
     .project-img{
         mix-blend-mode: multiply;
         border-radius: 20px;
+    }
+}
+
+//carousel list
+.carousel{
+    display: flex;
+    flex-direction: column-reverse;
+    &.carousel-slider{
+        min-height: 330px!important;
+        @include max(768px){
+            min-height: auto!important;
+        }
+    }
+    .control-dots{
+        position: static!important;
+        .dot{
+            box-shadow: none!important;
+            width: 10px!important;
+            height: 10px!important;
+            opacity: 1!important;
+            margin: 0 4px!important;
+            &.selected{
+                background: $color-primary;
+            }
+        }
     }
 }

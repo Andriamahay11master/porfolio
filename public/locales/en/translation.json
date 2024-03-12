@@ -48,6 +48,12 @@
       "desc": "TOA is a market leader in the telecommunications tower infrastructure. I developed the front end of the showcase website with the Elementor team.",
       "valBtn": "See project",
       "altImage": "Project image 3"
+    },
+    "4":{
+      "title": "Mind money",
+      "desc": "Mind Money is a web application for tracking expenses. I developed it with Next JS, HTML5, CSS3 and PostgreSQL.",
+      "valBtn": "See project",
+      "altImage": "Project image 4"
     }
   },
   "contact":{
