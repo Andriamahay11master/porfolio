@@ -48,6 +48,12 @@
       "desc": "TOA est une entreprise leader sur le marché de l'infrastructure des tours de télécommunication. J'ai développé avec l'équipe Elementor le front du site vitrine",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 3"
+    },
+    "4":{
+      "title": "Mind money",
+      "desc": "Mind Money est une application web pour suivre, analyser et optimiser vos depenses. Réalisé avec Next JS, HTML5, CSS3 et PostgreSQL.",
+      "valBtn": "Voir le projet",
+      "altImage": "Image Projet 4"
     }
   },
   "contact":{

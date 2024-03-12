@@ -4,6 +4,7 @@ import SectionTitle from '@/components/sectionTitle/SectionTitle'
 import BlockInfo from '@/components/blockInfo/BlockInfo'
 import ListSkills from '@/components/listSkills/ListSkills'
 import Project from '@/components/project/Project'
+import ListProject from '@/components/project/ListProject'
 import Contact from '@/components/contact/Contact'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
@@ -133,6 +134,23 @@ export default function Home() {
     $altImage: `${t('projet.3.altImage')}`
   }
 
+  const dataProject4 = {
+    $title: `${t('projet.4.title')}`,
+    $desc: `${t('projet.4.desc')}`,
+    $btn: `${t('projet.4.valBtn')}`,
+    $linkBtn: 'https://money-mind-flax.vercel.app/',
+    $srcImage: '/images/project/mindmoney.jpg',
+    $width: 1600,
+    $height: 941,
+    $altImage: `${t('projet.4.altImage')}`
+  }
+
+  const dataProjectList = [
+    dataProject1,
+    dataProject2,
+    dataProject3,
+    dataProject4
+  ]
 
   //Data page form
   const dataForm = {
@@ -168,9 +186,7 @@ export default function Home() {
         <div className="main-section project-section">
           <div className="container">
             <div className="project-block">
-              <Project {...dataProject1}/>
-              <Project {...dataProject2}/>
-              <Project {...dataProject3}/>
+              <ListProject list={dataProjectList} />
             </div>
           </div>
         </div>
