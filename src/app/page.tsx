@@ -96,6 +96,7 @@ export default function Home() {
       'Figma',
       'Git',
       'SQL',
+      'Firebase',
       'Office 365',
     ]
   }
@@ -145,11 +146,23 @@ export default function Home() {
     $altImage: `${t('projet.4.altImage')}`
   }
 
+  const dataProject5 = {
+    $title: `${t('projet.5.title')}`,
+    $desc: `${t('projet.5.desc')}`,
+    $btn: `${t('projet.5.valBtn')}`,
+    $linkBtn: 'https://taskmanager-eight-sigma.vercel.app/',
+    $srcImage: '/images/project/taskmanager.jpg',
+    $width: 1600,
+    $height: 941,
+    $altImage: `${t('projet.5.altImage')}`
+  }
+
   const dataProjectList = [
     dataProject1,
     dataProject2,
     dataProject3,
-    dataProject4
+    dataProject4,
+    dataProject5
   ]
 
   //Data page form
