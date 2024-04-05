@@ -54,6 +54,12 @@
       "desc": "Mind Money est une application web pour suivre, analyser et optimiser vos depenses. Réalisé avec Next JS, HTML5, CSS3 et PostgreSQL.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 4"
+    },
+    "5":{
+      "title": "Taskmanager",
+      "desc": "Taskmanager est une application accessible via un navigateur web. Cela signifie que les utilisateurs peuvent y accéder depuis n'importe quel appareil connecté à Internet, qu'il s'agisse d'un ordinateur de bureau, d'un ordinateur portable, d'une tablette ou même d'un smartphone. Réalisé avec React JS, HTML5, CSS3 et Firebase.",
+      "valBtn": "Voir le projet",
+      "altImage": "Image Projet 5"
     }
   },
   "contact":{
