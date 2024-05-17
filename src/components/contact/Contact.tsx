@@ -5,7 +5,7 @@ import './contact.scss';
 import { z, ZodError } from 'zod';
 import Popup from '../popup/Popup';
 import { db } from '../../app/firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, query, orderBy, limit, getDocs } from 'firebase/firestore';
 
 interface ContactProps{
     name: string,
@@ -19,6 +19,7 @@ interface ContactProps{
 export default function Contact({name, email, message, valBtn, valText, valTxtBtn} : ContactProps) {
 
     const [showPopup, setShowPopup] = useState(false);
+    const [idcontact, setIdcontact] = useState(0);
 
     const contactSchema = z.object({
         name: z.string().min(3, {message: "Name must be at least 3 characters"}),
@@ -35,6 +36,22 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
 
     const [formErrors, setFormErrors] = useState<ZodError | null>(null);
     
+      //get last ID inserted in document contacts
+    const fetchLastId = async () => {
+        try {
+            const q = query(collection(db, "contacts"), orderBy("id", "desc"), limit(1)); // Limit to 1 document
+            const querySnapshot = await getDocs(q);
+            if (!querySnapshot.empty) {
+                const lastId = querySnapshot.docs[0].data().id;
+                setIdcontact(lastId + 1); // Set the new ID as the last ID + 1
+            } else {
+                setIdcontact(1); // If no documents found, set ID to 1
+            }
+        } catch (error) {
+            console.error("Error fetching last ID: ", error);
+        }
+    }
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
         // Clear error class for the current input field
@@ -53,7 +70,13 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
         event.preventDefault();
         try {
             contactSchema.parse(formData);
-            await addDoc(collection(db, 'contacts'), formData);
+            await addDoc(collection(db, 'contacts'), 
+            {
+                id: idcontact,
+                name: formData.name,
+                email: formData.email,
+                message: formData.message
+            });
             setShowPopup(true);
             setFormData({
                 name: '',
@@ -73,6 +96,10 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
     const handleClosePopup = () => {
         setShowPopup(false);
       };
+
+      React.useEffect(() => {
+        fetchLastId();
+      }, []);
 
     return (
         <>
