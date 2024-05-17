@@ -6,6 +6,7 @@ import { z, ZodError } from 'zod';
 import Popup from '../popup/Popup';
 import { db } from '../../app/firebase';
 import { collection, addDoc, query, orderBy, limit, getDocs } from 'firebase/firestore';
+import Loader from '../loader/Loader';
 
 interface ContactProps{
     name: string,
@@ -20,6 +21,7 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
 
     const [showPopup, setShowPopup] = useState(false);
     const [idcontact, setIdcontact] = useState(0);
+    const [loading, setLoading] = useState(false);
 
     const contactSchema = z.object({
         name: z.string().min(3, {message: "Name must be at least 3 characters"}),
@@ -67,7 +69,6 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setFormErrors(null);
-        event.preventDefault();
         try {
             contactSchema.parse(formData);
             await addDoc(collection(db, 'contacts'), 
@@ -77,7 +78,11 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
                 email: formData.email,
                 message: formData.message
             });
-            setShowPopup(true);
+            setLoading(true);
+            setTimeout(() => {
+                setLoading(false);
+                setShowPopup(true);
+            }, 1500);
             setFormData({
                 name: '',
                 email: '',
@@ -152,6 +157,7 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
                 </div>
             </div>
 
+            {loading && <Loader/>}
             {showPopup && <Popup icon="icon-checkmark" val={valText} valTxtBtn={valTxtBtn} icnBTn="btn-close" onClose={handleClosePopup} />}
         </>
          
