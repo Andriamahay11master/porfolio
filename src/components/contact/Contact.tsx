@@ -4,6 +4,8 @@ import { useState } from 'react';
 import './contact.scss';
 import { z, ZodError } from 'zod';
 import Popup from '../popup/Popup';
+import { db } from '../../app/firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 interface ContactProps{
     name: string,
@@ -32,7 +34,7 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
     });
 
     const [formErrors, setFormErrors] = useState<ZodError | null>(null);
-
+    
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
         // Clear error class for the current input field
@@ -48,19 +50,25 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setFormErrors(null);
+        event.preventDefault();
         try {
             contactSchema.parse(formData);
-            console.log('Form submitted successfully', formData);
+            await addDoc(collection(db, 'contacts'), formData);
             setShowPopup(true);
-        } catch (error) {
-            if (error instanceof ZodError) {
-                setFormErrors(error);
+            setFormData({
+                name: '',
+                email: '',
+                message: ''
+            });
+        } catch (err) {
+            if (err instanceof ZodError) {
+                setFormErrors(err);
             }
             else{
-                console.error('Error sending email:', error);
+                console.error('Error adding document: ', err);
             }
         }
-    }
+      };
 
     const handleClosePopup = () => {
         setShowPopup(false);
