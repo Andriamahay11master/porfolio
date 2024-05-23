@@ -25,7 +25,7 @@ export const sendEmail = functions.firestore.document("contacts/{docId}").onCrea
     text: `Hello ${data.name},\n\nThank you for reaching out. We have received your message: "${data.message}"\n\nBest Regards,\nYour Company`
   };
 
-  return transporter.sendMail(mailOptions, (error, info) => {
+  return transporter.sendMail(mailOptions, (error:any, info:any) => {
     if (error) {
       console.error("Error sending email:", error);
     } else {
