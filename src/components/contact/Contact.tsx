@@ -4,8 +4,6 @@ import { useState } from 'react';
 import './contact.scss';
 import { z, ZodError } from 'zod';
 import Popup from '../popup/Popup';
-import { db } from '../../app/firebase';
-import { collection, addDoc, query, orderBy, limit, getDocs } from 'firebase/firestore';
 import Loader from '../loader/Loader';
 
 interface ContactProps{
@@ -20,7 +18,6 @@ interface ContactProps{
 export default function Contact({name, email, message, valBtn, valText, valTxtBtn} : ContactProps) {
 
     const [showPopup, setShowPopup] = useState(false);
-    const [idcontact, setIdcontact] = useState(0);
     const [loading, setLoading] = useState(false);
 
     const contactSchema = z.object({
@@ -37,22 +34,6 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
     });
 
     const [formErrors, setFormErrors] = useState<ZodError | null>(null);
-    
-      //get last ID inserted in document contacts
-    const fetchLastId = async () => {
-        try {
-            const q = query(collection(db, "contacts"), orderBy("id", "desc"), limit(1)); // Limit to 1 document
-            const querySnapshot = await getDocs(q);
-            if (!querySnapshot.empty) {
-                const lastId = querySnapshot.docs[0].data().id;
-                setIdcontact(lastId + 1); // Set the new ID as the last ID + 1
-            } else {
-                setIdcontact(1); // If no documents found, set ID to 1
-            }
-        } catch (error) {
-            console.error("Error fetching last ID: ", error);
-        }
-    }
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -71,18 +52,32 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
         setFormErrors(null);
         try {
             contactSchema.parse(formData);
-            await addDoc(collection(db, 'contacts'), 
-            {
-                id: idcontact,
-                name: formData.name,
-                email: formData.email,
-                message: formData.message
-            });
+            // Afficher le loader
             setLoading(true);
+    
+            // Envoyer les données au backend
+            const response = await fetch('http://localhost:5000/send-email', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+    
+            if (!response.ok) {
+                throw new Error(`Server error: ${response.status}`);
+            }
+    
+            const data = await response.json();
+    
+            console.log('Success:', data);
+    
             setTimeout(() => {
                 setLoading(false);
                 setShowPopup(true);
             }, 1500);
+    
             setFormData({
                 name: '',
                 email: '',
@@ -91,20 +86,18 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
         } catch (err) {
             if (err instanceof ZodError) {
                 setFormErrors(err);
+            } else {
+                console.error('Error sending email: ', err);
             }
-            else{
-                console.error('Error adding document: ', err);
-            }
+            // Masquer le loader en cas d'erreur
+            setLoading(false);
         }
-      };
+    };
+    
 
     const handleClosePopup = () => {
         setShowPopup(false);
       };
-
-      React.useEffect(() => {
-        fetchLastId();
-      }, []);
 
     return (
         <>
