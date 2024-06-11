@@ -13,9 +13,9 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.post('/send-email', async (req, res) => {
-    const { name, email, message } = req.body;
+    const { name, email: senderEmail, message } = req.body;
 
-    if (!name || !email || !message) {
+    if (!name || !senderEmail || !message) {
         return res.status(400).json({ error: 'All fields are required' });
     }
 
@@ -33,8 +33,8 @@ app.post('/send-email', async (req, res) => {
     });
 
     const mailOptions = {
-        from: email,
-        to: process.env.ETHEREAL_USER || testAccount.user,
+        from: senderEmail, // Utilisez l'adresse email de l'expéditeur
+        to: `${process.env.ETHEREAL_USER || testAccount.user}, ${process.env.REAL_RECIPIENT}, ${senderEmail}`, // Ajoutez l'adresse email de l'expéditeur à la liste des destinataires
         subject: `Message from ${name}`,
         text: message,
     };
