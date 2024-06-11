@@ -9,29 +9,34 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());  // <-- Assurez-vous que CORS est configuré correctement
+app.use(cors());
 app.use(bodyParser.json());
 
-app.post('/send-email', (req, res) => {
+app.post('/send-email', async (req, res) => {
     const { name, email, message } = req.body;
 
     if (!name || !email || !message) {
         return res.status(400).json({ error: 'All fields are required' });
     }
 
+    // Configurer Nodemailer avec Ethereal
+    let testAccount = await nodemailer.createTestAccount();
+
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'smtp.ethereal.email',
+        port: 587,
+        secure: false, // true for 465, false for other ports
         auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
-        }
+            user: process.env.ETHEREAL_USER || testAccount.user, // Utilisez l'utilisateur Ethereal
+            pass: process.env.ETHEREAL_PASS || testAccount.pass, // Utilisez le mot de passe Ethereal
+        },
     });
 
     const mailOptions = {
         from: email,
-        to: process.env.EMAIL_USER,
+        to: process.env.ETHEREAL_USER || testAccount.user,
         subject: `Message from ${name}`,
-        text: message
+        text: message,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
@@ -39,16 +44,15 @@ app.post('/send-email', (req, res) => {
             console.error('Error sending email:', error);
             return res.status(500).json({ error: 'Failed to send email' });
         }
-        console.log('Email sent:', info.response);
-        res.status(200).json({ message: 'Email sent: ' + info.response });
+        console.log('Email sent:', nodemailer.getTestMessageUrl(info));
+        res.status(200).json({ message: 'Email sent', url: nodemailer.getTestMessageUrl(info) });
     });
+});
+
+app.get('/', (req, res) => {
+    res.send('Server is running');
 });
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
-});
-
-
-app.get('/', (req, res) => {
-    res.send('Server is running');
 });
