@@ -19,42 +19,26 @@ app.post('/send-email', async (req, res) => {
         return res.status(400).json({ error: 'All fields are required' });
     }
 
-    // Configurer Nodemailer avec Ethereal
-    let testAccount = await nodemailer.createTestAccount();
-
     const transporter = nodemailer.createTransport({
-        host: 'sandbox.smtp.mailtrap.io',
-        port: 587,
-        secure: false, // true for 465, false for other ports
+        host: "sandbox.smtp.mailtrap.io",
+        port: 2525,
         auth: {
-            user: process.env.ETHEREAL_USER || testAccount.user, // Utilisez l'utilisateur Ethereal
-            pass: process.env.ETHEREAL_PASS || testAccount.pass, // Utilisez le mot de passe Ethereal
-        },
-    });
+          user: "2d09831ad53d0a",
+          pass: "ea5ec9f418d129"
+        }
+      });
 
     // Option d'envoi de mail à l'utilisateur Ethereal et au destinataire réel
     const mailOptionsToAdmin = {
-        from: email, // Utilisez l'adresse email de l'expéditeur
-        to: `${process.env.ETHEREAL_USER || testAccount.user}, ${process.env.REAL_RECIPIENT}`, // Admins
+        from: 'irimananaandriamahay@gmail.com', // Utilisez l'adresse email de l'expéditeur
+        to: email, // Admins
         subject: `Message from ${name}`,
         text: message,
-        replyTo: email,
     };
 
-    // Option d'envoi de mail à l'expéditeur
-    const mailOptionsToSender = {
-        from: process.env.ETHEREAL_USER || testAccount.user, // Utilisez l'adresse email Ethereal
-        to: email, // Expéditeur
-        subject: `Copy of your message to ${process.env.REAL_RECIPIENT}`,
-        text: message,
-    };
-
+    // Option d'envoi de mail à l'utilisateur Ethereal
     try {
         await transporter.sendMail(mailOptionsToAdmin);
-        console.log('Email sent to admin:', process.env.REAL_RECIPIENT);
-
-        await transporter.sendMail(mailOptionsToSender);
-        console.log('Email sent to sender:', email);
 
         res.status(200).json({ message: 'Emails sent successfully' });
     } catch (error) {
