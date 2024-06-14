@@ -36,9 +36,20 @@ app.post('/send-email', async (req, res) => {
         text: message,
     };
 
+    // Option d'envoi de mail à l'utilisateur pour confirmer la réception
+    const mailOptionsToUser = {
+        from: 'irimananaandriamahay@gmail.com', // Utilisez une adresse email générique de votre domaine
+        to: email,
+        subject: 'Confirmation de réception',
+        text: `Bonjour ${name},\n\nNous avons bien reçu votre message :\n\n"${message}"\n\nMerci de nous avoir contactés !\n\nCordialement,\nL'équipe de Mon Site`,
+    };
+
     // Option d'envoi de mail à l'utilisateur Ethereal
     try {
         await transporter.sendMail(mailOptionsToAdmin);
+
+        // Envoyer l'email de confirmation à l'utilisateur
+        await transporter.sendMail(mailOptionsToUser);
 
         res.status(200).json({ message: 'Emails sent successfully' });
     } catch (error) {
