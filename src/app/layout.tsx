@@ -3,14 +3,14 @@ import { Inter } from 'next/font/google'
 import './globals.scss'
 import '../assets/scss/main.scss'
 import { Analytics } from '@vercel/analytics/react'
-import { metaTitleP, metaKeyP, metaDescP,} from './dataMeta'
+import { metaTitleEn, metaTitleFr, metaDescEn, metaDescFr, metaKeyEn, metaKeyFr} from './dataMeta'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: metaTitleP,
-  description: metaDescP,
-  keywords: metaKeyP,
+  title: metaTitleEn,
+  description: metaDescEn,
+  keywords: metaKeyEn,
   robots: {
     index: true,
     follow: true,

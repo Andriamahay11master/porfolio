@@ -15,6 +15,8 @@ export default function Header({linkMenu} : HeaderProps) {
     const [langMobile, setLangMobile] = useState(false);
     const [currentHash, setCurrentHash] = useState("/#home");
 
+    //localStorage.setItem('preferredLanguage', 'en');
+
     const closeMenu = (link: string) => {
         
         return () => {
@@ -24,6 +26,13 @@ export default function Header({linkMenu} : HeaderProps) {
             }, 300);
         };
     };
+
+    useEffect(() => {
+        const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+        i18next.changeLanguage(preferredLanguage);
+        setLang(preferredLanguage === 'fr');
+        setLangMobile(preferredLanguage === 'fr');
+    }, []);
 
       useEffect(() => {
         function handleResize() {
@@ -63,6 +72,7 @@ export default function Header({linkMenu} : HeaderProps) {
             setLangMobile(false);
         }
         setNavbarOpen(false);
+        localStorage.setItem('preferredLanguage', lg);
     }
 
     return (
