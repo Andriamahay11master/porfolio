@@ -15,12 +15,16 @@ export default function Header({linkMenu} : HeaderProps) {
     const [lang, setLang] = useState(false);
     const [langMobile, setLangMobile] = useState(false);
     const pathname = usePathname();
-    
-    const closeMenu = () => {
-        setTimeout(() => {
-            setNavbarOpen(false);
-        }, 300)
-      }
+    const [currentHash, setCurrentHash] = useState('/');
+
+    const closeMenu = (link: string) => {
+        return () => {
+            setCurrentHash(link);
+            setTimeout(() => {
+                setNavbarOpen(false);
+            }, 300);
+        };
+    };
 
       useEffect(() => {
         function handleResize() {
@@ -30,15 +34,15 @@ export default function Header({linkMenu} : HeaderProps) {
         }
  
         handleResize();
- 
+
         window.addEventListener("resize", handleResize);
  
         return () => {
             window.removeEventListener("resize", handleResize);
         };
-    }, [navbarOpen]);
+    }, [navbarOpen,currentHash]);
 
-
+    
     const changeLanguageMobile = (lg:string) => {
         if(lg === 'fr') {
             i18next.changeLanguage('fr');
@@ -97,18 +101,16 @@ export default function Header({linkMenu} : HeaderProps) {
                                 <div className="cntNavBox"> 
                                     <ul className="cntNav">
                                         {linkMenu.map((link) => {
-                                            const isActive = pathname === link.href
-                                    
+                                            const isActive = currentHash === link.href;
                                             return (
                                                 <li key={link.name}>
                                                     <Link
                                                         className={isActive ? 'cntNav-link active' : 'cntNav-link'}
                                                         href={link.href}
-                                                        onClick={closeMenu} locale="en" title='Link menu'>
+                                                        onClick={closeMenu(link.href)} locale="en" title='Link menu'>
                                                         {link.name}
                                                     </Link>
                                                 </li>
-                                            
                                             )
                                         })}
                                     </ul> 
