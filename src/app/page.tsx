@@ -70,10 +70,12 @@ export default function Home() {
 
   //Data Block Info
   const dataBlockInfo = {
-    $title: `${t('blockInfo.title')}`,
-    $desc: `${t('blockInfo.desc')}`,
-    $linkBtn: '/#projects',
-    $valBtn: `${t('blockInfo.valBtn')}`
+    title: `${t('blockInfo.title')}`,
+    desc: `${t('blockInfo.desc')}`,
+    linkBtn: '/#projects',
+    valBtn: `${t('blockInfo.valBtn')}`,
+    image:'/images/Mahay-profil.jpg',
+    altImage: 'andriamahay-irimanana-image'
   }
 
   //Data list skills
@@ -89,12 +91,13 @@ export default function Home() {
       'Tailwind',
       'Bootstrap',
       'Jquery',
-      'React',
-      'NextJS',
-      'VueJS',
+      'Typescript',
+      'React JS',
+      'Next JS',
       'Figma',
       'Git',
       'SQL',
+      'PostGreSQL',
       'Firebase',
       'Office 365',
     ]
