@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'
 import './header.scss';
 import Image from 'next/image';
 import i18next from 'i18next';
@@ -14,10 +13,10 @@ export default function Header({linkMenu} : HeaderProps) {
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [lang, setLang] = useState(false);
     const [langMobile, setLangMobile] = useState(false);
-    const pathname = usePathname();
-    const [currentHash, setCurrentHash] = useState('/');
+    const [currentHash, setCurrentHash] = useState("/#home");
 
     const closeMenu = (link: string) => {
+        
         return () => {
             setCurrentHash(link);
             setTimeout(() => {
@@ -41,6 +40,18 @@ export default function Header({linkMenu} : HeaderProps) {
             window.removeEventListener("resize", handleResize);
         };
     }, [navbarOpen,currentHash]);
+
+    useEffect(() => {
+        const handleHashChange = () => {
+            setCurrentHash(window.location.hash);
+        };
+
+        window.addEventListener("hashchange", handleHashChange);
+
+        return () => {
+            window.removeEventListener("hashchange", handleHashChange);
+        };
+    }, []);
 
     
     const changeLanguageMobile = (lg:string) => {
