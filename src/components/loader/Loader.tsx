@@ -1,5 +1,6 @@
 import './loader.scss';
 
+//Composant loader
 export default function Loader() {
     return (
         <div className="loader">
