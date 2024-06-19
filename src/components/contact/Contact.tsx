@@ -5,6 +5,7 @@ import './contact.scss';
 import { z, ZodError } from 'zod';
 import Popup from '../popup/Popup';
 import Loader from '../loader/Loader';
+import emailjs from '@emailjs/browser';
 
 interface ContactProps{
     name: string,
@@ -19,6 +20,7 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
 
     const [showPopup, setShowPopup] = useState(false);
     const [loading, setLoading] = useState(false);
+    const form = React.useRef<HTMLFormElement>(null);
 
     const contactSchema = z.object({
         name: z.string().min(3, {message: "Name must be at least 3 characters"}),
@@ -56,23 +58,19 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
             setLoading(true);
     
             // Envoyer les données au backend
-            const response = await fetch('http://localhost:5000/send-email', {
-                method: 'POST',
-                mode: 'cors',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
-    
-            if (!response.ok) {
-                throw new Error(`Server error: ${response.status}`);
+            if(form.current){
+                emailjs
+                .sendForm('service_sqvkqf3', 'template_lejiuq3', '#formContact')
+                .then(
+                    () => {
+                    console.log('SUCCESS!');
+                    },
+                    (error) => {
+                    console.log('FAILED...', error.text);
+                    },
+                );
             }
-    
-            const data = await response.json();
-    
-            console.log('Success:', data);
-    
+            
             setTimeout(() => {
                 setLoading(false);
                 setShowPopup(true);
@@ -103,7 +101,7 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
         <>
             <div className="form-block">
                 <div className="container">
-                    <form className="form-content" onSubmit={handleSubmit}>
+                    <form ref={form} className="form-content" onSubmit={handleSubmit} id='formContact'>
                     <div className="form-group">
                         <label htmlFor="name">{name}</label>
                         <input
