@@ -92,12 +92,12 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
             // Masquer le loader en cas d'erreur
             setLoading(false);
         }
-    };
+    }
     
 
     const handleClosePopup = () => {
         setShowPopup(false);
-      };
+    }
 
     return (
         <>
