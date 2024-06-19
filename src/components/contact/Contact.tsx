@@ -4,6 +4,7 @@ import { useState } from 'react';
 import './contact.scss';
 import { z, ZodError } from 'zod';
 import Popup from '../popup/Popup';
+import Loader from '../loader/Loader';
 
 interface ContactProps{
     name: string,
@@ -17,6 +18,7 @@ interface ContactProps{
 export default function Contact({name, email, message, valBtn, valText, valTxtBtn} : ContactProps) {
 
     const [showPopup, setShowPopup] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const contactSchema = z.object({
         name: z.string().min(3, {message: "Name must be at least 3 characters"}),
@@ -50,17 +52,48 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
         setFormErrors(null);
         try {
             contactSchema.parse(formData);
-            console.log('Form submitted successfully', formData);
-            setShowPopup(true);
-        } catch (error) {
-            if (error instanceof ZodError) {
-                setFormErrors(error);
+            // Afficher le loader
+            setLoading(true);
+    
+            // Envoyer les données au backend
+            const response = await fetch('http://localhost:5000/send-email', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+    
+            if (!response.ok) {
+                throw new Error(`Server error: ${response.status}`);
             }
-            else{
-                console.error('Error sending email:', error);
+    
+            const data = await response.json();
+    
+            console.log('Success:', data);
+    
+            setTimeout(() => {
+                setLoading(false);
+                setShowPopup(true);
+            }, 1500);
+    
+            setFormData({
+                name: '',
+                email: '',
+                message: ''
+            });
+        } catch (err) {
+            if (err instanceof ZodError) {
+                setFormErrors(err);
+            } else {
+                console.error('Error sending email: ', err);
             }
+            // Masquer le loader en cas d'erreur
+            setLoading(false);
         }
-    }
+    };
+    
 
     const handleClosePopup = () => {
         setShowPopup(false);
@@ -117,6 +150,7 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
                 </div>
             </div>
 
+            {loading && <Loader/>}
             {showPopup && <Popup icon="icon-checkmark" val={valText} valTxtBtn={valTxtBtn} icnBTn="btn-close" onClose={handleClosePopup} />}
         </>
          

@@ -1,5 +1,10 @@
 {
   "title": "Welcome to react using react-i18next",
+  "meta": {
+    "title":"Andriamahay IRIMANANA | Portfolio | Developer Frontend",
+    "description":"Experienced front-end developer specializing in responsive, user-friendly web apps. Skilled in HTML, CSS, JavaScript, and React.js. Expert in transforming designs into clean, maintainable code. Collaborative team player focused on high-quality digital experiences. Explore my portfolio to see my work.",
+    "keywords":"Andriamahay, Andriamahay IRIMANANA, Andriamahay IRIMANANA Portfolio, Andriamahay IRIMANANA Developer Frontend"
+  },
   "description": {
     "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
     "part2": "Switch language between english and german using buttons above."

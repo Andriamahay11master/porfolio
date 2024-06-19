@@ -1,8 +1,6 @@
-"use client"
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'
 import './header.scss';
 import Image from 'next/image';
 import i18next from 'i18next';
@@ -15,13 +13,26 @@ export default function Header({linkMenu} : HeaderProps) {
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [lang, setLang] = useState(false);
     const [langMobile, setLangMobile] = useState(false);
-    const pathname = usePathname();
-    
-    const closeMenu = () => {
-        setTimeout(() => {
-            setNavbarOpen(false);
-        }, 300)
-      }
+    const [currentHash, setCurrentHash] = useState("/#home");
+
+    //localStorage.setItem('preferredLanguage', 'en');
+
+    const closeMenu = (link: string) => {
+        
+        return () => {
+            setCurrentHash(link);
+            setTimeout(() => {
+                setNavbarOpen(false);
+            }, 300);
+        };
+    };
+
+    useEffect(() => {
+        const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+        i18next.changeLanguage(preferredLanguage);
+        setLang(preferredLanguage === 'fr');
+        setLangMobile(preferredLanguage === 'fr');
+    }, []);
 
       useEffect(() => {
         function handleResize() {
@@ -31,15 +42,27 @@ export default function Header({linkMenu} : HeaderProps) {
         }
  
         handleResize();
- 
+
         window.addEventListener("resize", handleResize);
  
         return () => {
             window.removeEventListener("resize", handleResize);
         };
-    }, [navbarOpen]);
+    }, [navbarOpen,currentHash]);
 
+    useEffect(() => {
+        const handleHashChange = () => {
+            setCurrentHash(window.location.hash);
+        };
 
+        window.addEventListener("hashchange", handleHashChange);
+
+        return () => {
+            window.removeEventListener("hashchange", handleHashChange);
+        };
+    }, []);
+
+    
     const changeLanguageMobile = (lg:string) => {
         if(lg === 'fr') {
             i18next.changeLanguage('fr');
@@ -49,6 +72,7 @@ export default function Header({linkMenu} : HeaderProps) {
             setLangMobile(false);
         }
         setNavbarOpen(false);
+        localStorage.setItem('preferredLanguage', lg);
     }
 
     return (
@@ -79,7 +103,7 @@ export default function Header({linkMenu} : HeaderProps) {
                     <div className="cntLogoMobile">
                             <Link href="/#home" title='Ancre to top'>
                                 <figure>
-                                    <Image src="/images/Mahay.jpg" alt="Logo Site" width={200} height={200} title='Mahay image'/>
+                                    <Image src="/images/Mahay-profil.jpg" alt="Logo Site" width={200} height={200} title='Mahay image'/>
                                 </figure>
                                 <span className='cntLogo-text'>IRIMANANA Henikaja Andriamahay</span>
                             </Link>
@@ -88,7 +112,7 @@ export default function Header({linkMenu} : HeaderProps) {
                         <div className="cntlogo">
                             <Link href="/" title='Ancre to top'>
                                 <figure>
-                                    <Image src="/images/Mahay.jpg" alt="Logo Site" width={200} height={200} title='Mahay image'/>
+                                    <Image src="/images/Mahay-profil.jpg" alt="Logo Site" width={200} height={200} title='Mahay image'/>
                                 </figure>
                                 <span className='cntLogo-text'>IRIMANANA Henikaja Andriamahay</span>
                             </Link>
@@ -98,18 +122,16 @@ export default function Header({linkMenu} : HeaderProps) {
                                 <div className="cntNavBox"> 
                                     <ul className="cntNav">
                                         {linkMenu.map((link) => {
-                                            const isActive = pathname === link.href
-                                    
+                                            const isActive = currentHash === link.href;
                                             return (
                                                 <li key={link.name}>
                                                     <Link
                                                         className={isActive ? 'cntNav-link active' : 'cntNav-link'}
                                                         href={link.href}
-                                                        onClick={closeMenu} locale="en" title='Link menu'>
+                                                        onClick={closeMenu(link.href)} locale="en" title='Link menu'>
                                                         {link.name}
                                                     </Link>
                                                 </li>
-                                            
                                             )
                                         })}
                                     </ul> 

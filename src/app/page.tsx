@@ -3,7 +3,6 @@ import Banner from '@/components/banner/Banner'
 import SectionTitle from '@/components/sectionTitle/SectionTitle'
 import BlockInfo from '@/components/blockInfo/BlockInfo'
 import ListSkills from '@/components/listSkills/ListSkills'
-import Project from '@/components/project/Project'
 import ListProject from '@/components/project/ListProject'
 import Contact from '@/components/contact/Contact'
 import Header from '@/components/header/Header'
@@ -71,10 +70,12 @@ export default function Home() {
 
   //Data Block Info
   const dataBlockInfo = {
-    $title: `${t('blockInfo.title')}`,
-    $desc: `${t('blockInfo.desc')}`,
-    $linkBtn: '/#projects',
-    $valBtn: `${t('blockInfo.valBtn')}`
+    title: `${t('blockInfo.title')}`,
+    desc: `${t('blockInfo.desc')}`,
+    linkBtn: '/#projects',
+    valBtn: `${t('blockInfo.valBtn')}`,
+    image:'/images/Mahay-profil.jpg',
+    altImage: 'andriamahay-irimanana-image'
   }
 
   //Data list skills
@@ -90,12 +91,13 @@ export default function Home() {
       'Tailwind',
       'Bootstrap',
       'Jquery',
-      'React',
-      'NextJS',
-      'VueJS',
+      'Typescript',
+      'React JS',
+      'Next JS',
       'Figma',
       'Git',
       'SQL',
+      'PostGreSQL',
       'Firebase',
       'Office 365',
     ]
