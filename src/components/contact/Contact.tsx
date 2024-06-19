@@ -57,7 +57,8 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
         // Envoyer les données au backend
         if(form.current){
             emailjs
-            .sendForm('service_sqvkqf3', 'template_lejiuq3', form.current, {publicKey: 'exV4X3eZrgvZ7atEu'})
+            .send('service_sqvkqf3', 'template_lejiuq3', formData, 'exV4X3eZrgvZ7atEu')
+            // .sendForm('service_sqvkqf3', 'template_lejiuq3', form.current, {publicKey: 'exV4X3eZrgvZ7atEu'})
             .then(
                 () => {
                 console.log('SUCCESS!');
