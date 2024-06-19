@@ -52,44 +52,41 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setFormErrors(null);
-        try {
-            contactSchema.parse(formData);
-            // Afficher le loader
-            setLoading(true);
-    
-            // Envoyer les données au backend
-            if(form.current){
-                emailjs
-                .sendForm('service_sqvkqf3', 'template_lejiuq3', '#formContact')
-                .then(
-                    () => {
-                    console.log('SUCCESS!');
-                    },
-                    (error) => {
-                    console.log('FAILED...', error.text);
-                    },
-                );
-            }
+        contactSchema.parse(formData);
             
-            setTimeout(() => {
-                setLoading(false);
-                setShowPopup(true);
-            }, 1500);
-    
-            setFormData({
-                name: '',
-                email: '',
-                message: ''
-            });
-        } catch (err) {
-            if (err instanceof ZodError) {
-                setFormErrors(err);
-            } else {
-                console.error('Error sending email: ', err);
-            }
-            // Masquer le loader en cas d'erreur
-            setLoading(false);
-        }
+        // Envoyer les données au backend
+        if(form.current){
+            emailjs
+            .sendForm('service_sqvkqf3', 'template_lejiuq3', form.current, {publicKey: 'exV4X3eZrgvZ7atEu'})
+            .then(
+                () => {
+                console.log('SUCCESS!');
+                // Afficher le loader
+                setLoading(true);
+
+                setTimeout(() => {
+                    setLoading(false);
+                    setShowPopup(true);
+                }, 1500);
+        
+                setFormData({
+                    name: '',
+                    email: '',
+                    message: ''
+                });
+
+                },
+                (err) => {
+                if (err instanceof ZodError) {
+                    setFormErrors(err);
+                } else {
+                    console.error('Error sending email: ', err);
+                }
+                // Masquer le loader en cas d'erreur
+                setLoading(false);  
+                },
+            );
+        } 
     };
     
 
