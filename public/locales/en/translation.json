@@ -65,6 +65,12 @@
       "desc": "Taskmanager is a web-based application, accessible via a web browser. This means that users can access it from any Internet-connected device, whether it's a desktop computer, laptop, tablet, or even a smartphone. Developed with React JS, HTML5, CSS3, and Firebase.",
       "valBtn": "See project",
       "altImage": "Project image 5"
+    },
+    "6":{
+      "title": "Greengascar",
+      "desc": "GreenGascar is Madagascar's first carbon footprint calculator. It helps users measure and reduce their environmental impact by analyzing energy consumption, transportation, and waste. The site was developed with React JS, HTML5, CSS3, and Wordpress.",
+      "valBtn": "See project",
+      "altImage": "Project image 6"
     }
   },
   "contact":{
