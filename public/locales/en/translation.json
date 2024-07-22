@@ -71,6 +71,12 @@
       "desc": "GreenGascar is Madagascar's first carbon footprint calculator. It helps users measure and reduce their environmental impact by analyzing energy consumption, transportation, and waste. The site was developed with React JS, HTML5, CSS3, and Wordpress.",
       "valBtn": "See project",
       "altImage": "Project image 6"
+    },
+    "7":{
+      "title": "Travelian",
+      "desc": "Travelian is a travel-dedicated website providing information on popular destinations like Norway and Switzerland. It offers travel guides, itineraries, special offers, and a blog on travel experiences. The site also features a photo gallery of destinations and traveler testimonials. The one-page site is built using Next.js, HTML5, and CSS3.",
+      "valBtn": "See project",
+      "altImage": "Project image 7"
     }
   },
   "contact":{

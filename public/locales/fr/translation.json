@@ -71,6 +71,12 @@
       "desc": "GreenGascar est le premier calculateur d'empreinte carbone pour les Malgaches. Il permet de mesurer et de réduire son impact environnemental en analysant la consommation d'énergie, les transports et les déchets. Le site a été réalisé avec Next JS, HTML5, CSS3 et Wordpress côté back.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 6"
+    },
+    "7":{
+      "title": "Travelian",
+      "desc": "Travelian est un site dédié aux voyages, offrant des informations sur diverses destinations populaires comme la Norvège et la Suisse. Il propose des guides de voyage, des plans de voyage, des offres spéciales, ainsi qu'un blog sur des expériences de voyage. Le site met également en avant une galerie de photos de destinations et des témoignages de voyageurs. La One page a été réalisé avec Next JS, HTML5, CSS3.",
+      "valBtn": "Voir le projet",
+      "altImage": "Image Projet 7"
     }
   },
   "contact":{

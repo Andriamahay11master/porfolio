@@ -170,13 +170,25 @@ export default function Home() {
     $altImage: `${t('projet.6.altImage')}`
   }
 
+  const dataProject7 = {
+    $title: `${t('projet.7.title')}`,
+    $desc: `${t('projet.7.desc')}`,
+    $btn: `${t('projet.7.valBtn')}`,
+    $linkBtn: 'https://greengascar.pulse.mg/',
+    $srcImage: '/images/project/travelian.jpg',
+    $width: 1600,
+    $height: 941,
+    $altImage: `${t('projet.7.altImage')}`
+  }
+
   const dataProjectList = [
     dataProject1,
     dataProject2,
     dataProject3,
     dataProject4,
     dataProject5,
-    dataProject6
+    dataProject6,
+    dataProject7
   ]
 
   //Data page form
