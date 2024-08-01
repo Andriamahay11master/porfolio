@@ -1,18 +1,39 @@
 .btn {
-  padding: 15px 40px;
+  padding: 20px 40px;
   border: none;
-  border-radius: 4px;
+  border-radius: 7px;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
-
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
   @media (max-width: 1440px) {
     font-size: 15px;
   }
+  &:before{
+    content: "";
+    width: 0;
+    opacity: 0;
+    height: 400px;
+    background: #FFF;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);;
+    transform: rotate(10deg);
+    z-index: -1;
+    display: inline-block;
+    position: absolute;
+    left: -50px;
+    top: -20px;
+  }
 
   &:hover {
-    cursor: pointer;
+    &::before{
+      width: 200px;
+      opacity: 1;
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
   }
 
   &.btn-outline-black {
@@ -44,7 +65,10 @@
     }
 
     &:hover {
-      background: $color-secondary;
+      &::before{
+        background: #FFF;
+      }
+      color: $color-primary;
     }
 
     &.btn-primary-icon {
