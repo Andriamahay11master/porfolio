@@ -118,12 +118,16 @@ h4, .title-h4{
 
 .container {
   margin: auto;
-  width: 1200px;
+  width: 1400px;
   @include max(1440px) {
-    width: auto;
+    width: 1200px;
+  }
+  @include max(1200px){
+    width: 900px;
   }
   @include max(992px) {
     margin: 0 15px;
+    width: auto;
     max-width: 992px;
   }
 

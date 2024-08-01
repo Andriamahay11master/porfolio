@@ -2,11 +2,9 @@
 @import "../../assets/scss/common/mixins";
 
 .form-block{
-    max-width: 700px;
     margin: auto;
     margin-bottom: 100px;
     @include max(768px){
-        max-width: 100%;
         margin-bottom: 50px;
     }
 }
@@ -14,7 +12,10 @@
     padding: 50px;
     background: #FFF;
     border-radius: 3px;
+    max-width: 700px;
+    margin: auto;
     @include max(768px){
+        max-width: 100%;
         padding: 50px 30px;
     }
     .form-group{

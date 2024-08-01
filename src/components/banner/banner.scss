@@ -21,6 +21,9 @@
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
         max-width: 55vw;
         overflow: hidden;
+        @include max(1200px){
+            max-width: 60vw;
+        }
         @include max(575px){
             min-width: 320px;
             left: 12%;
