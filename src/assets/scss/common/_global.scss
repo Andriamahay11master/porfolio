@@ -121,10 +121,10 @@ h4, .title-h4{
   width: 1200px;
   @include max(1440px) {
     width: auto;
-    margin: 0 50px;
   }
-  @include max(768px) {
+  @include max(992px) {
     margin: 0 15px;
+    max-width: 992px;
   }
 
 }
@@ -134,7 +134,7 @@ h4, .title-h4{
   @include max(1440px){
     margin: 0 50px;
   }
-  @include max(768px){
+  @include max(992px){
     margin: 0 15px;
   }
 }
