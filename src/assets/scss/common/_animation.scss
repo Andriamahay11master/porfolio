@@ -12,3 +12,24 @@
       stroke-dashoffset: -124;
     }
   }
+
+  
+/* The type and erase effect */
+@keyframes typing-erase {
+  0% { width: 0 }
+  50%, 70% { width: 100% }
+  90%, 100% { width: 0 }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #fff }
+}
+
+@keyframes slide-text {
+  0%, 25% { transform: translateY(-1rem) }
+  25% ,50% { transform: translateY(-3.5rem) }
+  50%, 75% { transform: translateY(-6rem) }
+  75%, 100% { transform: translateY(6rem) }
+}
