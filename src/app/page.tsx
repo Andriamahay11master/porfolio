@@ -41,7 +41,7 @@ export default function Home() {
     $desc: `${t('banner.description')}`,
     $btn: `${t('banner.textButton')}`,
     $linkBtn: '/#projects',
-    $srcImage: '/images/banner/banner-2023.jpg',
+    $srcImage: '/images/banner/Programming-background.jpg',
     $width: 1200,
     $height: 600,
     $altImage: `${t('banner.altImage')}`
