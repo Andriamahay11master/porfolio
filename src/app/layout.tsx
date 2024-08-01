@@ -4,6 +4,7 @@ import './globals.scss'
 import '../assets/scss/main.scss'
 import { Analytics } from '@vercel/analytics/react'
 import { metaTitleEn, metaTitleFr, metaDescEn, metaDescFr, metaKeyEn, metaKeyFr} from './dataMeta'
+import SmoothScrolling from '@/components/smooth/Smoothscroling'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,7 +35,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
-          {children}
+          <SmoothScrolling>
+            {children}
+          </SmoothScrolling>
           <Analytics />
       </body>
     </html>
