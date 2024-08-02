@@ -18,6 +18,14 @@
         max-width: 100%;
         padding: 50px 30px;
     }
+    .form-group-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        @include max(768px){
+            grid-template-columns: 100%;
+        }
+    }
     .form-group{
         margin-bottom: 20px;
         &.form-group-btn{
@@ -28,20 +36,22 @@
     }
     label{
         display: block;
-        font-size: 13px;
-        font-weight: 700;
+        font-size: 14px;
+        font-weight: 400;
         margin-bottom: 5px;
+        color: $grey-4A;
         text-transform: capitalize;
     }
     .form-control{
         width: 100%;
-        border-radius: 4px;
-        background: $white-f7;
-        border: 1px solid $grey;
+        background: rgba($white-f7,0.5);
+        border-bottom: 1px solid $grey;
         padding: 10px 15px;
+        transition: all 0.5s ease-in-out;
         &:focus{
             outline: none;
             box-shadow: none;
+            background: $white-f7;
         }
         &.error{
             border: 1px solid $red;

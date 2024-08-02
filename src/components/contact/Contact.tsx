@@ -100,48 +100,50 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
             <div className="form-block">
                 <div className="container">
                     <form ref={form} className="form-content" onSubmit={handleSubmit} id='formContact'>
-                    <div className="form-group">
-                        <label htmlFor="name">{name}</label>
-                        <input
-                        className={`form-control ${formErrors?.issues.find((issue) => issue.path[0] === 'name') ? 'error' : ''}`}
-                        type="text"
-                        name="name"
-                        id="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        />
-                        {formErrors?.issues.map((issue) => issue.path[0] === 'name' && <p className="error-message" key={issue.message}>{issue.message}</p>)}
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email">{email}</label>
-                        <input
-                        className={`form-control ${formErrors?.issues.find((issue) => issue.path[0] === 'email') ? 'error' : ''}`}
-                        type="email"
-                        name="email"
-                        id="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        />
-                        {formErrors?.issues.map((issue) => issue.path[0] === 'email' && <p className="error-message" key={issue.message}>{issue.message}</p>)}
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="message">{message}</label>
-                        <textarea
-                        className={`form-control textarea-control ${formErrors?.issues.find((issue) => issue.path[0] === 'message') ? 'error' : ''}`}
-                        name="message"
-                        id="message"
-                        cols={30}
-                        rows={10}
-                        value={formData.message}
-                        onChange={handleChange}
-                        />
-                        {formErrors?.issues.map((issue) => issue.path[0] === 'message' && <p className="error-message" key={issue.message}>{issue.message}</p>)}
-                    </div>
-                    <div className="form-group form-group-btn">
-                        <button type="submit" className="btn btn-primary btn-send" aria-label="submit form">
-                        {valBtn}
-                        </button>
-                    </div>
+                        <div className="form-group-content">
+                            <div className="form-group">
+                                <label htmlFor="name">{name}</label>
+                                <input
+                                className={`form-control ${formErrors?.issues.find((issue) => issue.path[0] === 'name') ? 'error' : ''}`}
+                                type="text"
+                                name="name"
+                                id="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                />
+                                {formErrors?.issues.map((issue) => issue.path[0] === 'name' && <p className="error-message" key={issue.message}>{issue.message}</p>)}
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="email">{email}</label>
+                                <input
+                                className={`form-control ${formErrors?.issues.find((issue) => issue.path[0] === 'email') ? 'error' : ''}`}
+                                type="email"
+                                name="email"
+                                id="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                />
+                                {formErrors?.issues.map((issue) => issue.path[0] === 'email' && <p className="error-message" key={issue.message}>{issue.message}</p>)}
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="message">{message}</label>
+                            <textarea
+                            className={`form-control textarea-control ${formErrors?.issues.find((issue) => issue.path[0] === 'message') ? 'error' : ''}`}
+                            name="message"
+                            id="message"
+                            cols={30}
+                            rows={10}
+                            value={formData.message}
+                            onChange={handleChange}
+                            />
+                            {formErrors?.issues.map((issue) => issue.path[0] === 'message' && <p className="error-message" key={issue.message}>{issue.message}</p>)}
+                        </div>
+                        <div className="form-group form-group-btn">
+                            <button type="submit" className="btn btn-primary btn-send" aria-label="submit form">
+                            {valBtn}
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
