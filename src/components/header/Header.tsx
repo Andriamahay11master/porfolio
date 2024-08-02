@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import './header.scss';
 import Image from 'next/image';
 import i18next from 'i18next';
+import Lenis from '@studio-freight/lenis';
 
 interface HeaderProps {
     linkMenu: {name: string, href: string}[]
@@ -14,6 +15,23 @@ export default function Header({linkMenu} : HeaderProps) {
     const [lang, setLang] = useState(false);
     const [langMobile, setLangMobile] = useState(false);
     const [currentHash, setCurrentHash] = useState("/#home");
+    const lenisRef = useRef<Lenis | null>(null);
+
+    useEffect(() => {
+        const lenis = new Lenis();
+        lenisRef.current = lenis;
+
+        const raf = (time: DOMHighResTimeStamp) => {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        };
+
+        requestAnimationFrame(raf);
+
+        return () => {
+            lenis.destroy();
+        };
+    }, []);
 
     //localStorage.setItem('preferredLanguage', 'en');
 
@@ -21,6 +39,10 @@ export default function Header({linkMenu} : HeaderProps) {
         
         return () => {
             setCurrentHash(link);
+            const targetElement = document.querySelector(link.replace('/', ''));
+            if (targetElement instanceof HTMLElement && lenisRef.current) {
+                lenisRef.current.scrollTo(targetElement, { duration: 1, easing: (t) => t });
+            }
             setTimeout(() => {
                 setNavbarOpen(false);
             }, 300);
@@ -62,7 +84,6 @@ export default function Header({linkMenu} : HeaderProps) {
         };
     }, []);
 
-    
     const changeLanguageMobile = (lg:string) => {
         if(lg === 'fr') {
             i18next.changeLanguage('fr');
