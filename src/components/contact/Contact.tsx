@@ -24,6 +24,33 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
     const [showPopup, setShowPopup] = useState(false);
     const [loading, setLoading] = useState(false);
     const form = React.useRef<HTMLFormElement>(null);
+    const [isFocused, setIsFocused] = useState(false);
+    const [isFocusedEmail, setIsFocusedEmail] = useState(false);
+    const [isFocusedMessage, setIsFocusedMessage] = useState(false);
+
+    const handleFocus = () => {
+      setIsFocused(true);
+    };
+  
+    const handleBlur = () => {
+      setIsFocused(false);
+    };
+
+    const handleFocusEmail = () => {
+        setIsFocusedEmail(true);
+      };
+    
+      const handleBlurEmail = () => {
+        setIsFocusedEmail(false);
+      };
+
+      const handleFocusMessage = () => {
+        setIsFocusedMessage(true);
+      };
+    
+      const handleBlurMessage = () => {
+        setIsFocusedMessage(false);
+      };
 
     const contactSchema = z.object({
         name: z.string().min(3, {message: "Name must be at least 3 characters"}),
@@ -113,7 +140,9 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
                                 id="name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                placeholder={placeholderName}
+                                placeholder={!isFocused ? placeholderName : ''}
+                                onBlur={handleBlur}
+                                onFocus={handleFocus}
                                 />
                                 {formErrors?.issues.map((issue) => issue.path[0] === 'name' && <p className="error-message" key={issue.message}>{issue.message}</p>)}
                             </div>
@@ -126,7 +155,9 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
                                 id="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                placeholder={placeholderEmail}
+                                placeholder={!isFocusedEmail ? placeholderEmail : ''}
+                                onBlur={handleBlurEmail}
+                                onFocus={handleFocusEmail}
                                 />
                                 {formErrors?.issues.map((issue) => issue.path[0] === 'email' && <p className="error-message" key={issue.message}>{issue.message}</p>)}
                             </div>
@@ -141,7 +172,9 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
                             rows={10}
                             value={formData.message}
                             onChange={handleChange}
-                            placeholder={placeholderMessage}
+                            placeholder={!isFocusedMessage ? placeholderMessage : ''}
+                            onBlur={handleBlurMessage}
+                            onFocus={handleFocusMessage}
                             />
                             {formErrors?.issues.map((issue) => issue.path[0] === 'message' && <p className="error-message" key={issue.message}>{issue.message}</p>)}
                         </div>
