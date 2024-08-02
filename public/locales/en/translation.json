@@ -89,7 +89,10 @@
     "message": "message",
     "valBtn": "submit",
     "popupVal": "Your message has been sent!",
-    "valTxtBtn": "Validate"
+    "valTxtBtn": "Validate",
+    "placeholderName": "Enter your name",
+    "placeholderEmail": "Enter your email",
+    "placeholderMessage": "Enter your message"
   },
   "footer":{
     "title": "Follow me",

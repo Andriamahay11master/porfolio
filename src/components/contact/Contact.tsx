@@ -13,10 +13,13 @@ interface ContactProps{
     message: string,
     valBtn: string,
     valText: string,
-    valTxtBtn: string
+    valTxtBtn: string,
+    placeholderName: string,
+    placeholderEmail: string,
+    placeholderMessage: string
 }
 
-export default function Contact({name, email, message, valBtn, valText, valTxtBtn} : ContactProps) {
+export default function Contact({name, email, message, valBtn, valText, valTxtBtn, placeholderName, placeholderEmail, placeholderMessage} : ContactProps) {
 
     const [showPopup, setShowPopup] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -110,6 +113,7 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
                                 id="name"
                                 value={formData.name}
                                 onChange={handleChange}
+                                placeholder={placeholderName}
                                 />
                                 {formErrors?.issues.map((issue) => issue.path[0] === 'name' && <p className="error-message" key={issue.message}>{issue.message}</p>)}
                             </div>
@@ -122,6 +126,7 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
                                 id="email"
                                 value={formData.email}
                                 onChange={handleChange}
+                                placeholder={placeholderEmail}
                                 />
                                 {formErrors?.issues.map((issue) => issue.path[0] === 'email' && <p className="error-message" key={issue.message}>{issue.message}</p>)}
                             </div>
@@ -136,6 +141,7 @@ export default function Contact({name, email, message, valBtn, valText, valTxtBt
                             rows={10}
                             value={formData.message}
                             onChange={handleChange}
+                            placeholder={placeholderMessage}
                             />
                             {formErrors?.issues.map((issue) => issue.path[0] === 'message' && <p className="error-message" key={issue.message}>{issue.message}</p>)}
                         </div>

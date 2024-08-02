@@ -56,6 +56,10 @@
         &.error{
             border: 1px solid $red;
         }
+        &::placeholder{
+            color: rgba($grey-4A, 0.5);
+            font-size: 14px;
+        }
     }
     .btn-primary{
         text-transform: uppercase;

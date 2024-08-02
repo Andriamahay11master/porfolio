@@ -89,7 +89,10 @@
     "message": "Message",
     "valBtn": "Envoyer",
     "popupVal": "Votre message a bien été prise en compte!",
-    "valTxtBtn": "Valider"
+    "valTxtBtn": "Valider",
+    "placeholderName": "Entrez votre nom",
+    "placeholderEmail": "Entrez votre email",
+    "placeholderMessage": "Entrez votre message"
   },
   "footer":{
     "title": "Suivez-moi",

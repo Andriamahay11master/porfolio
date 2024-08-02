@@ -199,6 +199,9 @@ export default function Home() {
     valBtn: `${t('form.valBtn')}`,
     valText: `${t('form.popupVal')}`,
     valTxtBtn: `${t('form.valTxtBtn')}`,
+    placeholderName: `${t('form.placeholderName')}`,
+    placeholderEmail: `${t('form.placeholderEmail')}`,
+    placeholderMessage: `${t('form.placeholderMessage')}`
   }
 
   //data footer
