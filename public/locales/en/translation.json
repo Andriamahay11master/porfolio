@@ -1,5 +1,4 @@
 {
-  "title": "Welcome to react using react-i18next",
   "meta": {
     "title":"Andriamahay IRIMANANA | Portfolio | Developer Frontend",
     "description":"Experienced front-end developer specializing in responsive, user-friendly web apps. Skilled in HTML, CSS, JavaScript, and React.js. Expert in transforming designs into clean, maintainable code. Collaborative team player focused on high-quality digital experiences. Explore my portfolio to see my work.",
@@ -23,64 +22,64 @@
   },
   "aboutTitle": {
     "title": "About me",
-    "desc": "In this section, you'll find a detailed overview of my passion for front-end development and the skills I bring to the table. I'm dedicated to creating visually appealing and functional interfaces, with expertise in various tools and technologies. Explore to discover more about my commitment to delivering high-quality front-end solutions."
+    "desc": "In this section, I share my passion for front-end development, where each project is an opportunity to create interfaces that are both visually appealing and high-performing. With deep expertise in modern tools and technologies, I am committed to delivering top-quality front-end solutions. Discover how my dedication to innovation and attention to detail translates into exceptional user experiences."
   },
   "blockInfo":{
     "title": "Front-End Developer",
-    "desc":"👋 Hello World! I'm Mahay, a passionate front-end developer with a knack for transforming ideas into captivating digital experiences. 💻✨ <br/><br/>🚀 Armed with a creative mindset and a love for clean, efficient code, I thrive on the challenges of bringing user interfaces to life. From crafting seamless user journeys to ensuring pixel-perfect design implementation, I am dedicated to delivering web solutions that not only meet but exceed expectations. <br/><br/>🎨 My toolkit includes the latest front-end technologies such as HTML5, CSS3, and JavaScript, and I'm always eager to stay ahead of the curve with emerging trends like React.js and Vue.js. I believe in the power of responsive design, ensuring that the user experience remains flawless across devices. <br/><br/>🛠️ Whether it's optimizing website performance, enhancing interactivity, or collaborating with cross-functional teams, I'm committed to creating web applications that resonate with users and leave a lasting impression.  <br/><br/> 💡 Let's build something extraordinary together – where design meets functionality, and user satisfaction takes center stage. Feel free to reach out for collaborations, ideas, or just a good coding chat! 🚀🌐",
+    "desc":"👋 Hello World! I'm Mahay, a passionate front-end developer with a knack for transforming ideas into captivating digital experiences. 💻✨ <br/><br/>🚀 Armed with a creative mindset and a love for clean, efficient code, I thrive on the challenges of bringing user interfaces to life. From crafting seamless user journeys to ensuring pixel-perfect design implementation, I am dedicated to delivering web solutions that not only meet but exceed expectations. <br/><br/>🎨 My toolkit includes the latest front-end technologies such as HTML5, CSS3, and JavaScript, and I'm always eager to stay ahead of the curve with emerging trends like React.js and Next.js. I believe in the power of responsive design, ensuring that the user experience remains flawless across devices. <br/><br/>🛠️ Whether it's optimizing website performance, enhancing interactivity, or collaborating with cross-functional teams, I'm committed to creating web applications that resonate with users and leave a lasting impression.  <br/><br/> 💡 Let's build something extraordinary together – where design meets functionality, and user satisfaction takes center stage. Feel free to reach out for collaborations, ideas, or just a good coding chat! 🚀🌐",
     "valBtn": "See my projects"
   },
   "skillsTitle":"My skills",
   "aboutProjects": {
     "title": "Projects",
-    "desc": "In this section, explore my personal achievements for a tangible glimpse into my expertise."
+    "desc": "In this section, explore a selection of my professional and personal achievements to gain a concrete insight into my expertise."
   },
   "projet":{
     "1":{
       "title": "First IMMO",
-      "desc": "The website of First IMMO, available at www.firstimmo.mg, is a platform specialized in real estate in Madagascar. With a user-friendly interface, the site provides a comprehensive range of services for individuals seeking real estate properties, whether for rent or purchase.",
+      "desc": "The First IMMO website, focused on real estate in Madagascar, is developed using WordPress with HTML5, CSS3, SCSS, JavaScript, Gulp,and incorporates the Google Maps API. It offers a user-friendly interface and a wide range of services for property rental and acquisition.",
       "valBtn": "See project",
       "altImage": "Project image 1"
     },
     "2":{
       "title": "SANKO",
-      "desc": "I created the landing page for the company SANKO. SANKO is an insurance brokerage and organizational consulting firm based in Madagascar and operating across the African continent.",
+      "desc": "The landing page for SANKO, a brokerage and organizational consulting company based in Madagascar and active across Africa, was developed using WordPress, HTML5, CSS3, SCSS, and JavaScript",
       "valBtn": "See project",
       "altImage": "Project image 2"
     },
     "3":{
       "title": "TOA",
-      "desc": "TOA is a market leader in the telecommunications tower infrastructure. I developed the front end of the showcase website with the Elementor team.",
+      "desc": "TOA is a leader in the telecommunications tower infrastructure market. For the technology side, we utilized HTML5, CSS3, SASS, JavScript, Gulp, and Elementor on WordPress.",
       "valBtn": "See project",
       "altImage": "Project image 3"
     },
     "4":{
       "title": "Mind money",
-      "desc": "Mind Money is a web application for tracking expenses. I developed it with Next JS, HTML5, CSS3 and PostgreSQL.",
+      "desc": "Mind Money is a personal project, a web application designed to track, analyze, and optimize expenses. Users need to create an account and log in to access the application. The project was developed using Next.js, HTML5, CSS3, SCSS, TypeScript, and Firebase.",
       "valBtn": "See project",
       "altImage": "Project image 4"
     },
     "5":{
       "title": "Taskmanager",
-      "desc": "Taskmanager is a web-based application, accessible via a web browser. This means that users can access it from any Internet-connected device, whether it's a desktop computer, laptop, tablet, or even a smartphone. Developed with React JS, HTML5, CSS3, and Firebase.",
+      "desc": "Taskmanager is a personal project, a web application for managing daily tasks. It features a calendar view for tasks and includes a login section to access the application. The project was developed using React.js, HTML5, CSS3, SCSS, Typescript and Firebase.",
       "valBtn": "See project",
       "altImage": "Project image 5"
     },
     "6":{
       "title": "Greengascar",
-      "desc": "GreenGascar is Madagascar's first carbon footprint calculator. It helps users measure and reduce their environmental impact by analyzing energy consumption, transportation, and waste. The site was developed with React JS, HTML5, CSS3, and Wordpress.",
+      "desc": "GreenGascar is Madagascar's first carbon footprint calculator. It helps users measure and reduce their environmental impact by analyzing energy consumption, transportation, and waste. The site was developed with React JS, HTML5, CSS3, Typescript and Wordpress.",
       "valBtn": "See project",
       "altImage": "Project image 6"
     },
     "7":{
       "title": "Travelian",
-      "desc": "Travelian is a travel-dedicated website providing information on popular destinations like Norway and Switzerland. It offers travel guides, itineraries, special offers, and a blog on travel experiences. The site also features a photo gallery of destinations and traveler testimonials. The one-page site is built using Next.js, HTML5, and CSS3.",
+      "desc": "Travelian is a personal project, a landing page focused on the travel theme. The goal is to demonstrate that it is entirely possible to create a landing page using Next.js. The project was developed with Next.js, HTML5, CSS3, SCSS and TypeScript.",
       "valBtn": "See project",
       "altImage": "Project image 7"
     },
     "8":{
       "title": "Snake 2D",
-      "desc": "Snake 2D is a game developed using React.js, showcasing the potential of creating interactive games with this framework. The game is built with HTML, CSS, TypeScript, and utilizes the canvas element for rendering graphics. This project demonstrates how modern web technologies can be leveraged to create engaging and dynamic gaming experiences.",
+      "desc": "Snake 2D is a game developed using React.js, showcasing the potential of creating interactive games with this framework. The game is built with HTML5, CSS3, SCSS, TypeScript, and utilizes the canvas element for rendering graphics. This project demonstrates how modern web technologies can be leveraged to create engaging and dynamic gaming experiences.",
       "valBtn": "See project",
       "altImage": "Project image 8"
     }

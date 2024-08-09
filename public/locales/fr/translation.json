@@ -1,5 +1,4 @@
 {
-  "title": "Bienvenue using react-i18next",
   "meta": {
     "title":"Andriamahay IRIMANANA | Portfolio | Développeur Frontend",
     "description":"Développeur front-end expérimenté spécialisé dans les applications web réactives et conviviales. Compétent en HTML, CSS, JavaScript et React.js. Expert en transformation de designs en code propre et maintenable. Joueur d'équipe collaboratif, axé sur des expériences numériques de haute qualité. Explorez mon portfolio pour voir mon travail.",
@@ -23,64 +22,64 @@
   },
   "aboutTitle": {
     "title": "À propos de moi",
-    "desc": "Dans cette section, vous trouverez une présentation détaillée de ma passion pour le développement front-end et des compétences que je mets en œuvre. Je m'engage à créer des interfaces visuellement attrayantes et fonctionnelles, avec une expertise dans divers outils et technologies. Explorez pour en savoir plus sur mon engagement à fournir des solutions front-end de haute qualité"
+    "desc": "Dans cette section, je partage ma passion pour le développement front-end, où chaque projet est une opportunité de créer des interfaces à la fois esthétiques et performantes. Avec une expertise pointue dans les outils et technologies modernes, je m'engage à offrir des solutions front-end de qualité supérieure. Découvrez comment mon dévouement à l'innovation et au détail se traduit en expériences utilisateur exceptionnelles."
   },
   "blockInfo":{
     "title": "Développeur web front-end",
-    "desc":"👋 Bonjour le monde ! Je suis Mahay, un développeur front-end passionné avec un talent pour transformer des idées en expériences numériques captivantes. 💻✨ <br/><br/>🚀 Armé d'un esprit créatif et d'un amour pour un code propre et efficace, je prospère face aux défis de donner vie aux interfaces utilisateur. De la conception de parcours utilisateur fluides à la mise en œuvre d'un design parfaitement détaillé, je suis déterminé à fournir des solutions web qui non seulement répondent aux attentes mais les dépassent. <br/><br/>🎨 Mon arsenal comprend les dernières technologies front-end telles que HTML5, CSS3 et JavaScript, et je suis toujours désireux de rester à la pointe avec les tendances émergentes comme React.js et Vue.js. Je crois en la puissance du design réactif, garantissant que l'expérience utilisateur reste impeccable sur tous les appareils. <br/><br/>🛠️ Que ce soit pour optimiser les performances des sites web, améliorer l'interactivité, ou collaborer avec des équipes pluridisciplinaires, je m'engage à créer des applications web qui résonnent avec les utilisateurs et laissent une impression durable. <br/><br/> 💡 Construisons quelque chose d'extraordinaire ensemble - là où le design rencontre la fonctionnalité, et la satisfaction de l'utilisateur prend le devant de la scène. N'hésitez pas à me contacter pour des collaborations, des idées, ou simplement une bonne discussion sur la programmation ! 🚀🌐",
+    "desc":"👋 Bonjour le monde ! Je suis Mahay, un développeur front-end passionné avec un talent pour transformer des idées en expériences numériques captivantes. 💻✨ <br/><br/>🚀 Armé d'un esprit créatif et d'un amour pour un code propre et efficace, je prospère face aux défis de donner vie aux interfaces utilisateur. De la conception de parcours utilisateur fluides à la mise en œuvre d'un design parfaitement détaillé, je suis déterminé à fournir des solutions web qui non seulement répondent aux attentes mais les dépassent. <br/><br/>🎨 Mon arsenal comprend les dernières technologies front-end telles que HTML5, CSS3 et JavaScript, et je suis toujours désireux de rester à la pointe avec les tendances émergentes comme React.js et Next.js. Je crois en la puissance du design réactif, garantissant que l'expérience utilisateur reste impeccable sur tous les appareils. <br/><br/>🛠️ Que ce soit pour optimiser les performances des sites web, améliorer l'interactivité, ou collaborer avec des équipes pluridisciplinaires, je m'engage à créer des applications web qui résonnent avec les utilisateurs et laissent une impression durable. <br/><br/> 💡 Construisons quelque chose d'extraordinaire ensemble - là où le design rencontre la fonctionnalité, et la satisfaction de l'utilisateur prend le devant de la scène. N'hésitez pas à me contacter pour des collaborations, des idées, ou simplement une bonne discussion sur la programmation ! 🚀🌐",
     "valBtn": "Voir mes projets"
   },
   "skillsTitle":"Mes compétences",
   "aboutProjects": {
     "title": "Projets",
-    "desc": "Dans cette section, explorez mes réalisations personnelles pour obtenir un aperçu concret de mon expertise."
+    "desc": "Dans cette section, découvrez une sélection de mes réalisations professionnelles et personnelles, offrant un aperçu concret de mon expertise."
   },
   "projet":{
     "1":{
       "title": "First IMMO",
-      "desc": "Le site internet de First IMMO, accessible via www.firstimmo.mg, se consacre exclusivement à l'immobilier à Madagascar. Doté d'une interface conviviale, il propose une variété étendue de services destinés à ceux en quête de biens immobiliers, que ce soit pour la location ou l'acquisition.",
+      "desc": "Le site First IMMO, dédié à l'immobilier à Madagascar, est développé sous WordPress avec HTML5, CSS3, SCSS, JavaScript, Gulp, et intègre l'API Google Maps. Il propose une interface conviviale et une large gamme de services pour la location et l'acquisition de biens.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 1"
     },
     "2":{
       "title": "Sanko",
-      "desc": " J'ai créé le landing page de la société SANKO. SANKO est une entreprise de courtage d'assurances et de conseil en organisation basée à Madagascar et présente sur le continent Afrique.",
+      "desc": "La landing page de SANKO, une entreprise de courtage en assurances et de conseil en organisation basée à Madagascar et active sur le continent africain, a été développée avec WordPress, HTML5, CSS3, SCSS et JavaScript.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 2"
     },
     "3":{
       "title": "TOA",
-      "desc": "TOA est une entreprise leader sur le marché de l'infrastructure des tours de télécommunication. J'ai développé avec l'équipe Elementor le front du site vitrine",
+      "desc": "TOA est un leader dans le secteur des infrastructures de tours de télécommunication. Pour le développement technologique, nous avons utilisé HTML5, CSS3, SCSS, Gulp, et Elementor sur WordPress.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 3"
     },
     "4":{
       "title": "Mind money",
-      "desc": "Mind Money est une application web pour suivre, analyser et optimiser vos depenses. Réalisé avec Next JS, HTML5, CSS3 et PostgreSQL.",
+      "desc": "Mind Money est un projet personnel, une application web conçue pour suivre, analyser et optimiser les dépenses. Les utilisateurs doivent créer un compte et se connecter pour accéder à l'application. Le développement a été réalisé avec Next.js, HTML5, CSS3, SCSS, TypeScript, et Firebase.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 4"
     },
     "5":{
       "title": "Taskmanager",
-      "desc": "Taskmanager est une application accessible via un navigateur web. Cela signifie que les utilisateurs peuvent y accéder depuis n'importe quel appareil connecté à Internet, qu'il s'agisse d'un ordinateur de bureau, d'un ordinateur portable, d'une tablette ou même d'un smartphone. Réalisé avec React JS, HTML5, CSS3 et Firebase.",
+      "desc": "Taskmanager est un projet personnel, une application web pour gérer les tâches quotidiennes. Elle offre une vue des tâches via un calendrier et comprend une section de connexion pour accéder à l'application. Le projet a été développé avec React.js, HTML5, CSS3, SCSS, Typescript et Firebase.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 5"
     },
     "6":{
       "title": "Greengascar",
-      "desc": "GreenGascar est le premier calculateur d'empreinte carbone pour les Malgaches. Il permet de mesurer et de réduire son impact environnemental en analysant la consommation d'énergie, les transports et les déchets. Le site a été réalisé avec Next JS, HTML5, CSS3 et Wordpress côté back.",
+      "desc": "GreenGascar est le premier calculateur d'empreinte carbone pour les Malgaches. Il permet de mesurer et de réduire son impact environnemental en analysant la consommation d'énergie, les transports et les déchets. Le site a été réalisé avec Next JS, HTML5, CSS3, Typescript et Wordpress côté back.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 6"
     },
     "7":{
       "title": "Travelian",
-      "desc": "Travelian est un site dédié aux voyages, offrant des informations sur diverses destinations populaires comme la Norvège et la Suisse. Il propose des guides de voyage, des plans de voyage, des offres spéciales, ainsi qu'un blog sur des expériences de voyage. Le site met également en avant une galerie de photos de destinations et des témoignages de voyageurs. La One page a été réalisé avec Next JS, HTML5, CSS3.",
+      "desc": "Travelian est un projet personnel, une landing page axée sur le thème du voyage. L'objectif est de démontrer qu'il est tout à fait possible de créer une landing page avec Next.js. Le développement a été réalisé avec Next.js, HTML5, CSS3, SCSS et TypeScript.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 7"
     },
     "8":{
-      "title": "Sanke 2D",
-      "desc": "Snake 2D est un jeu développé avec React.js, démontrant ainsi le potentiel de création de jeux interactifs avec ce framework. Le jeu est conçu en utilisant HTML, CSS, TypeScript et exploite l'élément canvas pour le rendu graphique. Ce projet illustre comment les technologies web modernes peuvent être utilisées pour créer des expériences de jeu engageantes et dynamiques.",
+      "title": "Snake 2D",
+      "desc": "Snake 2D est un jeu développé avec React.js, démontrant ainsi le potentiel de création de jeux interactifs avec ce framework. Le jeu est conçu en utilisant HTML5, CSS3, SCSS, TypeScript et exploite l'élément canvas pour le rendu graphique. Ce projet illustre comment les technologies web modernes peuvent être utilisées pour créer des expériences de jeu engageantes et dynamiques.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 8"
     }
