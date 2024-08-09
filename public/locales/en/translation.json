@@ -77,6 +77,12 @@
       "desc": "Travelian is a travel-dedicated website providing information on popular destinations like Norway and Switzerland. It offers travel guides, itineraries, special offers, and a blog on travel experiences. The site also features a photo gallery of destinations and traveler testimonials. The one-page site is built using Next.js, HTML5, and CSS3.",
       "valBtn": "See project",
       "altImage": "Project image 7"
+    },
+    "8":{
+      "title": "Snake 2D",
+      "desc": "Snake 2D is a game developed using React.js, showcasing the potential of creating interactive games with this framework. The game is built with HTML, CSS, TypeScript, and utilizes the canvas element for rendering graphics. This project demonstrates how modern web technologies can be leveraged to create engaging and dynamic gaming experiences.",
+      "valBtn": "See project",
+      "altImage": "Project image 8"
     }
   },
   "contact":{

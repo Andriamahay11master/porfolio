@@ -77,6 +77,12 @@
       "desc": "Travelian est un site dédié aux voyages, offrant des informations sur diverses destinations populaires comme la Norvège et la Suisse. Il propose des guides de voyage, des plans de voyage, des offres spéciales, ainsi qu'un blog sur des expériences de voyage. Le site met également en avant une galerie de photos de destinations et des témoignages de voyageurs. La One page a été réalisé avec Next JS, HTML5, CSS3.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 7"
+    },
+    "8":{
+      "title": "Sanke 2D",
+      "desc": "Snake 2D est un jeu développé avec React.js, démontrant ainsi le potentiel de création de jeux interactifs avec ce framework. Le jeu est conçu en utilisant HTML, CSS, TypeScript et exploite l'élément canvas pour le rendu graphique. Ce projet illustre comment les technologies web modernes peuvent être utilisées pour créer des expériences de jeu engageantes et dynamiques.",
+      "valBtn": "Voir le projet",
+      "altImage": "Image Projet 8"
     }
   },
   "contact":{

@@ -181,6 +181,17 @@ export default function Home() {
     $altImage: `${t('projet.7.altImage')}`
   }
 
+  const dataProject8 = {
+    $title: `${t('projet.8.title')}`,
+    $desc: `${t('projet.8.desc')}`,
+    $btn: `${t('projet.8.valBtn')}`,
+    $linkBtn: 'https://snake2-d-one.vercel.app/',
+    $srcImage: '/images/project/snake.jpg',
+    $width: 1600,
+    $height: 941,
+    $altImage: `${t('projet.8.altImage')}`
+  }
+
   const dataProjectList = [
     dataProject1,
     dataProject2,
@@ -188,7 +199,8 @@ export default function Home() {
     dataProject4,
     dataProject5,
     dataProject6,
-    dataProject7
+    dataProject7,
+    dataProject8
   ]
 
   //Data page form
