@@ -25,6 +25,7 @@
             max-width: 60vw;
         }
         @include max(575px){
+            transform: translate(0%, -50%);
             min-width: 320px;
             left: 12%;
         }
