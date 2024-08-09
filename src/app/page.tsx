@@ -74,7 +74,7 @@ export default function Home() {
     desc: `${t('blockInfo.desc')}`,
     linkBtn: '/#projects',
     valBtn: `${t('blockInfo.valBtn')}`,
-    image:'/images/Mahay-profil.jpg',
+    image:'/images/Mahay-profil-2.jpg',
     altImage: 'andriamahay-irimanana-image'
   }
 
@@ -82,10 +82,11 @@ export default function Home() {
   const dataListSkills = {
     $title: `${t('skillsTitle')}`,
     data: [
-      'HTML',
-      'CSS',
+      'HTML5',
+      'CSS3',
       'SCSS',
       'Responsive Design',
+      'Performance site',
       'SEO',
       'JavaScript',
       'Tailwind',
@@ -94,12 +95,15 @@ export default function Home() {
       'Typescript',
       'React JS',
       'Next JS',
+      'Lenis Scroll JS',
       'Figma',
       'Git',
       'SQL',
       'PostGreSQL',
       'Firebase',
       'Office 365',
+      'Leadership',
+      'Team management',
     ]
   }
 

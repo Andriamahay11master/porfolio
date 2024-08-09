@@ -124,7 +124,7 @@ export default function Header({linkMenu} : HeaderProps) {
                     <div className="cntLogoMobile">
                             <Link href="/#home" title='Ancre to top'>
                                 <figure>
-                                    <Image src="/images/Mahay-profil.jpg" alt="Logo Site" width={200} height={200} title='Mahay image'/>
+                                    <Image src="/images/Mahay-profil-2.jpg" alt="Logo Site" width={200} height={200} title='Mahay image'/>
                                 </figure>
                                 <span className='cntLogo-text'>IRIMANANA Henikaja Andriamahay</span>
                             </Link>
@@ -133,7 +133,7 @@ export default function Header({linkMenu} : HeaderProps) {
                         <div className="cntlogo">
                             <Link href="/" title='Ancre to top'>
                                 <figure>
-                                    <Image src="/images/Mahay-profil.jpg" alt="Logo Site" width={200} height={200} title='Mahay image'/>
+                                    <Image src="/images/Mahay-profil-2.jpg" alt="Logo Site" width={200} height={200} title='Mahay image'/>
                                 </figure>
                                 <span className='cntLogo-text'>IRIMANANA Henikaja Andriamahay</span>
                             </Link>
