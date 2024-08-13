@@ -1,3 +1,35 @@
 @import "../../assets/scss/common/variable";
 @import "../../assets/scss/common/mixins";
 
+.scrolltop {
+	z-index: 111;
+	position: fixed;
+	bottom: 121px;
+	right: 27px;
+	height: 52px;
+	width: 52px;
+	display: none;
+	place-items: center;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+
+	@include max(992px) {
+		bottom: 94px;
+		right: 25px;
+	}
+    .scrolltop-value {
+        display: block;
+        height: calc(110% - 12px);
+        width: calc(110% - 12px);
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 35px;
+        color: $color-primary;
+    }
+    i{
+        font-size: 15px;
+    }
+}   

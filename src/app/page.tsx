@@ -9,6 +9,7 @@ import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import '@/app/i18n'
 import { useTranslation } from 'next-i18next';
+import ScrollToTop from '@/components/scrolltotop/ScrollToTop'
 
 export default function Home() {
 
@@ -252,6 +253,7 @@ export default function Home() {
         <Contact {...dataForm} />
       </main>
       <Footer {...dataFooter}/>
+      <ScrollToTop/>
     </>
   )
 }
