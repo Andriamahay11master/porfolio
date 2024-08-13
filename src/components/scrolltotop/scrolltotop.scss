@@ -2,26 +2,28 @@
 @import "../../assets/scss/common/mixins";
 
 .scrolltop {
-	z-index: 111;
+    display: grid;
 	position: fixed;
 	bottom: 50px;
 	right: 25px;
 	height: 52px;
 	width: 52px;
-	display: none;
+	z-index: 111;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
 	place-items: center;
 	border-radius: 50%;
+    transition: all 0.3s ease;
 	box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
 	cursor: pointer;    
 
     &.show {
-        display: grid;
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        transition: all 0.3s ease;
     }
-
-	@include max(992px) {
-		bottom: 94px;
-		right: 25px;
-	}
     .scrolltop-value {
         display: block;
         height: calc(110% - 12px);
