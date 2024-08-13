@@ -1,4 +1,4 @@
+Sitemap: https://andriamahay-irimanana.vercel.app/sitemap.xml
+
 User-agent: *
 Disallow: /node_modules/
-
-Sitemap: http://www.yourdomain.com/sitemap.xml
