@@ -202,7 +202,7 @@ export default function Home() {
     $desc: `${t('projet.9.desc')}`,
     $btn: `${t('projet.9.valBtn')}`,
     $linkBtn: 'https://simply-sweet.vercel.app/',
-    $srcImage: '/images/project/Simplysweet.jpg',
+    $srcImage: '/images/project/SimplySweet.jpg',
     $width: 1600,
     $height: 941,
     $altImage: `${t('projet.9.altImage')}`
