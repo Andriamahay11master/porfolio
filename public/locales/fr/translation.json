@@ -82,6 +82,12 @@
       "desc": "Snake 2D est un jeu développé avec React.js, démontrant ainsi le potentiel de création de jeux interactifs avec ce framework. Le jeu est conçu en utilisant HTML5, CSS3, SCSS, TypeScript et exploite l'élément canvas pour le rendu graphique. Ce projet illustre comment les technologies web modernes peuvent être utilisées pour créer des expériences de jeu engageantes et dynamiques.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 8"
+    },
+    "9":{
+      "title": "Simply Sweet",
+      "desc": "Simply Sweet est une application web développée en React JS, conçue pour faciliter la gestion des ventes d'articles pour enfants. Elle permet de suivre les articles vendus et non vendus, d'afficher des indicateurs clés de performance (KPI), et de filtrer les données selon le mois et l'année. Les technologies utilisées incluent HTML5, CSS3, SCSS, TypeScript, et Firebase pour la gestion des données et l'authentification",
+      "valBtn": "Voir le projet",
+      "altImage": "Image Projet 9"
     }
   },
   "contact":{
