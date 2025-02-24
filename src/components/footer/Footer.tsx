@@ -10,6 +10,7 @@ interface FooterProps{
 
 export default function Footer({desc, title, copyright} : FooterProps) {
     
+    const currentYear = new Date().getFullYear();
     return (
         <footer className='footerPage'>
             <div className="cntFooter">
@@ -23,7 +24,7 @@ export default function Footer({desc, title, copyright} : FooterProps) {
                     <div className="titleFooter">{title}</div>
                     <div className="listLink">
                         <div className="itemLink">
-                            <Link href="https://www.facebook.fr" target='_blank' aria-label="Profil Facebook d'Andriamahay Henikaja Irimanana" title='Profil Facebook'><i className="icon-footer icon-fb"></i></Link>
+                            <Link href="https://www.facebook.com/happy.mahay.travellover" target='_blank' aria-label="Profil Facebook d'Andriamahay Henikaja Irimanana" title='Profil Facebook'><i className="icon-footer icon-fb"></i></Link>
                         </div>
                         <div className="itemLink">
                             <Link href="https://www.linkedin.com/in/andriamahay-henikaja-irimanana/" target='_blank' aria-label="Profil LinkedIn d'Andriamahay Henikaja Irimanana" title='Profil LinkedIn'><i className="icon-footer icon-linkedin"></i></Link>
@@ -34,7 +35,7 @@ export default function Footer({desc, title, copyright} : FooterProps) {
             <div className="footerCopyright">
                 <div className="cntCopyright">
                     <div className="itemCol"> 
-                        <p>2023 © {copyright} <Link href="/" className='copyRightLink'>IRIMANANA Henikaja Andriamahay </Link></p>
+                        <p>{currentYear} © {copyright} <Link href="/" className='copyRightLink'>IRIMANANA Henikaja Andriamahay </Link></p>
                     </div>
                 </div>
             </div>
