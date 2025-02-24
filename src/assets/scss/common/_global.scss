@@ -2,8 +2,6 @@ html{
   // scroll-behavior:smooth;
 }
 
-
-
 ::selection {
   color: white;
   background: $color-primary;
@@ -36,6 +34,7 @@ body {
   line-height: 1.45;
   overflow-x: hidden;
   scroll-behavior:smooth;
+  background: var(--bg-main);
   @include max(1280px) {
     font-size: 15px;
   }

@@ -26,11 +26,15 @@ $font-family: 'Inter';
 /* Light mode (default) */
 :root {
     --text-color: #000;
+    --bg-main: $white-f4;
+    --bg-footer:$dark-grey;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
         --text-color: #fff;
+        --bg-main: #1c1f1e;
+        --bg-footer:#000;
     }
 }

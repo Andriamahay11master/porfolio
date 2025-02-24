@@ -3,7 +3,7 @@
 
 
 .footerPage {
-    background: $dark-grey;
+    background: var(--bg-footer);
     position: relative;
     z-index: 2;
     a {
@@ -77,7 +77,7 @@
     .footerCopyright {
         padding: 18px 135px;
         border-top: 1px solid rgba($grey-c4, 0.25);
-        background: $dark-grey;
+        background: var(--bg-footer);
         margin: 0 6px;
         @include max(1440px){
             padding: 18px 50px;
