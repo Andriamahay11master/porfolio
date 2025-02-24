@@ -22,3 +22,15 @@ $color-gradient: linear-gradient(90deg, #53B281 0%, #53B281 42.2%, #ED8606 55.39
 
 //Font-family
 $font-family: 'Inter';
+
+/* Light mode (default) */
+:root {
+    --text-color: #000;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #fff;
+    }
+}
