@@ -26,8 +26,9 @@ $font-family: 'Inter';
 /* Light mode (default) */
 :root {
     --text-color: #000;
-    --bg-main: $white-f4;
-    --bg-footer:$dark-grey;
+    --bg-main: #F4F7FA;
+    --bg-footer: #404040;
+    --bg-project: #fff;
 }
 
 /* Dark mode */
@@ -35,6 +36,7 @@ $font-family: 'Inter';
     :root {
         --text-color: #fff;
         --bg-main: #1c1f1e;
-        --bg-footer:#000;
+        --bg-footer: #000;
+        --bg-project: #000;
     }
 }
