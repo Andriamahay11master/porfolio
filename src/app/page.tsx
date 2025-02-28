@@ -179,7 +179,7 @@ export default function Home() {
     $title: `${t('projet.7.title')}`,
     $desc: `${t('projet.7.desc')}`,
     $btn: `${t('projet.7.valBtn')}`,
-    $linkBtn: 'https://greengascar.pulse.mg/',
+    $linkBtn: 'https://travelian.vercel.app/',
     $srcImage: '/images/project/travelian.jpg',
     $width: 1600,
     $height: 941,
