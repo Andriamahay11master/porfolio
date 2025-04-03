@@ -10,6 +10,8 @@ import Footer from '@/components/footer/Footer'
 import '@/app/i18n'
 import { useTranslation } from 'next-i18next';
 import ScrollToTop from '@/components/scrolltotop/ScrollToTop'
+import { useEffect, useState } from 'react'
+import Loader from '@/components/loader/Loader'
 
 export default function Home() {
 
@@ -256,6 +258,20 @@ export default function Home() {
     title: `${t('footer.title')}`,
     desc: `${t('footer.desc')}`,
     copyright: `${t('footer.copyright')}`,
+  }
+
+  const [loading, setLoading] = useState(true);
+
+  
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 600);
+  }, [loading]);
+
+  if (loading) {
+    return <Loader/>
   }
   return (
     <>
