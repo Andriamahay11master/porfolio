@@ -87,6 +87,7 @@ export default function Home() {
       'CSS3',
       'SCSS',
       'Responsive Design',
+      'Accessibility Web',
       'Performance site',
       'SEO',
       'JavaScript',
@@ -95,8 +96,12 @@ export default function Home() {
       'Jquery',
       'Typescript',
       'React JS',
-      'Next JS',
+      'Next.js',
       'Lenis Scroll JS',
+      'Wordpress',
+      'Python',
+      'Machine Learning',
+      'Deep Learning',
       'Figma',
       'Git',
       'SQL',
@@ -105,6 +110,7 @@ export default function Home() {
       'Office 365',
       'Leadership',
       'Team management',
+      'Collaboration',
     ]
   }
 
