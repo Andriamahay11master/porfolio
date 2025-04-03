@@ -88,6 +88,12 @@
       "desc": "Simply Sweet est une application web développée en React JS, conçue pour faciliter la gestion des ventes d'articles pour enfants. Elle permet de suivre les articles vendus et non vendus, d'afficher des indicateurs clés de performance (KPI), et de filtrer les données selon le mois et l'année. Les technologies utilisées incluent HTML5, CSS3, SCSS, TypeScript, et Firebase pour la gestion des données et l'authentification",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 9"
+    },
+    "10":{
+      "title": "Buy Right",
+      "desc": "Buy Right est une application web moderne pour créer et gérer des listes de courses. Les technologies utilisées incluent HTML5, CSS3, SCSS, TypeScript, Vite JS pour la construction de l'application, et Firebase pour la gestion des données et l'authentification",
+      "valBtn": "Voir le projet",
+      "altImage": "Image Projet 10"
     }
   },
   "contact":{
