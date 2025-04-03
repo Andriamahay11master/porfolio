@@ -267,7 +267,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 600);
+    }, 500);
   }, [loading]);
 
   if (loading) {

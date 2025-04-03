@@ -2,16 +2,16 @@
 @import '../../assets/scss/common/_mixins';
 
 .loader{
-    background: rgba($color-primary, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 200;
-    width: 100vw;
-    height: 100vh;
+    background-color: rgba($color-primary, 0.5);
+    z-index: 120;
     .spinner {
         animation: rotate 2s linear infinite;
         width: 50px;

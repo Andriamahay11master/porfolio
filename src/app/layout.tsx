@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.scss'
 import '../assets/scss/main.scss'
 import { Analytics } from '@vercel/analytics/react'
-import { metaTitleEn, metaTitleFr, metaDescEn, metaDescFr, metaKeyEn, metaKeyFr} from './dataMeta'
+import { metaTitleEn, metaDescEn, metaKeyEn} from './dataMeta'
 import SmoothScrolling from '@/components/smooth/Smoothscroling'
 
 const inter = Inter({ subsets: ['latin'] })
