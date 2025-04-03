@@ -52,8 +52,8 @@ export default function Header({linkMenu} : HeaderProps) {
     useEffect(() => {
         const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
         i18next.changeLanguage(preferredLanguage);
-        setLang(preferredLanguage === 'fr');
-        setLangMobile(preferredLanguage === 'fr');
+        // setLang(preferredLanguage === 'fr');
+        // setLangMobile(preferredLanguage === 'fr');
     }, []);
 
       useEffect(() => {
