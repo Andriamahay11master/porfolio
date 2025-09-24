@@ -1,20 +1,20 @@
 {
   "meta": {
-    "title":"Andriamahay IRIMANANA | Portfolio | Développeur Frontend",
-    "description":"Développeur front-end expérimenté spécialisé dans les applications web réactives et conviviales. Compétent en HTML, CSS, JavaScript et React.js. Expert en transformation de designs en code propre et maintenable. Joueur d'équipe collaboratif, axé sur des expériences numériques de haute qualité. Explorez mon portfolio pour voir mon travail.",
-    "keywords":"Andriamahay, Andriamahay IRIMANANA, Portfolio Andriamahay IRIMANANA, Développeur Frontend Andriamahay IRIMANANA"
+    "title": "Andriamahay IRIMANANA | Portfolio | Développeur Frontend",
+    "description": "Développeur front-end expérimenté spécialisé dans les applications web réactives et conviviales. Compétent en HTML, CSS, JavaScript et React.js. Expert en transformation de designs en code propre et maintenable. Joueur d'équipe collaboratif, axé sur des expériences numériques de haute qualité. Explorez mon portfolio pour voir mon travail.",
+    "keywords": "Andriamahay, Andriamahay IRIMANANA, Portfolio Andriamahay IRIMANANA, Développeur Frontend Andriamahay IRIMANANA"
   },
   "description": {
     "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
     "part2": "Switch language between english and german using buttons above."
   },
-  "menu":{
+  "menu": {
     "home": "Accueil",
     "about": "A propos",
     "contact": "Contact",
     "projects": "Projets"
   },
-  "banner" : {
+  "banner": {
     "title": "Bonjour, je m'appelle Mahay.",
     "description": "Un développeur web axé sur le frontend construisant l'interface utilisateur et l'expérience utilisateur des sites web et des applications web, contribuant ainsi au succès global du produit.",
     "textButton": "Voir mes projets",
@@ -24,83 +24,83 @@
     "title": "À propos de moi",
     "desc": "Dans cette section, je partage ma passion pour le développement front-end, où chaque projet est une opportunité de créer des interfaces à la fois esthétiques et performantes. Avec une expertise pointue dans les outils et technologies modernes, je m'engage à offrir des solutions front-end de qualité supérieure. Découvrez comment mon dévouement à l'innovation et au détail se traduit en expériences utilisateur exceptionnelles."
   },
-  "blockInfo":{
-    "title": "Développeur web front-end",
-    "desc":"👋 Bonjour le monde ! Je suis Mahay, un développeur front-end passionné avec un talent pour transformer des idées en expériences numériques captivantes. 💻✨ <br/><br/>🚀 Armé d'un esprit créatif et d'un amour pour un code propre et efficace, je prospère face aux défis de donner vie aux interfaces utilisateur. De la conception de parcours utilisateur fluides à la mise en œuvre d'un design parfaitement détaillé, je suis déterminé à fournir des solutions web qui non seulement répondent aux attentes mais les dépassent. <br/><br/>🎨 Mon arsenal comprend les dernières technologies front-end telles que HTML5, CSS3 et JavaScript, et je suis toujours désireux de rester à la pointe avec les tendances émergentes comme React.js et Next.js. Je crois en la puissance du design réactif, garantissant que l'expérience utilisateur reste impeccable sur tous les appareils. <br/><br/>🛠️ Que ce soit pour optimiser les performances des sites web, améliorer l'interactivité, ou collaborer avec des équipes pluridisciplinaires, je m'engage à créer des applications web qui résonnent avec les utilisateurs et laissent une impression durable. <br/><br/> 💡 Construisons quelque chose d'extraordinaire ensemble - là où le design rencontre la fonctionnalité, et la satisfaction de l'utilisateur prend le devant de la scène. N'hésitez pas à me contacter pour des collaborations, des idées, ou simplement une bonne discussion sur la programmation ! 🚀🌐",
+  "blockInfo": {
+    "title": "Développeur Front / AI & ML ingénieur",
+    "desc": "Je vous salue. Je m'appelle Mahay et je suis un développeur front-end passionné et un ingénieur AI/ML. Je suis motivé par la joie de transformer les idées en expériences numériques captivantes. 💻✨🚀 Avec un état d'esprit créatif et un amour pour le code propre et efficace, je m'épanouis en donnant vie aux interfaces utilisateur. Cela implique de concevoir des voyages transparents, d'assurer des conceptions parfaites au pixel près et de construire des applications web réactives et performantes. Outre le développement frontal, je m'intéresse également à l'intelligence artificielle et à l'apprentissage automatique. J'aime appliquer les techniques d'IA/ML pour résoudre les problèmes du monde réel, améliorer les expériences des utilisateurs et créer des solutions web plus intelligentes et plus adaptatives. 🎨 Ma boîte à outils couvre HTML5, CSS3, JavaScript, React.js et Next.js, tandis que je reste continuellement à l'affût des tendances émergentes à la fois dans le développement front-end et les technologies d'IA. 🛠️ Que vous ayez besoin d'aide pour optimiser les performances de votre site web, mettre en œuvre des fonctionnalités interactives ou intégrer des systèmes intelligents, je suis là pour fournir des solutions qui combinent design, fonctionnalité et innovation.💡 Nous recherchons un partenaire de collaboration pour nous aider à construire quelque chose d'extraordinaire, où la créativité rencontre la technologie, et où chaque expérience laisse un impact durable. Si vous souhaitez collaborer, partager des idées ou vous engager dans des discussions constructives sur le codage, n'hésitez pas à me contacter. 🚀🌐",
     "valBtn": "Voir mes projets"
   },
-  "skillsTitle":"Mes compétences",
+  "skillsTitle": "Mes compétences",
   "aboutProjects": {
     "title": "Projets",
     "desc": "Dans cette section, découvrez une sélection de mes réalisations professionnelles et personnelles, offrant un aperçu concret de mon expertise."
   },
-  "projet":{
-    "1":{
+  "projet": {
+    "1": {
       "title": "First IMMO",
       "desc": "Le site First IMMO, dédié à l'immobilier à Madagascar, est développé sous WordPress avec HTML5, CSS3, SCSS, JavaScript, Gulp, et intègre l'API Google Maps. Il propose une interface conviviale et une large gamme de services pour la location et l'acquisition de biens.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 1"
     },
-    "2":{
+    "2": {
       "title": "Sanko",
       "desc": "La landing page de SANKO, une entreprise de courtage en assurances et de conseil en organisation basée à Madagascar et active sur le continent africain, a été développée avec WordPress, HTML5, CSS3, SCSS et JavaScript.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 2"
     },
-    "3":{
+    "3": {
       "title": "TOA",
       "desc": "TOA est un leader dans le secteur des infrastructures de tours de télécommunication. Pour le développement technologique, nous avons utilisé HTML5, CSS3, SCSS, Gulp, et Elementor sur WordPress.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 3"
     },
-    "4":{
+    "4": {
       "title": "Mind money",
       "desc": "Mind Money est un projet personnel, une application web conçue pour suivre, analyser et optimiser les dépenses. Les utilisateurs doivent créer un compte et se connecter pour accéder à l'application. Le développement a été réalisé avec Next.js, HTML5, CSS3, SCSS, TypeScript, et Firebase.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 4"
     },
-    "5":{
+    "5": {
       "title": "Taskmanager",
       "desc": "Taskmanager est un projet personnel, une application web pour gérer les tâches quotidiennes. Elle offre une vue des tâches via un calendrier et comprend une section de connexion pour accéder à l'application. Le projet a été développé avec React.js, HTML5, CSS3, SCSS, Typescript et Firebase.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 5"
     },
-    "6":{
+    "6": {
       "title": "Greengascar",
       "desc": "GreenGascar est le premier calculateur d'empreinte carbone pour les Malgaches. Il permet de mesurer et de réduire son impact environnemental en analysant la consommation d'énergie, les transports et les déchets. Le site a été réalisé avec Next JS, HTML5, CSS3, Typescript et Wordpress côté back.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 6"
     },
-    "7":{
+    "7": {
       "title": "Travelian",
       "desc": "Travelian est un projet personnel, une landing page axée sur le thème du voyage. L'objectif est de démontrer qu'il est tout à fait possible de créer une landing page avec Next.js. Le développement a été réalisé avec Next.js, HTML5, CSS3, SCSS et TypeScript.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 7"
     },
-    "8":{
+    "8": {
       "title": "Snake 2D",
       "desc": "Snake 2D est un jeu développé avec React.js, démontrant ainsi le potentiel de création de jeux interactifs avec ce framework. Le jeu est conçu en utilisant HTML5, CSS3, SCSS, TypeScript et exploite l'élément canvas pour le rendu graphique. Ce projet illustre comment les technologies web modernes peuvent être utilisées pour créer des expériences de jeu engageantes et dynamiques.",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 8"
     },
-    "9":{
+    "9": {
       "title": "Simply Sweet",
       "desc": "Simply Sweet est une application web développée en React JS, conçue pour faciliter la gestion des ventes d'articles pour enfants. Elle permet de suivre les articles vendus et non vendus, d'afficher des indicateurs clés de performance (KPI), et de filtrer les données selon le mois et l'année. Les technologies utilisées incluent HTML5, CSS3, SCSS, TypeScript, et Firebase pour la gestion des données et l'authentification",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 9"
     },
-    "10":{
+    "10": {
       "title": "Buy Right",
       "desc": "Buy Right est une application web moderne pour créer et gérer des listes de courses. Les technologies utilisées incluent HTML5, CSS3, SCSS, TypeScript, Vite JS pour la construction de l'application, et Firebase pour la gestion des données et l'authentification",
       "valBtn": "Voir le projet",
       "altImage": "Image Projet 10"
     }
   },
-  "contact":{
+  "contact": {
     "title": "Contact",
     "desc": "N'hésitez pas à me contacter en remplissant le formulaire ci-dessous, et je vous répondrai dans les plus brefs délais."
   },
-  "form":{
+  "form": {
     "name": "Nom",
     "email": "Email",
     "message": "Message",
@@ -111,10 +111,9 @@
     "placeholderEmail": "Entrez votre email",
     "placeholderMessage": "Entrez votre message"
   },
-  "footer":{
+  "footer": {
     "title": "Suivez-moi",
     "desc": "Un développeur web axé sur le frontend construisant l'interface utilisateur et l'expérience utilisateur des sites web et des applications web, contribuant ainsi au succès global du produit.",
     "copyright": "Développé par"
   }
-
 }
