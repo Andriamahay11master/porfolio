@@ -7,7 +7,7 @@ import ListProject from "./components/project/ListProject";
 import Contact from "./components/contact/Contact";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import "./app/i18n";
+import "./i18n";
 import { useTranslation } from "react-i18next";
 import ScrollToTop from "./components/scrolltotop/ScrollToTop";
 import Loader from "./components/loader/Loader";
