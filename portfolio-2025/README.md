@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet est un site web de portfolio personnel construit avec **Next.js**,**TypeScript**, **HTML**,**SCSS**, conçu pour mettre en avant mes compétences, mon expérience et mes projets en tant que développeur front-end.
 
-Currently, two official plugins are available:
+## Contenu principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Brief présentation :** Description de ma motivation avec mes competences.
+- **Projets :** Voir tous les projets.
+- **Formulaire de contact :** Pour me contacter.
+- **Porfolio multilangue :** Le site est disponible en **Français** et **Anglais**.
+- **Interface utilisateur réactive :** Design adapté pour les appareils mobiles et de bureau, avec un style moderne.
 
-## React Compiler
+## Technologies utilisées
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Next JS & TypeScript :** Pour une architecture modulaire et un typage strict.
+- **SCSS :** Pour une gestion avancée des styles avec un design réactif.
 
-## Expanding the ESLint configuration
+## Installation et démarrage
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clonez le dépôt :
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/Andriamahay11master/porfolio.git
+cd portfolio
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Installez les dépendances :
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. Lancez l'application en mode développement :
+
+```bash
+npm run dev
+```
+
+4. Accédez à l'application sur `http://localhost:3000`.
+
+## Structure du projet
+
+- **src/** : Contient le code source de l'application.
+  - **components/** : Composants réutilisables tels que les formulaires, alertes, tableaux, etc.
+  - **app/** : Contient la composant principale de l'application et l'interface utilisateur.
+  - **assets/** : Fichiers SCSS pour la gestion des styles globaux et des composants.
+  - **models/** : Pour le typage des données.
+
+## Commandes utiles
+
+- **`npm run dev`** : Démarre l'application en mode développement.
+- **`npm run build`** : Génère un build de production.
+- **`npm run lint`** : Vérifie et corrige le code avec ESLint.
+
+## Contribution
+
+Les contributions sont les bienvenues. Si vous souhaitez contribuer, ouvrez un problème ou une pull request.

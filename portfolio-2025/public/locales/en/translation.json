@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Andriamahay IRIMANANA | Portfolio | Developer Frontend",
+    "description": "Experienced front-end developer specializing in responsive, user-friendly web apps. Skilled in HTML, CSS, JavaScript, and React.js. Expert in transforming designs into clean, maintainable code. Collaborative team player focused on high-quality digital experiences. Explore my portfolio to see my work.",
+    "keywords": "Andriamahay, Andriamahay IRIMANANA, Andriamahay IRIMANANA Portfolio, Andriamahay IRIMANANA Developer Frontend"
+  },
+  "description": {
+    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
+    "part2": "Switch language between english and german using buttons above."
+  },
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "projects": "Projects"
+  },
+  "banner": {
+    "title": "Greetings, my name is Mahay.",
+    "description": "A Frontend Developer specialized in web development, committed to crafting compelling user interfaces and experiences for websites and web applications, thereby contributing to the overall success of the products.",
+    "textButton": "See my projects",
+    "altImage": "Banner front"
+  },
+  "aboutTitle": {
+    "title": "About me",
+    "desc": "In this section, I share my passion for front-end development, where each project is an opportunity to create interfaces that are both visually appealing and high-performing. With deep expertise in modern tools and technologies, I am committed to delivering top-quality front-end solutions. Discover how my dedication to innovation and attention to detail translates into exceptional user experiences."
+  },
+  "blockInfo": {
+    "title": "Frontend Developer / AI & ML Engineer",
+    "desc": "Greetings. My name is Mahay, and I am a passionate front-end developer and AI/ML engineer. I am driven by the joy of transforming ideas into captivating digital experiences. 💻✨🚀 With a creative mindset and a love for clean, efficient code, I thrive on bringing user interfaces to life. This involves crafting seamless journeys, ensuring pixel-perfect designs, and building responsive, high-performance web applications. In addition to front-end development, I am also interested in Artificial Intelligence and Machine Learning. I enjoy applying AI/ML techniques to solve real-world problems, enhance user experiences, and create smarter, more adaptive web solutions. 🎨 My toolkit spans HTML5, CSS3, JavaScript, React.js, and Next.js, while I continuously stay ahead of emerging trends in both front-end development and AI technologies. 🛠️ Whether you need help optimising your website's performance, implementing interactive features, or integrating intelligent systems, I am here to deliver solutions that combine design, functionality and innovation.💡 We are looking for a collaborative partner to help us build something extraordinary, where creativity meets technology, and every experience leaves a lasting impact. If you are interested in collaborating, sharing ideas, or engaging in constructive coding discussions, please get in touch. 🚀🌐",
+    "valBtn": "See my projects"
+  },
+  "skillsTitle": "My skills",
+  "aboutProjects": {
+    "title": "Projects",
+    "desc": "In this section, explore a selection of my professional and personal achievements to gain a concrete insight into my expertise."
+  },
+  "projet": {
+    "1": {
+      "title": "First IMMO",
+      "desc": "The First IMMO website, focused on real estate in Madagascar, is developed using WordPress with HTML5, CSS3, SCSS, JavaScript, Gulp,and incorporates the Google Maps API. It offers a user-friendly interface and a wide range of services for property rental and acquisition.",
+      "valBtn": "See project",
+      "altImage": "Project image 1"
+    },
+    "2": {
+      "title": "SANKO",
+      "desc": "The landing page for SANKO, a brokerage and organizational consulting company based in Madagascar and active across Africa, was developed using WordPress, HTML5, CSS3, SCSS, and JavaScript",
+      "valBtn": "See project",
+      "altImage": "Project image 2"
+    },
+    "3": {
+      "title": "TOA",
+      "desc": "TOA is a leader in the telecommunications tower infrastructure market. For the technology side, we utilized HTML5, CSS3, SASS, JavScript, Gulp, and Elementor on WordPress.",
+      "valBtn": "See project",
+      "altImage": "Project image 3"
+    },
+    "4": {
+      "title": "Mind money",
+      "desc": "Mind Money is a personal project, a web application designed to track, analyze, and optimize expenses. Users need to create an account and log in to access the application. The project was developed using Next.js, HTML5, CSS3, SCSS, TypeScript, and Firebase.",
+      "valBtn": "See project",
+      "altImage": "Project image 4"
+    },
+    "5": {
+      "title": "Taskmanager",
+      "desc": "Taskmanager is a personal project, a web application for managing daily tasks. It features a calendar view for tasks and includes a login section to access the application. The project was developed using React.js, HTML5, CSS3, SCSS, Typescript and Firebase.",
+      "valBtn": "See project",
+      "altImage": "Project image 5"
+    },
+    "6": {
+      "title": "Greengascar",
+      "desc": "GreenGascar is Madagascar's first carbon footprint calculator. It helps users measure and reduce their environmental impact by analyzing energy consumption, transportation, and waste. The site was developed with React JS, HTML5, CSS3, Typescript and Wordpress.",
+      "valBtn": "See project",
+      "altImage": "Project image 6"
+    },
+    "7": {
+      "title": "Travelian",
+      "desc": "Travelian is a personal project, a landing page focused on the travel theme. The goal is to demonstrate that it is entirely possible to create a landing page using Next.js. The project was developed with Next.js, HTML5, CSS3, SCSS and TypeScript.",
+      "valBtn": "See project",
+      "altImage": "Project image 7"
+    },
+    "8": {
+      "title": "Snake 2D",
+      "desc": "Snake 2D is a game developed using React.js, showcasing the potential of creating interactive games with this framework. The game is built with HTML5, CSS3, SCSS, TypeScript, and utilizes the canvas element for rendering graphics. This project demonstrates how modern web technologies can be leveraged to create engaging and dynamic gaming experiences.",
+      "valBtn": "See project",
+      "altImage": "Project image 8"
+    },
+    "9": {
+      "title": "Simply Sweet",
+      "desc": "Simply Sweet is a web application developed in React JS, designed to simplify the management of children's product sales. It enables tracking of sold and unsold items, displaying key performance indicators (KPIs), and filtering data by month and year. The technologies used include HTML5, CSS3, SCSS, TypeScript, and Firebase for data management and authentication.",
+      "valBtn": "See project",
+      "altImage": "Project image 9"
+    },
+    "10": {
+      "title": "Buy Right",
+      "desc": "Buy Right is a modern web application for creating and managing shopping lists. The technologies used include HTML5, CSS3, SCSS, TypeScript, Vite JS for application construction, and Firebase for data management and authentication.",
+      "valBtn": "Voir le projet",
+      "altImage": "Image Projet 10"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "desc": "Feel free to get in touch by completing the form below, and I'll promptly respond at your earliest convenience."
+  },
+  "form": {
+    "name": "name",
+    "email": "email",
+    "message": "message",
+    "valBtn": "submit",
+    "popupVal": "Your message has been sent!",
+    "valTxtBtn": "Validate",
+    "placeholderName": "Enter your name",
+    "placeholderEmail": "Enter your email",
+    "placeholderMessage": "Enter your message"
+  },
+  "footer": {
+    "title": "Follow me",
+    "desc": "A Web Developer specializing in Frontend development, dedicated to constructing the user interface and experience for websites and web applications, contributing to the overall success of the product.",
+    "copyright": "made by"
+  }
+}
