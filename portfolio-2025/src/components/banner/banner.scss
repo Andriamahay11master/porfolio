@@ -1,0 +1,63 @@
+@import "../../assets/scss/common/variable";
+@import "../../assets/scss/common/mixins";
+
+.banner{
+    height: calc(100vh - 116px);
+    position: relative; 
+    overflow: hidden;
+    @include max(768px){
+        height: calc(100vh - 75px);
+    }
+    .banner-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .banner-content{
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translate(-15%, -50%);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+        margin: 0 135px;
+        @include max(1440px){
+            margin: 0 50px;
+        }
+        @include max(992px){
+            margin: 0;
+        }
+        @include max(575px){
+            transform: translate(0%, -50%);
+            min-width: 320px;
+            left: 12%;
+        }
+        .banner-title, .banner-desc{
+            color: #fff;
+        }
+        .banner-title{  
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            overflow: hidden; 
+            white-space: nowrap;
+            width: 0;
+            max-width: max-content;
+            animation: typing-erase 5s steps(80, end) infinite,
+            blink-caret .5s step-end infinite;
+            @include max(992px){
+                white-space: unset;
+                width: unset;
+                animation: unset;
+            }
+        }
+        .banner-desc{
+            margin-bottom: 25px;
+            font-size: 20px;
+            @include max(1440px){
+              font-size: 18px;
+            }
+        }
+        .btn-primary{
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@import "../../assets/scss/common/variable";
+@import "../../assets/scss/common/mixins";
+
+.project-content{
+    display: flex;
+    margin-bottom: 2px;
+    min-height: 350px;
+    @include max(992px){
+        grid-template-columns: 100%;
+        min-height: auto;
+        flex-direction: column;
+    }
+    .title-h2, .project-desc{
+        margin-bottom: 15px;
+    }
+    .project-col{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        @include max(992px){
+            width: 100%;
+        }
+        &:last-of-type{
+            padding: 0 50px;
+            border-left: 1px solid rgba($grey, 0.2);
+            @include max(992px){
+                padding: 30px;
+            }
+        }
+    }
+    .project-img{
+        position: relative;
+        mix-blend-mode: multiply;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+}
+
+//carousel list
+.carousel{
+    display: flex;
+    flex-direction: column-reverse;
+    &.carousel-slider{
+        min-height: 330px!important;
+        @include max(768px){
+            min-height: auto!important;
+        }
+    }
+    .control-dots{
+        position: static!important;
+        .dot{
+            box-shadow: none!important;
+            width: 10px!important;
+            height: 10px!important;
+            opacity: 1!important;
+            margin: 0 4px!important;
+            &.selected{
+                background: $color-primary;
+            }
+        }
+    }
+}
+
+.listProject{
+   .project-content{
+        position: sticky;
+        top: 25vh;
+        left: 0;
+        @include max(992px){
+            top: 20vh;
+        }
+        &:nth-child(even){
+            .project-col{
+                &:last-child{
+                    order: 1;
+                    background: var(--bg-project);
+                    @include max(992px){
+                        order: 2;
+                    }
+                }
+                &:first-child{
+                    order: 2;
+                    @include max(992px){
+                        order: 1;
+                    }
+                }
+            }
+        }
+        &:nth-child(odd){
+            .project-col{
+                &:last-child{
+                    background: var(--bg-project);
+                }
+            }
+        }
+   }
+}
