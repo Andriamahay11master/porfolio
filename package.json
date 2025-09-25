@@ -10,17 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "i18next": "^25.5.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-i18next": "^15.7.3",
+    "react-lazy-load-image-component": "^1.6.3",
     "sass": "^1.93.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
+    "@types/react-lazy-load-image-component": "^1.6.4",
     "@vitejs/plugin-react": "^5.0.3",
     "eslint": "^9.36.0",
     "eslint-plugin-react-hooks": "^5.2.0",
