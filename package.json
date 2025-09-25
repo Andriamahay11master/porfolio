@@ -17,6 +17,7 @@
     "react-dom": "^19.1.1",
     "react-i18next": "^15.7.3",
     "react-lazy-load-image-component": "^1.6.3",
+    "react-router-dom": "^7.9.2",
     "sass": "^1.93.2"
   },
   "devDependencies": {

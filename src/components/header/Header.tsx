@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import "./header.scss";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -110,22 +110,22 @@ export default function Header({ linkMenu }: HeaderProps) {
           <div className="headerTopContent">
             <div className="headerTopCol">
               <div className="header-reseau-sociaux">
-                <Link
+                <a
                   className="header-rs-link"
                   href="https://wwww.facebook.fr"
                   target="_blank"
                   title="Profil Facebook"
                 >
                   <i className="icon-fb"></i>
-                </Link>
-                <Link
+                </a>
+                <a
                   className="header-rs-link"
                   href="https://www.linkedin.com/in/andriamahay-henikaja-irimanana/"
                   target="_blank"
                   title="Profil LinkedIn"
                 >
                   <i className="icon-linkedin"></i>
-                </Link>
+                </a>
               </div>
             </div>
             <div className="headerTopCol">
@@ -161,7 +161,7 @@ export default function Header({ linkMenu }: HeaderProps) {
       <div className="headerIntern">
         <div className="container-transverse">
           <div className="cntLogoMobile">
-            <Link href="/#home" title="Ancre to top">
+            <Link to="/#home" title="Ancre to top">
               <figure>
                 <LazyLoadImage
                   src="/images/Mahay-profil-2.jpg"
@@ -180,7 +180,7 @@ export default function Header({ linkMenu }: HeaderProps) {
             className={`headerInternContent${navbarOpen ? " show-menu" : ""}`}
           >
             <div className="cntlogo">
-              <Link href="/" title="Ancre to top">
+              <Link to="/" title="Ancre to top">
                 <figure>
                   <LazyLoadImage
                     src="/images/Mahay-profil-2.jpg"
@@ -207,9 +207,8 @@ export default function Header({ linkMenu }: HeaderProps) {
                             className={
                               isActive ? "cntNav-link active" : "cntNav-link"
                             }
-                            href={link.href}
+                            to={link.href}
                             onClick={closeMenu(link.href)}
-                            locale="en"
                             title="Link menu"
                           >
                             {link.name}
@@ -224,22 +223,22 @@ export default function Header({ linkMenu }: HeaderProps) {
 
             <div className="block-bottom-mobile">
               <div className="header-reseau-sociaux">
-                <Link
+                <a
                   className="header-rs-link"
                   href="https://www.facebook.com"
                   target="_blank"
                   title="Profil Facebook"
                 >
                   <i className="icon-fb"></i>
-                </Link>
-                <Link
+                </a>
+                <a
                   className="header-rs-link"
                   href="https://www.linkedin.com/in/andriamahay-henikaja-irimanana/"
                   target="_blank"
                   title="Profil LinkedIn"
                 >
                   <i className="icon-linkedin"></i>
-                </Link>
+                </a>
               </div>
               <div className="list-language">
                 <button
