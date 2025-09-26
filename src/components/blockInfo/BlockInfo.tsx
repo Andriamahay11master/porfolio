@@ -1,4 +1,3 @@
-import * as React from "react";
 import "./blockinfo.scss";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
