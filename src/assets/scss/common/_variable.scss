@@ -1,42 +1,48 @@
-$font-path: '/assets/fonts/';
-$font-path-icon: '/assets/fonts/font-icon/';
+$font-path: "/assets/fonts/Inter/";
+$font-path-icon: "/assets/fonts/font-icon/";
 
 //Color
 $color-primary: #336699;
 $color-secondary: #0099cc;
 $white: white;
-$grey: #9A9A9A;
-$grey-4A: #4A4A4A;
+$grey: #9a9a9a;
+$grey-4A: #4a4a4a;
 $dark-grey: #404040;
-$grey-c4: #C4C4C4;
-$grey-3: #5B5B5B;
-$grey-6A: #6A6B6C;
-$grey-4: #EEEAEA;
-$red: #FF0000;
-$blue-2: #DDFAFE;
-$white-f4: #F4F7FA;
-$white-f7: #F7F7F7;
+$grey-c4: #c4c4c4;
+$grey-3: #5b5b5b;
+$grey-6A: #6a6b6c;
+$grey-4: #eeeaea;
+$red: #ff0000;
+$blue-2: #ddfafe;
+$white-f4: #f4f7fa;
+$white-f7: #f7f7f7;
 
 $finish-color: #53b281;
-$color-gradient: linear-gradient(90deg, #53B281 0%, #53B281 42.2%, #ED8606 55.39%, #EE411A 84.92%, #EE1C25 100.75%);
+$color-gradient: linear-gradient(
+  90deg,
+  #53b281 0%,
+  #53b281 42.2%,
+  #ed8606 55.39%,
+  #ee411a 84.92%,
+  #ee1c25 100.75%
+);
 
 //Font-family
-$font-family: 'Inter';
-
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
 /* Light mode (default) */
 :root {
-    --text-color: #000;
-    --bg-main: #F4F7FA;
-    --bg-footer: #404040;
-    --bg-project: #fff;
+  --text-color: #000;
+  --bg-main: #f4f7fa;
+  --bg-footer: #404040;
+  --bg-project: #fff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-    :root {
-        --text-color: #fff;
-        --bg-main: #1c1f1e;
-        --bg-footer: #000;
-        --bg-project: #000;
-    }
+  :root {
+    --text-color: #fff;
+    --bg-main: #1c1f1e;
+    --bg-footer: #000;
+    --bg-project: #000;
+  }
 }
