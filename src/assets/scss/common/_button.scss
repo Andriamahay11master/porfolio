@@ -11,32 +11,37 @@
   @include max(1440px) {
     font-size: 15px;
   }
-  &:before, &::after{
+  &:before,
+  &::after {
     content: "";
     position: absolute;
     display: block;
     background: transparent;
     z-index: 2;
-    width: 10%; height: 30%;
+    width: 10%;
+    height: 30%;
     transition: 0.35s;
-    @include max(992px){
+    @include max(992px) {
       display: none;
     }
   }
 
   &::before {
-    top: -5px; left: -5px;
+    top: -5px;
+    left: -5px;
     border-left: 1px solid rgb(28, 31, 30);
     border-top: 1px solid rgb(28, 31, 30);
   }
   &::after {
-    bottom: -5px; right: -5px;
+    bottom: -5px;
+    right: -5px;
     border-right: 1px solid rgb(28, 31, 30);
     border-bottom: 1px solid rgb(28, 31, 30);
   }
 
   &:hover {
-    &::before, &::after{
+    &::before,
+    &::after {
       width: calc(100% + 10px);
       height: calc(100% + 10px);
       transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -56,13 +61,13 @@
     &:hover {
       background: $color-secondary;
       border: 1px solid $color-secondary;
-      color: #FFF;
+      color: #fff;
     }
   }
 
   &.btn-primary {
     background: $color-primary;
-    color: #FFF;
+    color: #fff;
     font-weight: 600;
     font-size: 17px;
 
@@ -71,12 +76,13 @@
       font-size: 14px;
     }
 
-    &::before, &::after{
-        border-color: $color-primary;
+    &::before,
+    &::after {
+      border-color: $color-primary;
     }
 
     &:hover {
-      background: #FFF;
+      background: #fff;
       color: $color-primary;
     }
 
@@ -147,7 +153,8 @@
   &.btn-icon {
     padding: 0;
     background: transparent;
-    &::after, &:before {
+    &::after,
+    &:before {
       display: none;
     }
   }
@@ -199,7 +206,6 @@
         bottom: -2px;
       }
     }
-
   }
 
   &.btn--act {
@@ -232,7 +238,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background: #4A4A4A;
+    background: #4a4a4a;
     z-index: 1;
     border-radius: 8px;
   }

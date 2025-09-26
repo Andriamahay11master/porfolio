@@ -103,6 +103,10 @@ h4,
   }
 }
 
+p {
+  color: var(--text-color);
+}
+
 .paragraphe {
   color: var(--text-color);
   font-size: 20px;
@@ -113,6 +117,10 @@ h4,
   @include max(1280px) {
     font-size: 18px;
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
