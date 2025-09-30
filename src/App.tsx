@@ -22,12 +22,12 @@ import {
   dataProject,
 } from "./data/section";
 import { dataListSkills } from "./data/skills";
-import dataProjectList from "./data/projects";
 import { dataForm } from "./data/contact";
 import { dataFooter } from "./data/footer";
+import { useTranslatedData } from "./hooks/useTranslatedData";
 
 function App() {
-  const { t } = useTranslation("translation");
+  const dataProjectList = useTranslatedData();
 
   const [loading, setLoading] = useState(true);
 
