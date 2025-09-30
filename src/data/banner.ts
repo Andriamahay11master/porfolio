@@ -5,8 +5,8 @@ export const dataBlockContentRight = {
   desc: "banner.description",
   valBtn: "banner.textButton",
   linkBtn: "/#projects",
-  srcImage: "/images/banner/Programming-background.jpg",
-  width: 600,
-  height: 400,
+  srcImage: "/images/banner/AI_Front.png",
+  width: 1536,
+  height: 864,
   altImage: "banner.altImage",
 };
