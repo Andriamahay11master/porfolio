@@ -1,71 +1,71 @@
 @mixin browserCss($prop, $value) {
-   -moz-#{$prop}: $value;
-   -ms-#{$prop}: $value;
-   -o-#{$prop}: $value;
-   -webkit-#{$prop}: $value;
-   #{$prop}: $value;
+  -moz-#{$prop}: $value;
+  -ms-#{$prop}: $value;
+  -o-#{$prop}: $value;
+  -webkit-#{$prop}: $value;
+  #{$prop}: $value;
 }
 
-@mixin maxPortrait($value,$value2: 851px) {
-   @media (min-width: $value2) and (max-width: $value) and (orientation: portrait) {
-       @content;
-   }
+@mixin maxPortrait($value, $value2: 851px) {
+  @media (min-width: $value2) and (max-width: $value) and (orientation: portrait) {
+    @content;
+  }
 }
 
 @mixin maxForceOrientationPortrait($value) {
-   @media (max-width: $value) and (orientation: landscape) {
-       @content;
-   }
+  @media (max-width: $value) and (orientation: landscape) {
+    @content;
+  }
 }
 
 @mixin max($value) {
-   @media (max-width: $value) {
-       @content;
-   }
+  @media (max-width: $value) {
+    @content;
+  }
 }
 @mixin min($value) {
-   @media (min-width: $value) {
-       @content;
-   }
+  @media (min-width: $value) {
+    @content;
+  }
 }
 @mixin minMax($valueMin, $valueMax) {
-   @media (min-width: $valueMin) and (max-width: $valueMax) {
-       @content;
-   }
+  @media (min-width: $valueMin) and (max-width: $valueMax) {
+    @content;
+  }
 }
 
 @mixin maxHW($valueh, $valuew) {
-   @media (max-height: $valueh) and (min-width: $valuew) {
-       @content;
-   }
+  @media (max-height: $valueh) and (min-width: $valuew) {
+    @content;
+  }
 }
 
 @mixin maxHmaxW($valueh, $valuew) {
-   @media (max-height: $valueh) and (max-width: $valuew) {
-       @content;
-   }
+  @media (max-height: $valueh) and (max-width: $valuew) {
+    @content;
+  }
 }
 
 @mixin maxHminmaxW($valueh, $valuew1, $valuew2) {
-   @media (max-height: $valueh) and (min-width: $valuew1) and (max-width: $valuew2) {
-       @content;
-   }
+  @media (max-height: $valueh) and (min-width: $valuew1) and (max-width: $valuew2) {
+    @content;
+  }
 }
 
 @mixin maxH($value) {
-   @media (max-height: $value) {
-       @content;
-   }
+  @media (max-height: $value) {
+    @content;
+  }
 }
 
 @mixin minH($value) {
-   @media (min-height: $value) {
-       @content;
-   }
+  @media (min-height: $value) {
+    @content;
+  }
 }
 
-@mixin forceBreak(){
-           /* These are technically the same, but use both */
+@mixin forceBreak() {
+  /* These are technically the same, but use both */
   overflow-wrap: break-word;
   word-wrap: break-word;
 
@@ -80,4 +80,26 @@
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
+}
+
+@mixin d-flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin d-flex-center() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@mixin d-grid-50() {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
 }

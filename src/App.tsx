@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import ScrollToTop from "./components/scrolltotop/ScrollToTop";
 import Loader from "./components/loader/Loader";
 import "./App.scss";
+import BlockContentRight from "./components/block/BlockContentRight";
 
 function App() {
   const { t } = useTranslation("translation");
@@ -268,6 +269,18 @@ function App() {
     copyright: `${t("footer.copyright")}`,
   };
 
+  //data Info
+  const dataBlockContentRight = {
+    title: `${t("banner.title")}`,
+    desc: `${t("banner.description")}`,
+    valBtn: `${t("banner.textButton")}`,
+    linkBtn: "/#projects",
+    srcImage: "/images/banner/Programming-background.jpg",
+    width: 1200,
+    height: 600,
+    altImage: `${t("banner.altImage")}`,
+  };
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -284,6 +297,7 @@ function App() {
       <Header linkMenu={dataNav} />
       <main className="main-page">
         <Banner {...dataBanner} />
+        <BlockContentRight data={dataBlockContentRight} />
         <SectionTitle {...dataAbout} />
         <div className="main-section about-section">
           <div className="container">
