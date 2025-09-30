@@ -18,10 +18,10 @@ function App() {
   const data = useTranslatedData();
 
   const loading = useLoader();
-  if (loading) return <Loader />;
 
   return (
     <>
+      {loading && <Loader />}
       <Header linkMenu={data.nav} />
       <main className="main-page">
         <div className="container">
