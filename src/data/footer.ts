@@ -1,6 +1,6 @@
 //data footer
 export const dataFooter = {
-  title: `${t("footer.title")}`,
-  desc: `${t("footer.desc")}`,
-  copyright: `${t("footer.copyright")}`,
+  title: "footer.title",
+  desc: "footer.desc",
+  copyright: "footer.copyright",
 };
