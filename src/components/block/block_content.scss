@@ -3,6 +3,27 @@
 
 .block-content {
   @include d-grid-50;
+  height: 100vh;
+  .block-img {
+    @include d-flex-center;
+  }
+  .block-col {
+    height: 100%;
+  }
+  .block-body {
+    height: 100%;
+    @include d-flex-center;
+    flex-direction: column;
+    align-items: start;
+  }
+  .title-h2 {
+    margin-bottom: 25px;
+  }
+  p {
+    text-align: justify;
+    width: 90%;
+    margin-bottom: 20px;
+  }
   &.content-right {
   }
 }

@@ -5,7 +5,7 @@ export const dataBlockContentRight = {
   valBtn: "banner.textButton",
   linkBtn: "/#projects",
   srcImage: "/images/banner/Programming-background.jpg",
-  width: 1200,
-  height: 600,
+  width: 600,
+  height: 400,
   altImage: "banner.altImage",
 };

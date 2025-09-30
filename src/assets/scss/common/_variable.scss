@@ -16,7 +16,7 @@ $red: #ff0000;
 $blue-2: #ddfafe;
 $white-f4: #f4f7fa;
 $white-f7: #f7f7f7;
-
+$black: #000;
 $finish-color: #53b281;
 $color-gradient: linear-gradient(
   90deg,
@@ -40,8 +40,8 @@ $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: #fff;
-    --bg-main: #1c1f1e;
+    --text-color: $black;
+    --bg-main: $white-f4;
     --bg-footer: #000;
     --bg-project: #000;
   }
