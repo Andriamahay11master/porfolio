@@ -37,18 +37,14 @@ body {
   }
 }
 
-.main-page {
-  padding-top: 116px;
-  @include max(1200px) {
-    padding-top: 75px;
-  }
-}
 h1,
 .title-h1 {
   font-size: 60px;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-color);
+  text-transform: uppercase;
+
   @include max(1440px) {
     font-size: 40px;
   }
@@ -59,9 +55,9 @@ h1,
 
 h2,
 .title-h2 {
-  font-size: 44px;
+  font-size: 40px;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 100;
   color: var(--text-color);
   @include max(1440px) {
     font-size: 34px;

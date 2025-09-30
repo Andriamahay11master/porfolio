@@ -21,7 +21,8 @@ export default function BlockContentRight({ data }: BlockContentRightProps) {
       </div>
       <div className="block-col">
         <div className="block-body">
-          <h2 className="title-h2">{data.title}</h2>
+          <h1 className="title-h1">{data.title}</h1>
+          {data.subtitle && <h2 className="title-h2">{data.subtitle}</h2>}
           <p>{data.desc}</p>
           {data.linkBtn && (
             <Link to={data.linkBtn} className="btn btn-primary">

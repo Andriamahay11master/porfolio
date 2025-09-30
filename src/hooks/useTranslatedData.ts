@@ -22,6 +22,7 @@ export const useTranslatedData = () => {
 
   const translatedBlockContentRight = {
     title: t(dataBlockContentRight.title),
+    subtitle: t(dataBlockContentRight.subtitle),
     desc: t(dataBlockContentRight.desc),
     valBtn: t(dataBlockContentRight.valBtn),
     linkBtn: dataBlockContentRight.linkBtn,
