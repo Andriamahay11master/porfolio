@@ -9,24 +9,17 @@ import Footer from "./components/footer/Footer";
 import "./i18n";
 import ScrollToTop from "./components/scrolltotop/ScrollToTop";
 import Loader from "./components/loader/Loader";
-import "./App.scss";
 import BlockContentRight from "./components/block/BlockContentRight";
 import { useTranslatedData } from "./hooks/useTranslatedData";
+import "./App.scss";
+import { useLoader } from "./hooks/useLoader";
 
 function App() {
   const data = useTranslatedData();
 
-  const [loading, setLoading] = useState(true);
+  const loading = useLoader();
+  if (loading) return <Loader />;
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
-  }, [loading]);
-
-  if (loading) {
-    return <Loader />;
-  }
   return (
     <>
       <Header linkMenu={data.nav} />
