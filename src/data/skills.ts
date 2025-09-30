@@ -1,6 +1,6 @@
 //Data list skills
 export const dataListSkills = {
-  $title: `${t("skillsTitle")}`,
+  title: "skillsTitle",
   data: [
     "HTML5",
     "CSS3",
