@@ -1,18 +1,18 @@
 export const dataNav = [
   {
-    name: `${t("menu.home")}`,
+    name: "menu.home",
     href: "/#home",
   },
   {
-    name: `${t("menu.about")}`,
+    name: "menu.about",
     href: "/#about",
   },
   {
-    name: `${t("menu.projects")}`,
+    name: "menu.projects",
     href: "/#projects",
   },
   {
-    name: `${t("menu.contact")}`,
+    name: "menu.contact",
     href: "/#contact",
   },
 ];
