@@ -8,10 +8,14 @@
     grid-template-columns: 1fr;
     padding: 30px 15px;
   }
+  .block-col {
+    @include d-flex-center;
+  }
   .block-img {
-    height: 100%;
-    display: block;
-    margin: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   .block-col {
     height: 100%;

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import type { BlockContent } from "../../models/BlockContent";
 import "./block_content.scss";
-interface BlockContentRightProps {
+interface BlockMainContentProps {
   data: BlockContent;
 }
-export default function BlockContentRight({ data }: BlockContentRightProps) {
+export default function BlockMainContent({ data }: BlockMainContentProps) {
   return (
-    <div className="block-content content-right">
+    <div className="block-content">
       <div className="block-col">
         {data.srcImage && (
           <div className="block-img">

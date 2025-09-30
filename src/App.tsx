@@ -9,10 +9,10 @@ import Footer from "./components/footer/Footer";
 import "./i18n";
 import ScrollToTop from "./components/scrolltotop/ScrollToTop";
 import Loader from "./components/loader/Loader";
-import BlockContentRight from "./components/block/BlockContentRight";
 import { useTranslatedData } from "./hooks/useTranslatedData";
 import "./App.scss";
 import { useLoader } from "./hooks/useLoader";
+import BlockMainContent from "./components/block/BlockMainContent";
 
 function App() {
   const data = useTranslatedData();
@@ -24,7 +24,9 @@ function App() {
     <>
       <Header linkMenu={data.nav} />
       <main className="main-page">
-        <BlockContentRight data={data.blockContentRight} />
+        <div className="container">
+          <BlockMainContent data={data.blockContentRight} />
+        </div>
         <SectionTitle {...data.about} />
         <div className="main-section about-section">
           <div className="container">
