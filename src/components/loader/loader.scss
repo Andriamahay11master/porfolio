@@ -12,8 +12,8 @@
   left: 0;
   z-index: 120;
   background-color: rgba($color-primary, 0.7); // overlay only
-  backdrop-filter: blur(6px); // the magic!
-  -webkit-backdrop-filter: blur(6px); // for Safari
+  backdrop-filter: blur(7px); // the magic!
+  -webkit-backdrop-filter: blur(7px); // for Safari
   .spinner {
     animation: rotate 2s linear infinite;
     width: 50px;
@@ -22,10 +22,11 @@
     z-index: 2;
     .path {
       fill: none;
-      stroke: $white;
-      stroke-width: 6;
+      stroke-width: 9;
       stroke-linecap: round;
-      animation: dash 1.5s ease-in-out infinite;
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: 0;
+      animation: dash 1.5s ease-in-out infinite, colorCycle 3s linear infinite;
     }
   }
 }
