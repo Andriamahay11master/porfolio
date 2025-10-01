@@ -1,21 +1,18 @@
 @import "../../assets/scss/common/variable";
 @import "../../assets/scss/common/mixins";
 
-.list-skills{
-    .title-h2{
-       margin-bottom: 15px; 
+.list-skills {
+  .list-skills-block {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    .list-skills-item {
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 3px;
+      background: $grey;
+      color: #fff;
+      font-size: 15px;
     }
-    .list-skills-block{
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        .list-skills-item{
-            display: inline-block;
-            padding: 10px 15px;
-            border-radius: 3px;
-            background: $grey;
-            color: #FFF;
-            font-size: 15px;
-        }
-    }
+  }
 }

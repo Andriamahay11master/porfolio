@@ -28,14 +28,10 @@ function App() {
         <div className="container">
           <BlockMainContent data={data.blockContentRight} />
           <Content title={data.about.title} children={data.about.desc} />
-        </div>
-        <div className="main-section about-section">
-          <div className="container">
-            <div className="about-block">
-              <BlockInfo {...data.blockInfo} />
-              <ListSkills $title={data.skills.title} data={data.skills.data} />
-            </div>
-          </div>
+          <Content
+            title={data.skills.title}
+            children={<ListSkills data={data.skills.data} />}
+          />
         </div>
         <SectionTitle {...data.project} />
         <div className="main-section project-section">
