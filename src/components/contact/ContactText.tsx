@@ -1,27 +1,26 @@
 import { Link } from "react-router-dom";
 import "./contactText.scss";
-export default function ContactText({
-  address,
-  phone,
-  email,
-  linkLkd,
-  linkGithub,
-}: any) {
+import type { ContactInfo } from "../../models/ContactInfo";
+
+interface ContactTextProps {
+  data: ContactInfo;
+}
+export default function ContactText({ data }: ContactTextProps) {
   return (
     <div className="contact-body">
       <div className="contact-top">
-        <p className="contact-address">{address}</p>
-        <p className="contact-phone">{phone}</p>
-        <a href={`mailto:${email}`} className="contact-email">
-          {email}
+        <p className="contact-address">{data.address}</p>
+        <p className="contact-phone">{data.phone}</p>
+        <a href={`mailto:${data.email}`} className="contact-email">
+          {data.email}
         </a>
       </div>
       <div className="contact-bottom">
         <div className="contact-link">
-          <Link to={linkLkd} target="_blank" rel="noopener noreferrer">
+          <Link to={data.linkLkd} target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin"></i>
           </Link>
-          <Link to={linkGithub} target="_blank" rel="noopener noreferrer">
+          <Link to={data.linkGithub} target="_blank" rel="noopener noreferrer">
             <i className="fab fa-github"></i>
           </Link>
         </div>

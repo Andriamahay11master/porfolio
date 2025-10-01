@@ -14,6 +14,7 @@ import "./App.scss";
 import { useLoader } from "./hooks/useLoader";
 import BlockMainContent from "./components/block/BlockMainContent";
 import Content from "./components/content/Content";
+import ContactText from "./components/contact/ContactText";
 
 function App() {
   const data = useTranslatedData();
@@ -39,7 +40,7 @@ function App() {
             </div>
           </div>
         </div>
-        <Content title={data.contact.title} children={data.contact.desc} />
+        <Content title={data.contact.title} children={<ContactText />} />
       </main>
       <Footer {...data.footer} />
       <ScrollToTop />
