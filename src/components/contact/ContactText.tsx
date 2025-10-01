@@ -32,7 +32,7 @@ export default function ContactText({ data }: ContactTextProps) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="icon-linkedin"></i>
+          <i className="icon-github"></i>
         </Link>
       </div>
     </div>
