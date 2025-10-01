@@ -13,6 +13,7 @@ import { useTranslatedData } from "./hooks/useTranslatedData";
 import "./App.scss";
 import { useLoader } from "./hooks/useLoader";
 import BlockMainContent from "./components/block/BlockMainContent";
+import Content from "./components/content/Content";
 
 function App() {
   const data = useTranslatedData();
@@ -26,8 +27,8 @@ function App() {
       <main className="main-page">
         <div className="container">
           <BlockMainContent data={data.blockContentRight} />
+          <Content title={data.about.title} children={data.about.desc} />
         </div>
-        <SectionTitle {...data.about} />
         <div className="main-section about-section">
           <div className="container">
             <div className="about-block">

@@ -1,8 +1,8 @@
-//Data Section Title About
-const dataAbout = {
-  id: "about",
-  title: "aboutTitle.title",
-  desc: "aboutTitle.desc",
+//Data Section About me
+const dataAboutMe = {
+  id: "about-me",
+  title: "aboutMe.title",
+  desc: "aboutMe.desc",
 };
 
 //Data Section Title Project
@@ -29,4 +29,4 @@ const dataBlockInfo = {
   altImage: "andriamahay-irimanana-image",
 };
 
-export { dataAbout, dataProject, dataContact, dataBlockInfo };
+export { dataAboutMe, dataProject, dataContact, dataBlockInfo };

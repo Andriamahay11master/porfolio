@@ -6,7 +6,7 @@ import { dataForm } from "../data/contact";
 import { dataBlockContentRight } from "../data/banner";
 import { dataNav } from "../data/nav";
 import {
-  dataAbout,
+  dataAboutMe,
   dataBlockInfo,
   dataContact,
   dataProject,
@@ -72,9 +72,9 @@ export const useTranslatedData = () => {
     altImage: t(dataBlockInfo.altImage),
   };
   const translatedAbout = {
-    id: dataAbout.id,
-    title: t(dataAbout.title),
-    desc: t(dataAbout.desc),
+    id: dataAboutMe.id,
+    title: t(dataAboutMe.title),
+    desc: t(dataAboutMe.desc),
   };
 
   const translatedProject = {

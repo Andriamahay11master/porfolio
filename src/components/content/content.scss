@@ -1,2 +1,8 @@
 @import "../../assets/scss/common/_variable.scss";
 @import "../../assets/scss/common/_mixins.scss";
+
+.content {
+  @include d-grid-50();
+  .title-h2 {
+  }
+}
