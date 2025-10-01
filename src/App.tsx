@@ -40,6 +40,7 @@ function App() {
         <Content
           title={data.contact.title}
           children={<ContactText data={data.contact} />}
+          classN="contact"
         />
       </main>
       <Footer {...data.footer} />

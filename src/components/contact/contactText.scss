@@ -12,6 +12,7 @@
   .contact-bottom {
     @include d-flex;
     gap: 0.5rem;
+    justify-content: flex-end;
     .btn {
       width: 2.5rem;
       height: 2.5rem;

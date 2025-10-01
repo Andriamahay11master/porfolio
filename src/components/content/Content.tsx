@@ -3,11 +3,11 @@ import "./content.scss";
 interface ContentProps {
   children: React.ReactNode;
   title: string;
-  bgcolor?: string;
+  classN?: string;
 }
-export default function Content({ children, title, bgcolor }: ContentProps) {
+export default function Content({ children, title, classN }: ContentProps) {
   return (
-    <div className={"content " + bgcolor}>
+    <div className={"content " + classN}>
       <div className="container">
         <div className="content-col">
           <h2 className="title-h1 title-shadow">{title}</h2>

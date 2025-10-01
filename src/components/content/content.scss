@@ -7,4 +7,11 @@
   .container {
     @include d-grid-50();
   }
+  &.contact {
+    .content-col {
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
 }
