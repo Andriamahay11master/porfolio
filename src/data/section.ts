@@ -12,7 +12,7 @@ const dataProject = {
   desc: "aboutProjects.desc",
 };
 
-//Data Section Title Contact
+//Data Section Contact
 const dataContact = {
   id: "contact",
   title: "contact.title",

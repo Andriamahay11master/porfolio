@@ -39,8 +39,7 @@ function App() {
             </div>
           </div>
         </div>
-        <SectionTitle {...data.contact} />
-        <Contact {...data.form} />
+        <Content title={data.contact.title} children={data.contact.desc} />
       </main>
       <Footer {...data.footer} />
       <ScrollToTop />
