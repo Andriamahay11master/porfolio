@@ -99,6 +99,9 @@ h4,
   }
 }
 
+.title-shadow {
+  text-shadow: $shadowTitle;
+}
 p {
   color: var(--text-color);
 }

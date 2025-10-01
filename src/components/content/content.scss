@@ -2,7 +2,9 @@
 @import "../../assets/scss/common/_mixins.scss";
 
 .content {
-  @include d-grid-50();
-  .title-h2 {
+  background: $white-f7;
+  padding: 3rem 0;
+  .container {
+    @include d-grid-50();
   }
 }

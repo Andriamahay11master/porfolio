@@ -25,14 +25,12 @@ function App() {
       {loading && <Loader />}
       <Header linkMenu={data.nav} />
       <main className="main-page">
-        <div className="container">
-          <BlockMainContent data={data.blockContentRight} />
-          <Content title={data.about.title} children={data.about.desc} />
-          <Content
-            title={data.skills.title}
-            children={<ListSkills data={data.skills.data} />}
-          />
-        </div>
+        <BlockMainContent data={data.blockContentRight} />
+        <Content title={data.about.title} children={data.about.desc} />
+        <Content
+          title={data.skills.title}
+          children={<ListSkills data={data.skills.data} />}
+        />
         <SectionTitle {...data.project} />
         <div className="main-section project-section">
           <div className="container">

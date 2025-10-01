@@ -2,11 +2,14 @@
 @import "../../assets/scss/common/mixins";
 
 .block-content {
-  @include d-grid-50;
   height: 100vh;
-  @include max(768px) {
-    grid-template-columns: 1fr;
-    padding: 30px 15px;
+  .container {
+    height: 100%;
+    @include d-grid-50;
+    @include max(768px) {
+      grid-template-columns: 1fr;
+      padding: 30px 15px;
+    }
   }
   .block-col {
     @include d-flex-center;
@@ -35,7 +38,6 @@
     align-items: start;
   }
   .title-h1 {
-    text-shadow: #f4e2d5 0.25rem 0.25rem;
     margin-bottom: 10px;
   }
   .title-h2 {
