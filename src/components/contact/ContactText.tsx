@@ -10,20 +10,30 @@ export default function ContactText({ data }: ContactTextProps) {
     <div className="contact-body">
       <div className="contact-top">
         <p className="contact-address">{data.address}</p>
-        <p className="contact-phone">{data.phone}</p>
-        <a href={`mailto:${data.email}`} className="contact-email">
+        <a href={`tel:${data.phone}`} className="link contact-phone">
+          {data.phone}
+        </a>
+        <a href={`mailto:${data.email}`} className="link contact-email">
           {data.email}
         </a>
       </div>
       <div className="contact-bottom">
-        <div className="contact-link">
-          <Link to={data.linkLkd} target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin"></i>
-          </Link>
-          <Link to={data.linkGithub} target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-github"></i>
-          </Link>
-        </div>
+        <Link
+          className="btn btn-rs-icon"
+          to={data.linkLkd}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="icon-linkedin"></i>
+        </Link>
+        <Link
+          className="btn btn-rs-icon"
+          to={data.linkGithub}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="icon-linkedin"></i>
+        </Link>
       </div>
     </div>
   );

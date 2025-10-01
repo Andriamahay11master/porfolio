@@ -12,13 +12,6 @@ const dataProject = {
   desc: "aboutProjects.desc",
 };
 
-//Data Section Contact
-const dataContact = {
-  id: "contact",
-  title: "contact.title",
-  desc: "contact.desc",
-};
-
 //Data Block Info
 const dataBlockInfo = {
   title: "blockInfo.title",
@@ -29,4 +22,4 @@ const dataBlockInfo = {
   altImage: "andriamahay-irimanana-image",
 };
 
-export { dataAboutMe, dataProject, dataContact, dataBlockInfo };
+export { dataAboutMe, dataProject, dataBlockInfo };

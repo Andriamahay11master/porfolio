@@ -1,9 +1,6 @@
-import { useEffect, useState } from "react";
 import SectionTitle from "./components/sectionTitle/SectionTitle";
-import BlockInfo from "./components/blockInfo/BlockInfo";
 import ListSkills from "./components/listSkills/ListSkills";
 import ListProject from "./components/project/ListProject";
-import Contact from "./components/contact/Contact";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import "./i18n";
@@ -40,7 +37,10 @@ function App() {
             </div>
           </div>
         </div>
-        <Content title={data.contact.title} children={<ContactText />} />
+        <Content
+          title={data.contact.title}
+          children={<ContactText data={data.contact} />}
+        />
       </main>
       <Footer {...data.footer} />
       <ScrollToTop />

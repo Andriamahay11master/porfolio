@@ -2,15 +2,10 @@ import { useTranslation } from "react-i18next";
 import dataProjectList from "../data/projects";
 import { dataListSkills } from "../data/skills";
 import { dataFooter } from "../data/footer";
-import { dataForm } from "../data/contact";
+import { dataForm, dataContact } from "../data/contact";
 import { dataBlockContentRight } from "../data/banner";
 import { dataNav } from "../data/nav";
-import {
-  dataAboutMe,
-  dataBlockInfo,
-  dataContact,
-  dataProject,
-} from "../data/section";
+import { dataAboutMe, dataBlockInfo, dataProject } from "../data/section";
 
 export const useTranslatedData = () => {
   const { t } = useTranslation();
@@ -84,9 +79,12 @@ export const useTranslatedData = () => {
   };
 
   const translatedContact = {
-    id: dataContact.id,
     title: t(dataContact.title),
-    desc: t(dataContact.desc),
+    address: t(dataContact.address),
+    phone: t(dataContact.phone),
+    email: t(dataContact.email),
+    linkLkd: dataContact.linkLkd,
+    linkGithub: dataContact.linkGithub,
   };
 
   return {
