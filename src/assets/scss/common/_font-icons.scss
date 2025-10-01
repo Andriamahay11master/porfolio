@@ -1,18 +1,5 @@
 @font-face {
   font-family: "icomoon";
-  src: url($font-path-icon + "icomoon.eot?saezpr");
-  src: url($font-path-icon + "icomoon.eot?saezpr#iefix")
-      format("embedded-opentype"),
-    url($font-path-icon + "icomoon.ttf?saezpr") format("truetype"),
-    url($font-path-icon + "icomoon.woff?saezpr") format("woff"),
-    url($font-path-icon + "icomoon.svg?saezpr#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "icomoon";
   src: url($font-path-icon + "icomoon.eot?a9r5h8");
   src: url($font-path-icon + "icomoon.eot?a9r5h8#iefix")
       format("embedded-opentype"),
