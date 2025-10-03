@@ -24,21 +24,21 @@ export default function Project({
 }: ProjectProps) {
   return (
     <div className="project-content">
-      <div className="project-col">
-        <LazyLoadImage
-          className="project-img"
-          src={srcImage}
-          width={width}
-          height={height}
-          alt={altImage}
-          loading="lazy"
-          title="project image"
-        />
-      </div>
-      <div className="project-col">
-        <div className="project-info">
+      <LazyLoadImage
+        className="project-img"
+        src={srcImage}
+        width={width}
+        height={height}
+        alt={altImage}
+        loading="lazy"
+        title="project image"
+      />
+      <div className="project-info">
+        <div className="project-info-top">
           <h2 className="title-h2 project-title">{title}</h2>
           <p className="project-desc">{desc}</p>
+        </div>
+        <div className="project-info-bottom">
           <a
             href={linkBtn}
             className="btn btn-primary"
