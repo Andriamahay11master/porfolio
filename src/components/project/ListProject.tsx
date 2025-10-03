@@ -10,7 +10,7 @@ export default function ListProject({ list }: ListProjectProps) {
   return (
     <div className="listProject">
       {list.map((item, index) => (
-        <Project key={index} {...item} />
+        <Project key={index} data={item} />
       ))}
     </div>
   );
