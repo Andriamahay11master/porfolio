@@ -2,13 +2,14 @@
 @import "../../assets/scss/common/mixins";
 
 .project-item {
+  border-radius: 1.5rem;
   margin-bottom: 2px;
-  min-height: 350px;
+  height: 30rem;
   position: relative;
   padding: 2rem;
   @include d-flex;
   align-items: flex-end;
-  border-radius: 2rem;
+  overflow: hidden;
   @include max(992px) {
     grid-template-columns: 100%;
     min-height: auto;
@@ -40,41 +41,26 @@
   }
   .project-info-bottom {
     @include d-flex;
+    height: 0;
     justify-content: flex-end;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  &:hover {
+    .project-info-bottom {
+      height: 3rem;
+    }
   }
 }
 
 .listProject {
-  .project-item {
-    position: sticky;
-    top: 25vh;
-    left: 0;
-    @include max(992px) {
-      top: 20vh;
-    }
-    &:nth-child(even) {
-      .project-col {
-        &:last-child {
-          order: 1;
-          background: var(--bg-project);
-          @include max(992px) {
-            order: 2;
-          }
-        }
-        &:first-child {
-          order: 2;
-          @include max(992px) {
-            order: 1;
-          }
-        }
-      }
-    }
-    &:nth-child(odd) {
-      .project-col {
-        &:last-child {
-          background: var(--bg-project);
-        }
-      }
-    }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  @include max(992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include max(768px) {
+    grid-template-columns: 100%;
   }
 }
