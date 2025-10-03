@@ -8,7 +8,7 @@ interface ProjectProps {
 
 export default function Project({ data }: ProjectProps) {
   return (
-    <div className="project-content">
+    <div className="project-item">
       <LazyLoadImage
         className="project-img"
         src={data.srcImage}

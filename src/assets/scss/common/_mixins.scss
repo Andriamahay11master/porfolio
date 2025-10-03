@@ -98,6 +98,7 @@
   -ms-flex-align: center;
   align-items: center;
 }
+
 @mixin d-grid-50() {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
