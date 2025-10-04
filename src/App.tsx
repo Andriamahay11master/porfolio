@@ -29,14 +29,7 @@ function App() {
           title={data.skills.title}
           children={<ListSkills data={data.skills.data} />}
         />
-        <SectionTitle {...data.project} />
-        <div className="main-section project-section">
-          <div className="container">
-            <div className="project-block">
-              <ListProject list={data.projects} />
-            </div>
-          </div>
-        </div>
+        <ListProject list={data.projects} />
         <Content
           title={data.contact.title}
           children={<ContactText data={data.contact} />}

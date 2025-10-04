@@ -10,20 +10,22 @@ interface ListProjectProps {
 export default function ListProject({ list }: ListProjectProps) {
   return (
     <div className="listProject">
-      <div className="listProject-top">
-        <h2 className="title-h1 title-shadow">Projects</h2>
-        <Link
-          to="/projects"
-          className="btn btn-underline-primary"
-          title="All projects"
-        >
-          All projects
-        </Link>
-      </div>
-      <div className="listProject-bottom">
-        {list.map((item, index) => (
-          <Project key={index} data={item} />
-        ))}
+      <div className="container">
+        <div className="listProject-top">
+          <h2 className="title-h1 title-shadow">Projects</h2>
+          <Link
+            to="/projects"
+            className="btn btn-underline-primary"
+            title="All projects"
+          >
+            All projects
+          </Link>
+        </div>
+        <div className="listProject-bottom">
+          {list.map((item, index) => (
+            <Project key={index} data={item} />
+          ))}
+        </div>
       </div>
     </div>
   );
