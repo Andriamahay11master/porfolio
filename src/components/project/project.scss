@@ -6,10 +6,10 @@
   margin-bottom: 2px;
   height: 30rem;
   position: relative;
-  padding: 2rem;
   @include d-flex;
   align-items: flex-end;
   overflow: hidden;
+  box-shadow: 0px 4px 10px rgba($black, 0.25);
   @include max(992px) {
     grid-template-columns: 100%;
     min-height: auto;
@@ -19,25 +19,28 @@
   .project-desc {
     margin-bottom: 15px;
   }
+  .project-desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
   .project-img {
     position: absolute;
-    mix-blend-mode: multiply;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     z-index: 1;
     top: 0;
     left: 0;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
   .project-info {
     position: relative;
     z-index: 2;
     height: auto;
+    background: rgba($white-f7, 0.5);
+    padding: 2rem;
+    backdrop-filter: blur(3px);
   }
   .project-info-bottom {
     @include d-flex;
