@@ -26,7 +26,7 @@ export default function Project({ data }: ProjectProps) {
         <div className="project-info-bottom">
           <a
             href={data.linkBtn}
-            className="btn btn-primary"
+            className="btn btn-underline-primary"
             title="Project link"
             target="_blank"
           >
