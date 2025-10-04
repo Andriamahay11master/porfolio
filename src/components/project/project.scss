@@ -41,7 +41,6 @@
     height: auto;
     background: rgba($white-f7, 0.5);
     padding: 2rem;
-    backdrop-filter: blur(3px);
   }
   .project-info-bottom {
     @include d-flex;
@@ -59,13 +58,21 @@
 }
 
 .listProject {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-  @include max(992px) {
-    grid-template-columns: repeat(2, 1fr);
+  .listProject-top {
+    @include d-flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    align-items: center;
   }
-  @include max(768px) {
-    grid-template-columns: 100%;
+  .listProject-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    @include max(992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include max(768px) {
+      grid-template-columns: 100%;
+    }
   }
 }
