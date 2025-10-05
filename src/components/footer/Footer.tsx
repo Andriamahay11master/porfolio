@@ -1,3 +1,4 @@
+import { scrollToTop } from "../../utils/scrollTop";
 import "./footer.scss";
 import { Link } from "react-router-dom";
 
@@ -16,7 +17,7 @@ export default function Footer({ copyright }: FooterProps) {
           <div className="itemCol">
             <p>
               {currentYear} © {copyright}{" "}
-              <Link to="/" className="copyRightLink">
+              <Link to="/" className="copyRightLink" onClick={scrollToTop}>
                 IRIMANANA Henikaja Andriamahay{" "}
               </Link>
             </p>

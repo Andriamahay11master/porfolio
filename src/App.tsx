@@ -1,4 +1,3 @@
-import SectionTitle from "./components/sectionTitle/SectionTitle";
 import ListSkills from "./components/listSkills/ListSkills";
 import ListProject from "./components/project/ListProject";
 import Header from "./components/header/Header";
