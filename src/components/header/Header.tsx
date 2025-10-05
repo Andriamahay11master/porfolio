@@ -44,6 +44,7 @@ export default function Header({ linkMenu }: HeaderProps) {
         lenisRef.current.scrollTo(targetElement, {
           duration: 1,
           easing: (t) => t,
+          offset: -100,
         });
       }
       setTimeout(() => {

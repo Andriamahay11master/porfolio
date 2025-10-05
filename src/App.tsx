@@ -32,6 +32,7 @@ function App() {
         <Content
           title={data.skills.title}
           children={<ListSkills data={data.skills.data} />}
+          id="projects"
         />
         <ListProject list={data.projects} />
         <Content
