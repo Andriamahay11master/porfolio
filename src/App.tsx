@@ -22,9 +22,13 @@ function App() {
     <>
       {loading && <Loader />}
       <Header linkMenu={data.nav} />
-      <main className="main-page">
+      <main className="main-page" id="home">
         <BlockMainContent data={data.blockContentRight} />
-        <Content title={data.about.title} children={data.about.desc} />
+        <Content
+          title={data.about.title}
+          children={data.about.desc}
+          id="about"
+        />
         <Content
           title={data.skills.title}
           children={<ListSkills data={data.skills.data} />}
@@ -34,6 +38,7 @@ function App() {
           title={data.contact.title}
           children={<ContactText data={data.contact} />}
           classN="contact"
+          id="contact"
         />
       </main>
       <Footer {...data.footer} />
