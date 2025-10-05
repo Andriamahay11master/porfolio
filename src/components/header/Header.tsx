@@ -225,11 +225,11 @@ export default function Header({ linkMenu }: HeaderProps) {
               <div className="header-reseau-sociaux">
                 <a
                   className="header-rs-link"
-                  href="https://www.facebook.com"
+                  href="https://github.com/Andriamahay11master"
                   target="_blank"
-                  title="Profil Facebook"
+                  title="Profil Github"
                 >
-                  <i className="icon-fb"></i>
+                  <i className="icon-github"></i>
                 </a>
                 <a
                   className="header-rs-link"
