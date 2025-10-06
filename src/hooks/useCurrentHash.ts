@@ -20,7 +20,7 @@ export const setScrollActiveHash = (newHash: string) => {
     currentHash = normalized;
     // Optionally update the URL here silently if you want the URL to track scroll position
     // window.history.replaceState(null, '', normalized); // Use this for silent URL update
-    listeners.forEach((cb) => cb(currentHash));
+    window.location.hash = normalized;
   }
 };
 export const setGlobalHash = (newHash: string) => {
