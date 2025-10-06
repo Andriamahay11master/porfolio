@@ -1,4 +1,4 @@
-import { scrollToTop } from "../../utils/scrollTop";
+import { setGlobalHash } from "../../hooks/useCurrentHash";
 import "./footer.scss";
 import { Link } from "react-router-dom";
 
@@ -11,10 +11,6 @@ interface FooterProps {
 export default function Footer({ copyright }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
-  const handleScrollToTop = (event: MouseEvent) => {
-    event.preventDefault();
-    scrollToTop();
-  };
   return (
     <footer className="footerPage">
       <div className="footerCopyright">
@@ -23,12 +19,9 @@ export default function Footer({ copyright }: FooterProps) {
             <p>
               {currentYear} © {copyright}{" "}
               <Link
-                to="/"
+                to="/#home"
                 className="copyRightLink"
-                onClick={(event) => {
-                  event.preventDefault();
-                  handleScrollToTop(event.nativeEvent as MouseEvent);
-                }}
+                onClick={() => setGlobalHash("/#home")}
               >
                 IRIMANANA Henikaja Andriamahay{" "}
               </Link>
