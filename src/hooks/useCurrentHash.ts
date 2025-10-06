@@ -12,6 +12,17 @@ function normalizeHash(h: string) {
 export const setGlobalLenisInstance = (lenis: Lenis) => {
   lenisInstance = lenis;
 };
+
+// Global function to update the active hash from the scroll observer
+export const setScrollActiveHash = (newHash: string) => {
+  const normalized = normalizeHash(newHash);
+  if (normalized !== currentHash) {
+    currentHash = normalized;
+    // Optionally update the URL here silently if you want the URL to track scroll position
+    // window.history.replaceState(null, '', normalized); // Use this for silent URL update
+    listeners.forEach((cb) => cb(currentHash));
+  }
+};
 export const setGlobalHash = (newHash: string) => {
   const normalized = normalizeHash(newHash);
 

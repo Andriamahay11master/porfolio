@@ -9,6 +9,7 @@ import Lenis from "@studio-freight/lenis";
 import {
   useCurrentHash,
   setGlobalLenisInstance,
+  setScrollActiveHash,
 } from "../../hooks/useCurrentHash";
 
 interface HeaderProps {
@@ -21,12 +22,24 @@ export default function Header({ linkMenu }: HeaderProps) {
   const [langMobile, setLangMobile] = useState(false);
   const { hash: currentHash, setHash } = useCurrentHash();
   const lenisRef = useRef<Lenis | null>(null);
+  const sectionIds = linkMenu.map((link) => link.href);
 
   useEffect(() => {
     const lenis = new Lenis();
     lenisRef.current = lenis;
 
     setGlobalLenisInstance(lenis);
+
+    // 👈 NEW: Lenis Scroll Listener for Home Section
+    const checkHomeSection = ({ scroll }: { scroll: number }) => {
+      // If the user is at the very top, force the active hash to '#home'
+      if (scroll < 100) {
+        // Check for a small buffer (e.g., 100 pixels)
+        setScrollActiveHash("#home");
+      }
+    };
+
+    lenis.on("scroll", checkHomeSection);
 
     const raf = (time: DOMHighResTimeStamp) => {
       lenis.raf(time);
@@ -36,6 +49,7 @@ export default function Header({ linkMenu }: HeaderProps) {
     requestAnimationFrame(raf);
 
     return () => {
+      lenis.off("scroll", checkHomeSection); // Cleanup the listener
       lenis.destroy();
     };
   }, []);
@@ -79,6 +93,44 @@ export default function Header({ linkMenu }: HeaderProps) {
       window.removeEventListener("resize", handleResize);
     };
   }, [navbarOpen, currentHash]);
+
+  useEffect(() => {
+    // Options for the Intersection Observer
+    const observerOptions = {
+      root: null, // viewport
+      rootMargin: "-15% 0px -85% 0px", // A section is "active" when its top is 30% from viewport top
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = `#${entry.target.id}`;
+          // Use the function from your hook to update the active hash
+          setScrollActiveHash(id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    // Attach the observer to all target sections
+    sectionIds.forEach((hash) => {
+      const elementId = hash.replace("#", "");
+      const target = document.getElementById(elementId);
+      if (target) {
+        observer.observe(target);
+      }
+    });
+
+    // Cleanup on component unmount
+    return () => {
+      observer.disconnect();
+    };
+  }, [linkMenu]);
 
   const changeLanguageMobile = (lg: string) => {
     if (lg === "fr") {
