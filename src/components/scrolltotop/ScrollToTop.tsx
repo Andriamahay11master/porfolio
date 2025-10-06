@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./scrolltotop.scss";
-import { scrollToTop } from "../../utils/scrollTop";
+import { setGlobalHash } from "../../hooks/useCurrentHash";
 
 export default function ScrollToTop() {
   const [scrollValue, setScrollValue] = useState(0);
@@ -27,7 +27,7 @@ export default function ScrollToTop() {
 
   const handleScrollToTop = (event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault();
-    scrollToTop();
+    setGlobalHash("/#home");
   };
   return (
     <div
