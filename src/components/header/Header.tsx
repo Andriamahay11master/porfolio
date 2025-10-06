@@ -6,7 +6,10 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import i18next from "i18next";
 import Lenis from "@studio-freight/lenis";
-import { useCurrentHash } from "../../hooks/useCurrentHash";
+import {
+  useCurrentHash,
+  setGlobalLenisInstance,
+} from "../../hooks/useCurrentHash";
 
 interface HeaderProps {
   linkMenu: { name: string; href: string }[];
@@ -22,6 +25,8 @@ export default function Header({ linkMenu }: HeaderProps) {
   useEffect(() => {
     const lenis = new Lenis();
     lenisRef.current = lenis;
+
+    setGlobalLenisInstance(lenis);
 
     const raf = (time: DOMHighResTimeStamp) => {
       lenis.raf(time);
@@ -87,7 +92,6 @@ export default function Header({ linkMenu }: HeaderProps) {
     localStorage.setItem("preferredLanguage", lg);
   };
 
-  console.log("currentHash:", currentHash);
   return (
     <header
       className={`sectHeader sectHeader--fixed${

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import type { BlockContent } from "../../models/BlockContent";
 import "./block_content.scss";
 import { useState } from "react";
+import { setGlobalHash } from "../../hooks/useCurrentHash";
 interface BlockMainContentProps {
   data: BlockContent;
 }
@@ -35,6 +36,7 @@ export default function BlockMainContent({ data }: BlockMainContentProps) {
                 className="btn btn-primary"
                 onMouseEnter={() => setMouseEnterButton(true)}
                 onMouseLeave={() => setMouseEnterButton(false)}
+                onClick={() => setGlobalHash(data.linkBtn!)}
               >
                 {data.valBtn}
               </Link>
