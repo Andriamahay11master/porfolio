@@ -5,11 +5,12 @@ import { useState } from "react";
 import { setGlobalHash } from "../../hooks/useCurrentHash";
 interface BlockMainContentProps {
   data: BlockContent;
+  id?: string;
 }
-export default function BlockMainContent({ data }: BlockMainContentProps) {
+export default function BlockMainContent({ data, id }: BlockMainContentProps) {
   const [mouseEnterButton, setMouseEnterButton] = useState(false);
   return (
-    <div className="block-content">
+    <div className="block-content" id={id}>
       <div className="container">
         <div className="block-col">
           {data.srcImage && (

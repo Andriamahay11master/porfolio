@@ -21,8 +21,8 @@ function App() {
     <>
       {loading && <Loader />}
       <Header linkMenu={data.nav} />
-      <main className="main-page" id="home">
-        <BlockMainContent data={data.blockContentRight} />
+      <main className="main-page">
+        <BlockMainContent data={data.blockContentRight} id="home" />
         <Content
           title={data.about.title}
           children={data.about.desc}

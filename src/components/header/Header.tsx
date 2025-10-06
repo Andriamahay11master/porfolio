@@ -11,6 +11,7 @@ import {
   setGlobalLenisInstance,
   setScrollActiveHash,
 } from "../../hooks/useCurrentHash";
+import { findLast } from "lodash";
 
 interface HeaderProps {
   linkMenu: { name: string; href: string }[];
@@ -30,16 +31,33 @@ export default function Header({ linkMenu }: HeaderProps) {
 
     setGlobalLenisInstance(lenis);
 
-    // 👈 NEW: Lenis Scroll Listener for Home Section
-    const checkHomeSection = ({ scroll }: { scroll: number }) => {
-      // If the user is at the very top, force the active hash to '#home'
+    const lastSectionHash = sectionIds[sectionIds.length - 1]; // e.g., #contact
+
+    // Lenis Scroll Listener for Top and Bottom edge cases
+    const checkEdgeSections = ({
+      scroll,
+      limit,
+    }: {
+      scroll: number;
+      limit: number;
+    }) => {
+      // A. HOME SECTION CHECK (Top of page)
       if (scroll < 100) {
-        // Check for a small buffer (e.g., 100 pixels)
+        // If scroll is near the top (e.g., first 100px)
         setScrollActiveHash("#home");
+        return; // Exit to prevent other logic from overriding
+      }
+
+      // B. CONTACT SECTION CHECK (Bottom of page)
+      // Check if the scroll position is within a small buffer of the maximum scroll limit
+      const distanceFromBottom = limit - scroll;
+      if (distanceFromBottom < 2) {
+        // If scroll is within the last 10 pixels
+        setScrollActiveHash(lastSectionHash);
       }
     };
 
-    lenis.on("scroll", checkHomeSection);
+    lenis.on("scroll", checkEdgeSections);
 
     const raf = (time: DOMHighResTimeStamp) => {
       lenis.raf(time);
@@ -49,7 +67,7 @@ export default function Header({ linkMenu }: HeaderProps) {
     requestAnimationFrame(raf);
 
     return () => {
-      lenis.off("scroll", checkHomeSection); // Cleanup the listener
+      lenis.off("scroll", checkEdgeSections); // Cleanup the listener
       lenis.destroy();
     };
   }, []);
@@ -95,21 +113,25 @@ export default function Header({ linkMenu }: HeaderProps) {
   }, [navbarOpen, currentHash]);
 
   useEffect(() => {
-    // Options for the Intersection Observer
+    // 1. Setup the Intersection Observer (IO)
     const observerOptions = {
       root: null, // viewport
-      rootMargin: "-15% 0px -85% 0px", // A section is "active" when its top is 30% from viewport top
+      // Create a single, thin detection line 20% down from the top of the screen.
+      rootMargin: "-25% 0px -75% 0px",
       threshold: 0,
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = `#${entry.target.id}`;
-          // Use the function from your hook to update the active hash
-          setScrollActiveHash(id);
-        }
-      });
+      // Find the *last* element that is intersecting (the one currently at the top)
+      const activeEntry = findLast(
+        entries,
+        (entry: IntersectionObserverEntry) => entry.isIntersecting
+      );
+
+      if (activeEntry) {
+        const id = `#${activeEntry.target.id}`;
+        setScrollActiveHash(id);
+      }
     };
 
     const observer = new IntersectionObserver(
@@ -117,7 +139,7 @@ export default function Header({ linkMenu }: HeaderProps) {
       observerOptions
     );
 
-    // Attach the observer to all target sections
+    // 2. Attach the observer to all sections
     sectionIds.forEach((hash) => {
       const elementId = hash.replace("#", "");
       const target = document.getElementById(elementId);
@@ -126,7 +148,7 @@ export default function Header({ linkMenu }: HeaderProps) {
       }
     });
 
-    // Cleanup on component unmount
+    // 3. Cleanup on component unmount
     return () => {
       observer.disconnect();
     };
