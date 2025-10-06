@@ -38,7 +38,6 @@ export default function Header({ linkMenu }: HeaderProps) {
   //localStorage.setItem('preferredLanguage', 'en');
 
   const closeMenu = (link: string) => {
-    setHash(link);
     const targetElement = document.querySelector(link);
     if (targetElement instanceof HTMLElement && lenisRef.current) {
       lenisRef.current.scrollTo(targetElement, {
@@ -46,6 +45,7 @@ export default function Header({ linkMenu }: HeaderProps) {
         easing: (t) => t,
         offset: -100,
       });
+      setHash(link);
     }
     setTimeout(() => {
       setNavbarOpen(false);
