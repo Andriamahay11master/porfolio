@@ -25,10 +25,14 @@ export default function ScrollToTop() {
     };
   }, []);
 
+  const handleScrollToTop = (event: React.MouseEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    scrollToTop();
+  };
   return (
     <div
       className={`scrolltop ${scrollValue > 5 ? "show" : ""}`}
-      onClick={scrollToTop}
+      onClick={handleScrollToTop}
       style={{
         background: `conic-gradient(#0058e7 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`,
       }}

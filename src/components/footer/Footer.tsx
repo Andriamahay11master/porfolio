@@ -10,6 +10,11 @@ interface FooterProps {
 
 export default function Footer({ copyright }: FooterProps) {
   const currentYear = new Date().getFullYear();
+
+  const handleScrollToTop = (event: MouseEvent) => {
+    event.preventDefault();
+    scrollToTop();
+  };
   return (
     <footer className="footerPage">
       <div className="footerCopyright">
@@ -17,7 +22,14 @@ export default function Footer({ copyright }: FooterProps) {
           <div className="itemCol">
             <p>
               {currentYear} © {copyright}{" "}
-              <Link to="/" className="copyRightLink" onClick={scrollToTop}>
+              <Link
+                to="/"
+                className="copyRightLink"
+                onClick={(event) => {
+                  event.preventDefault();
+                  handleScrollToTop(event.nativeEvent as MouseEvent);
+                }}
+              >
                 IRIMANANA Henikaja Andriamahay{" "}
               </Link>
             </p>

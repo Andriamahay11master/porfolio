@@ -16,7 +16,7 @@ export default function Header({ linkMenu }: HeaderProps) {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [lang, setLang] = useState(false);
   const [langMobile, setLangMobile] = useState(false);
-  const [currentHash, setCurrentHash] = useState("/#home");
+  const { hash: currentHash, setHash } = useCurrentHash();
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
@@ -38,20 +38,18 @@ export default function Header({ linkMenu }: HeaderProps) {
   //localStorage.setItem('preferredLanguage', 'en');
 
   const closeMenu = (link: string) => {
-    return () => {
-      setCurrentHash(link);
-      const targetElement = document.querySelector(link.replace("/", ""));
-      if (targetElement instanceof HTMLElement && lenisRef.current) {
-        lenisRef.current.scrollTo(targetElement, {
-          duration: 1,
-          easing: (t) => t,
-          offset: -100,
-        });
-      }
-      setTimeout(() => {
-        setNavbarOpen(false);
-      }, 300);
-    };
+    setHash(link);
+    const targetElement = document.querySelector(link);
+    if (targetElement instanceof HTMLElement && lenisRef.current) {
+      lenisRef.current.scrollTo(targetElement, {
+        duration: 1,
+        easing: (t) => t,
+        offset: -100,
+      });
+    }
+    setTimeout(() => {
+      setNavbarOpen(false);
+    }, 300);
   };
 
   useEffect(() => {
@@ -77,18 +75,6 @@ export default function Header({ linkMenu }: HeaderProps) {
     };
   }, [navbarOpen, currentHash]);
 
-  useEffect(() => {
-    const handleHashChange = () => {
-      setCurrentHash(window.location.hash);
-    };
-
-    window.addEventListener("hashchange", handleHashChange);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, []);
-
   const changeLanguageMobile = (lg: string) => {
     if (lg === "fr") {
       i18next.changeLanguage("fr");
@@ -101,6 +87,7 @@ export default function Header({ linkMenu }: HeaderProps) {
     localStorage.setItem("preferredLanguage", lg);
   };
 
+  console.log("currentHash:", currentHash);
   return (
     <header
       className={`sectHeader sectHeader--fixed${
@@ -210,7 +197,7 @@ export default function Header({ linkMenu }: HeaderProps) {
                               isActive ? "cntNav-link active" : "cntNav-link"
                             }
                             to={link.href}
-                            onClick={closeMenu(link.href)}
+                            onClick={() => closeMenu(link.href)}
                             title="Link menu"
                           >
                             {link.name}
