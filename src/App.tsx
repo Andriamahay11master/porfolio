@@ -25,7 +25,7 @@ function App() {
         <BlockMainContent data={data.blockContentRight} id="home" />
         <Content
           title={data.about.title}
-          children={data.about.desc}
+          children={<p>{data.about.desc}</p>}
           id="about"
         />
         <Content

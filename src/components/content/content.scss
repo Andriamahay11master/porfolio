@@ -4,8 +4,18 @@
 .content {
   background: $white-f7;
   padding: 3rem 0;
+  @include max(768px) {
+    padding: 1.5rem 0.5rem;
+  }
   .container {
     @include d-grid-50();
+    @include max(768px) {
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+    }
+  }
+  p{
+    text-align: justify;
   }
   &.contact {
     .content-col {
