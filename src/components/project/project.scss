@@ -9,7 +9,7 @@
   @include d-flex;
   align-items: flex-end;
   overflow: hidden;
-  box-shadow: 0px 4px 10px rgba($black, 0.25);
+  box-shadow: 0px 4px 8px rgba($black, 0.3);
   transition: all 0.3s ease-in-out;
   @include max(992px) {
     grid-template-columns: 100%;
@@ -63,6 +63,9 @@
   }
   &:hover {
     box-shadow: 0px 8px 15px rgba($black, 0.25);
+    @include max(768px) {
+      box-shadow: none;
+    }
     .project-info-bottom {
       height: 2rem;
       @include max(768px) {
@@ -92,6 +95,7 @@
     }
     @include max(768px) {
       grid-template-columns: 100%;
+      grid-gap: 1.5rem;
     }
   }
 }
