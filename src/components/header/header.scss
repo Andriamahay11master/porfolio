@@ -5,6 +5,9 @@
   width: 100%;
   z-index: 101;
   background: #fff;
+  @include max(768px) {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
   &--fixed {
     position: fixed;
     top: 0;
