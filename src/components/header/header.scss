@@ -322,6 +322,11 @@
         color: $grey-4A;
         font-weight: 300;
         text-decoration: none;
+        background: $color-primary;
+        color: $white;
+        border: none;
+        border-radius: 0.25rem;
+        padding: 0.5rem;
         &.active {
           font-weight: 600;
         }
