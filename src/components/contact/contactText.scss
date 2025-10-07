@@ -7,6 +7,12 @@
     @include max(768px) {
       padding: 0.5rem 0;
     }
+    .contact-address {
+      text-align: right;
+      @include max(768px) {
+        text-align: left;
+      }
+    }
     .link {
       display: block;
       color: $color-primary;
